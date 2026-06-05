@@ -1,0 +1,136 @@
+panic-analysis scan — 2026-06-05T10:11:14Z
+host: Linux 7.0.9-1-cachyos x86_64  rustc: rustc 1.94.1 (e408947bf 2026-03-25)
+scope: src/ tree
+
+## Prohibited primitives (must be 0 on every path)
+panic!           0
+todo!            0
+unimplemented!   0
+
+## Allowed-with-justification primitives (internal invariants)
+unreachable!     1
+unwrap()         108
+expect()         9
+
+## Backstops
+forbid(unsafe_code): present
+overflow-checks (release): 1
+
+## unwrap/expect ledger (every site — for the STATIC-REVIEW.1 3-bucket classification)
+  src/tzif/rfc9636.rs:452:        write_bytes(&TzifData::fixed(-18000, "EST", "EST5")).unwrap()
+  src/tzif/validate.rs:426:        assert_eq!(parse_footer(b"").unwrap(), "");
+  src/tzif/validate.rs:427:        assert_eq!(parse_footer(b"\n\n").unwrap(), "");
+  src/tzif/validate.rs:428:        assert_eq!(parse_footer(b"\nEST5\n").unwrap(), "EST5");
+  src/tzif/validate.rs:435:        let bytes = write_bytes(&data).unwrap();
+  src/tzif/validate.rs:436:        let parsed = parse(&bytes).unwrap();
+  src/tzif/validate.rs:449:        let parsed = parse(&write_bytes(&data).unwrap()).unwrap();
+  src/tzif/validate.rs:480:        let parsed = parse(&v1_tzif_one_transition(0)).unwrap();
+  src/tzif/validate.rs:538:        .unwrap();
+  src/tzif/data_block.rs:54:            .expect("every abbreviation is present after the build pass");
+  src/tzif/data_block.rs:71:        .expect("designation table entries are NUL-terminated")
+  src/tzif/data_block.rs:180:            let v = i32::try_from(at).expect("32-bit transition time out of range");
+  src/tzif/data_block.rs:204:        String::from_utf8(table[s..end].to_vec()).unwrap()
+  src/tzif/data_block.rs:209:        let (table, idx) = build_designations(types).unwrap();
+  src/model/time.rs:201:        assert_eq!(parse_offset("0").unwrap(), Offset(0));
+  src/model/time.rs:202:        assert_eq!(parse_offset("-").unwrap(), Offset(0));
+  src/model/time.rs:203:        assert_eq!(parse_offset("-5:00").unwrap(), Offset(-18000));
+  src/model/time.rs:204:        assert_eq!(parse_offset("5:30:15").unwrap(), Offset(19815));
+  src/model/time.rs:205:        assert_eq!(parse_offset("1").unwrap(), Offset(3600));
+  src/model/time.rs:219:        assert_eq!(parse_offset("25").unwrap(), Offset(90000));
+  src/model/time.rs:224:        assert_eq!(parse_time_of_day("2:00").unwrap().reference, TimeRef::Wall);
+  src/model/time.rs:226:            parse_time_of_day("2:00s").unwrap().reference,
+  src/model/time.rs:230:            parse_time_of_day("2:00u").unwrap().reference,
+  src/model/time.rs:233:        assert_eq!(parse_time_of_day("24:00").unwrap().seconds, 86400);
+  src/model/time.rs:234:        assert_eq!(parse_time_of_day("-2:30").unwrap().seconds, -9000);
+  src/model/time.rs:240:        assert!(!parse_save("0").unwrap().is_dst);
+  src/model/time.rs:241:        assert!(parse_save("1:00").unwrap().is_dst);
+  src/model/time.rs:242:        assert!(!parse_save("1:00s").unwrap().is_dst);
+  src/model/time.rs:243:        assert!(parse_save("0d").unwrap().is_dst);
+  src/model/time.rs:244:        assert_eq!(parse_save("-1:00").unwrap().seconds, -3600);
+  src/model/time.rs:249:        assert_eq!(parse_time_of_day("0:00:00.4").unwrap().seconds, 0);
+  src/model/time.rs:250:        assert_eq!(parse_time_of_day("0:00:00.5").unwrap().seconds, 1);
+  src/model/calendar.rs:248:        let r = resolve_on_day(OnDay::Last(Weekday::Sun), 2020, 3).unwrap();
+  src/model/calendar.rs:255:        let a = resolve_on_day(OnDay::OnAfter(Weekday::Sun, 8), 2020, 3).unwrap();
+  src/model/calendar.rs:258:        let b = resolve_on_day(OnDay::OnBefore(Weekday::Sun, 25), 2020, 10).unwrap();
+  src/model/calendar.rs:266:        let r = resolve_on_day(OnDay::OnAfter(Weekday::Sun, 29), 2021, 4).unwrap();
+  src/hash.rs:45:        s.push(char::from_digit((byte >> 4) as u32, 16).unwrap());
+  src/hash.rs:46:        s.push(char::from_digit((byte & 0x0f) as u32, 16).unwrap());
+  src/semantic_witness.rs:584:        .unwrap();
+  src/compare/semantic.rs:116:        crate::tzif::parse(&write_bytes(d).unwrap()).unwrap()
+  src/cli.rs:1266:        assert_eq!(parse_range(None).unwrap(), None);
+  src/cli.rs:1269:            parse_range(Some("@0")).unwrap(),
+  src/cli.rs:1277:            parse_range(Some("@0/@4102444800")).unwrap(),
+  src/cli.rs:1285:            parse_range(Some("/@100")).unwrap(),
+  src/cli.rs:1307:        assert_eq!(parse_redundant_until(None).unwrap(), None);
+  src/cli.rs:1309:            parse_redundant_until(Some("@946684800")).unwrap(),
+  src/cli.rs:1312:        assert_eq!(parse_redundant_until(Some("@-1")).unwrap(), Some(-1));
+  src/cli.rs:1323:            reconcile_emit_style(EmitStyleArg::Default, Some(BloatArg::Slim)).unwrap(),
+  src/cli.rs:1327:            reconcile_emit_style(EmitStyleArg::Default, Some(BloatArg::Fat)).unwrap(),
+  src/cli.rs:1332:            reconcile_emit_style(EmitStyleArg::ZicSlim, None).unwrap(),
+  src/cli.rs:1337:            reconcile_emit_style(EmitStyleArg::ZicSlim, Some(BloatArg::Slim)).unwrap(),
+  src/cli.rs:1350:        assert_eq!(parse_octal_mode(Some("644")).unwrap(), Some(0o644));
+  src/cli.rs:1351:        assert_eq!(parse_octal_mode(Some("0644")).unwrap(), Some(0o644));
+  src/cli.rs:1352:        assert_eq!(parse_octal_mode(Some("0o600")).unwrap(), Some(0o600));
+  src/cli.rs:1353:        assert_eq!(parse_octal_mode(Some("755")).unwrap(), Some(0o755));
+  src/cli.rs:1354:        assert_eq!(parse_octal_mode(None).unwrap(), None);
+  src/source/lexer.rs:208:        tokenize(s.as_bytes(), &PathBuf::from("t.zi")).unwrap()
+  src/source/lexer.rs:222:        let lines = tokenize_with(src, &p, true).expect("legacy mode admits Latin-1 in comments");
+  src/source/lexer.rs:279:        let d = e.diagnostic().unwrap();
+  src/source/lexer.rs:292:        let d = e.diagnostic().unwrap();
+  src/source/lexer.rs:307:        assert!(tokenize(b"", &PathBuf::from("t.zi")).unwrap().is_empty());
+  src/source/lexer.rs:315:        assert_eq!(e.diagnostic().unwrap().code, DiagnosticCode::NulByteInInput);
+  src/source/leap.rs:243:        let t = leap("Leap 2016 Dec 31 23:59:60 + S\nLeap 2015 Jun 30 23:59:60 + R\n").unwrap();
+  src/source/leap.rs:256:        let t = leap("Leap 2016 Dec 31 23:59:60 + S\nExpires 2025 Jan 1 0:00:00\n").unwrap();
+  src/source/parser.rs:72:                .expect("continuation without an open zone is impossible by construction");
+  src/source/parser.rs:589:        let db = parse("Zone Etc/UTC 0 - UTC\nLink Etc/UTC UTC\n").unwrap();
+  src/source/parser.rs:601:        let db = parse("Rule X 2020 only - Mar Sun>=8 2:00 1:00 D\n").unwrap();
+  src/source/parser.rs:616:        let db = parse(src).unwrap();
+  src/source/parser.rs:665:            parse_yit("Rule R 1990 1994 even Mar Sun>=18 2:00 0 -\n").expect("legacy admits even");
+  src/source/parser.rs:668:            parse_yit("Rule R 1990 1994 odd Mar Sun>=1 2:00 0 -\n").expect("legacy admits odd");
+  src/source/parser.rs:718:            .unwrap();
+  src/source/parser.rs:753:        let db = parse("Rule X minimum max - Apr lastSun 2:00 1:00 D\n").unwrap();
+  src/source/names.rs:101:        assert_eq!(month("January").unwrap(), 1);
+  src/source/names.rs:102:        assert_eq!(month("Jan").unwrap(), 1);
+  src/source/names.rs:103:        assert_eq!(month("Ja").unwrap(), 1);
+  src/source/names.rs:104:        assert_eq!(month("dec").unwrap(), 12);
+  src/source/names.rs:108:        assert_eq!(month("Jun").unwrap(), 6);
+  src/source/names.rs:109:        assert_eq!(month("Jul").unwrap(), 7);
+  src/source/names.rs:115:        assert_eq!(weekday("Sun").unwrap(), Weekday::Sun);
+  src/source/names.rs:116:        assert_eq!(weekday("Su").unwrap(), Weekday::Sun);
+  src/source/names.rs:117:        assert_eq!(weekday("Saturday").unwrap(), Weekday::Sat);
+  src/source/names.rs:118:        assert_eq!(weekday("Th").unwrap(), Weekday::Thu);
+  src/doctor.rs:297:                    version: first_line.unwrap(),
+  src/fs/output_tree.rs:290:        let dir = tempfile::tempdir().unwrap();
+  src/fs/output_tree.rs:291:        let p = write_zone_file(dir.path(), "Zone/D", b"hello", false, true).unwrap();
+  src/fs/output_tree.rs:292:        assert_eq!(std::fs::read(&p).unwrap(), b"hello");
+  src/fs/output_tree.rs:300:        let dir = tempfile::tempdir().unwrap();
+  src/fs/output_tree.rs:302:        write_zone_file(root, "B", b"zone-b", false, true).unwrap();
+  src/fs/output_tree.rs:303:        write_link(root, "A", "B", LinkMode::Symlink, false, true).unwrap();
+  src/fs/output_tree.rs:316:        let dir = tempfile::tempdir().unwrap();
+  src/fs/output_tree.rs:318:        write_zone_file(root, "B", b"zone-b", false, true).unwrap();
+  src/fs/output_tree.rs:319:        write_zone_file(root, "C", b"zone-c", false, true).unwrap();
+  src/fs/output_tree.rs:320:        write_link(root, "A", "B", LinkMode::Symlink, false, true).unwrap();
+  src/fs/output_tree.rs:322:        write_link(root, "A", "C", LinkMode::Symlink, true, true).unwrap();
+  src/fs/output_tree.rs:323:        let dest = std::fs::read_link(root.join("A")).unwrap();
+  src/fs/output_tree.rs:330:        assert_eq!(std::fs::read(root.join("A")).unwrap(), b"zone-c");
+  src/fs/output_tree.rs:336:            safe_relative_path("Europe/London").unwrap(),
+  src/fs/output_tree.rs:339:        assert_eq!(safe_relative_path("UTC").unwrap(), PathBuf::from("UTC"));
+  src/compile/transitions.rs:96:    let lo = rules.iter().map(|r| r.from).min().expect("non-empty");
+  src/compile/transitions.rs:107:            .expect("finite set has a concrete TO")
+  src/compile/leap.rs:164:        apply_leaps(&mut d, &t, None).unwrap();
+  src/compile/leap.rs:204:        apply_leaps(&mut d, &leaps, None).unwrap();
+  src/compile/leap.rs:232:        .unwrap();
+  src/compile/leap.rs:245:        .unwrap();
+  src/compile/leap.rs:290:        .unwrap();
+  src/compile/posix_footer.rs:252:            recurring(&r).unwrap(),
+  src/compile/posix_footer.rs:274:            recurring(&r).unwrap(),
+  src/compile/posix_footer.rs:298:            recurring(&r).unwrap(),
+  src/compile/posix_footer.rs:323:        let (footer, version) = recurring(&r).unwrap();
+  src/compile/posix_footer.rs:349:        let (footer, version) = recurring(&r).unwrap();
+  src/compile/posix_footer.rs:391:            recurring(&r).unwrap(),
+  src/compile/mod.rs:193:        crate::source::parse_into(src.as_bytes(), &PathBuf::from("t.zi"), &mut db).unwrap();
+  src/compile/mod.rs:199:        let d = compile_zone(&db("Zone Etc/UTC 0 - UTC\n"), "Etc/UTC").unwrap();
+  src/compile/mod.rs:209:        let d = compile_zone(&db("Zone Test/Fixed -5:00 - EST\n"), "Test/Fixed").unwrap();
+  src/compile/mod.rs:220:        let d = compile_zone(&db(src), "Test/Simple").unwrap();
+  src/compile/mod.rs:246:        let d = compile_zone(&db(src), "Test/Eastern").unwrap();
+  src/compile/mod.rs:262:        let d = compile_zone(&db(src), "Z").unwrap();

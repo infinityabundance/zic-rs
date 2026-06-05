@@ -1,0 +1,11 @@
+environment	fstype	materialization	bundle_hash	hash_ok	link_resolves	verdict
+ext4_home	ext2/ext3	copy	453641ff2568d8b1	yes	yes	deterministic-and-safe
+ext4_home	ext2/ext3	symlink	(relative)	n/a	yes	deterministic-and-safe
+tmpfs	tmpfs	copy	453641ff2568d8b1	yes	yes	deterministic-and-safe
+tmpfs	tmpfs	symlink	(relative)	n/a	yes	deterministic-and-safe
+ext4_second	ext2/ext3	copy	453641ff2568d8b1	yes	yes	deterministic-and-safe
+ext4_second	ext2/ext3	symlink	(relative)	n/a	yes	deterministic-and-safe
+relocate_copy(tmpfs->ext4)	ext4	copy	453641ff2568d8b1	yes	yes	deterministic-and-safe
+relocate_symlink(tmpfs->ext4)	ext4	symlink	(relative)	n/a	yes	deterministic-and-safe
+ref_hardlink_naive_relocate	ext4	hardlink	n/a	n/a	n/a	fragile: inode-sharing lost on naive cross-fs copy (341->598 unique inodes)
+rootless_unprivileged	(all above)	copy/symlink	453641ff2568d8b1	yes	yes	deterministic-and-safe (uid=1000, no root; fakeroot shown in PACKAGER-POLICY.1)

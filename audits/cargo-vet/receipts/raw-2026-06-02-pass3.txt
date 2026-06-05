@@ -1,0 +1,8 @@
+# T23.cargo-vet.3 raw — 2026-06-02
+## cargo vet (after)
+Vetting Succeeded (26 fully audited, 1 partially audited, 39 exempted)
+## audits.toml crates
+[[audits.cfg-if]]
+[[audits.colorchoice]]
+[[audits.is_terminal_polyfill]]
+[[audits.once_cell_polyfill]]

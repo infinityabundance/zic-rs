@@ -1,0 +1,27 @@
+# America/New_York — verbatim zishrink-abbreviated extract from tzdata.zi (IANA tzdb 2026b).
+# The UNMODIFIED extract (record keys R/Z; rule names in zishrink form `u`=US, `NY`=NYC) used as
+# the faithfulness reference for the de-abbreviated canonical slice. zic-rs now parses both forms.
+R u 1918 1919 - Mar lastSu 2 1 D
+R u 1918 1919 - O lastSu 2 0 S
+R u 1942 o - F 9 2 1 W
+R u 1945 o - Au 14 23u 1 P
+R u 1945 o - S 30 2 0 S
+R u 1967 2006 - O lastSu 2 0 S
+R u 1967 1973 - Ap lastSu 2 1 D
+R u 1974 o - Ja 6 2 1 D
+R u 1975 o - F lastSu 2 1 D
+R u 1976 1986 - Ap lastSu 2 1 D
+R u 1987 2006 - Ap Su>=1 2 1 D
+R u 2007 ma - Mar Su>=8 2 1 D
+R u 2007 ma - N Su>=1 2 0 S
+R NY 1920 o - Mar lastSu 2 1 D
+R NY 1920 o - O lastSu 2 0 S
+R NY 1921 1966 - Ap lastSu 2 1 D
+R NY 1921 1954 - S lastSu 2 0 S
+R NY 1955 1966 - O lastSu 2 0 S
+Z America/New_York -4:56:2 - LMT 1883 N 18 17u
+-5 u E%sT 1920
+-5 NY E%sT 1942
+-5 u E%sT 1946
+-5 NY E%sT 1967
+-5 u E%sT

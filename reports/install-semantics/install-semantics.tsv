@@ -1,0 +1,14 @@
+scenario	reference_zic	zic_rs	verdict
+existing_file_no_force	overwrites-in-place	REFUSES-no-clobber(needs --force)	install-policy-difference
+existing_file_with_force	overwrites-in-place	overwrites-atomically(temp+rename)	match
+dir_where_file	exit=1(refuses)	exit=1(refuses)	match
+readonly_parent_dir	exit=1(refuses)	exit=1(refuses)	match
+symlink_outside_root_leaf	victim-preserved	victim-preserved	match
+umask_000	mode=644	mode=644	match
+umask_022	mode=644	mode=644	match
+umask_077	mode=600	mode=600	match
+mode_-m_600	mode=600	mode=600	match
+-D_missing_dir	missing:exit=1	missing:exit=1	match
+partial_output_on_fatal	files=2(writes-as-it-goes)	files=0(compile-all-then-write)	safer-no-partial
+-p_posixrules	deprecated(obsolete)	ignored-by-shim/unsupported	unsupported-by-design
+link_materialization	hardlink(nlink=2)	copy(nlink=1)	install-policy-difference

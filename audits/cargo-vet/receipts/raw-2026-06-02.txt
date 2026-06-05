@@ -1,0 +1,12 @@
+# cargo vet init + cargo vet — 2026-06-02
+## cargo vet init
+ERROR   × 'cargo vet' already initialized (store found at /home/one/zic-rs/supply-
+  │ chain)
+
+## cargo vet
+Vetting Succeeded (66 exempted)
+## store
+audits.toml
+config.toml
+imports.lock
+exemptions: 66

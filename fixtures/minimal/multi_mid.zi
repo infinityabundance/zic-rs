@@ -1,0 +1,4 @@
+Rule R 1980 2000 - Apr Sun>=1 2:00 1:00 D
+Rule R 1980 2000 - Oct Sun>=1 2:00 0 S
+Zone Test/MidDst -5:00 R E%sT 1990 Jul 1 0:00
+		-4:00 - AST

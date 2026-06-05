@@ -1,0 +1,11 @@
+# Detached crux-mir harness for zic-rs — own [workspace] so nothing leaks into the main crate's
+# dep/vet/audit surface (mirrors fuzz/ and the loom harness). The `crucible` support crate is injected
+# by the crux-mir toolchain via CRUX_RUST_LIBRARY_PATH (the translated-std rlibs), not a Cargo dep.
+# Run: CRUX_RUST_LIBRARY_PATH=<rlibs> cargo +nightly-2025-09-14 crux-test -- --solver z3
+[workspace]
+
+[package]
+name = "zic-rs-crux-harness"
+version = "0.0.0"
+edition = "2021"
+publish = false

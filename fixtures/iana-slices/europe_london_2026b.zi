@@ -1,0 +1,100 @@
+# Europe/London — IANA tzdb 2026b slice (pinned fixture)
+#
+# PROVENANCE & TRANSFORM
+# ----------------------
+# Derived mechanically from /usr/share/zoneinfo/tzdata.zi (IANA tzdb 2026b, the installed
+# single-file zishrink form) by expanding ONLY the leading record keywords:
+#     R -> Rule      Z -> Zone      L -> Link
+# Nothing else is changed. Month/weekday/year tokens are left in their zic-style abbreviated
+# form (e.g. `O`, `Ap`, `lastSu`, `o`, `ma`) because zic-rs accepts unambiguous-prefix names
+# exactly as reference `zic` does (see src/source/names.rs). zishrink record-key shorthand is
+# a separate parser-breadth item (zic-rs's record dispatch is exact-match), NOT a London
+# semantic blocker — documented in docs/unsupported-syntax.md.
+#
+# FAITHFULNESS PROOF
+# ------------------
+# Reference `zic` (tzcode 2026b) compiles this canonical slice to a TZif file that is
+# BYTE-IDENTICAL to the one it produces from the unmodified abbreviated extract (verified with
+# `cmp`). So the only-record-keys transform preserves semantics exactly.
+#
+# ORACLE STATUS
+# -------------
+# zic-rs output matches reference `zic` under the `zdump` behaviour oracle over 1830..2045
+# (see docs/compatibility.md). This is behaviour (semantic) parity, the project's bar; the
+# explicit-transition representation may differ (slim/fat) — byte-parity is not claimed here.
+Rule G 1916 o - May 21 2s 1 BST
+Rule G 1916 o - O 1 2s 0 GMT
+Rule G 1917 o - Ap 8 2s 1 BST
+Rule G 1917 o - S 17 2s 0 GMT
+Rule G 1918 o - Mar 24 2s 1 BST
+Rule G 1918 o - S 30 2s 0 GMT
+Rule G 1919 o - Mar 30 2s 1 BST
+Rule G 1919 o - S 29 2s 0 GMT
+Rule G 1920 o - Mar 28 2s 1 BST
+Rule G 1920 o - O 25 2s 0 GMT
+Rule G 1921 o - Ap 3 2s 1 BST
+Rule G 1921 o - O 3 2s 0 GMT
+Rule G 1922 o - Mar 26 2s 1 BST
+Rule G 1922 o - O 8 2s 0 GMT
+Rule G 1923 o - Ap Su>=16 2s 1 BST
+Rule G 1923 1924 - S Su>=16 2s 0 GMT
+Rule G 1924 o - Ap Su>=9 2s 1 BST
+Rule G 1925 1926 - Ap Su>=16 2s 1 BST
+Rule G 1925 1938 - O Su>=2 2s 0 GMT
+Rule G 1927 o - Ap Su>=9 2s 1 BST
+Rule G 1928 1929 - Ap Su>=16 2s 1 BST
+Rule G 1930 o - Ap Su>=9 2s 1 BST
+Rule G 1931 1932 - Ap Su>=16 2s 1 BST
+Rule G 1933 o - Ap Su>=9 2s 1 BST
+Rule G 1934 o - Ap Su>=16 2s 1 BST
+Rule G 1935 o - Ap Su>=9 2s 1 BST
+Rule G 1936 1937 - Ap Su>=16 2s 1 BST
+Rule G 1938 o - Ap Su>=9 2s 1 BST
+Rule G 1939 o - Ap Su>=16 2s 1 BST
+Rule G 1939 o - N Su>=16 2s 0 GMT
+Rule G 1940 o - F Su>=23 2s 1 BST
+Rule G 1941 o - May Su>=2 1s 2 BDST
+Rule G 1941 1943 - Au Su>=9 1s 1 BST
+Rule G 1942 1944 - Ap Su>=2 1s 2 BDST
+Rule G 1944 o - S Su>=16 1s 1 BST
+Rule G 1945 o - Ap M>=2 1s 2 BDST
+Rule G 1945 o - Jul Su>=9 1s 1 BST
+Rule G 1945 1946 - O Su>=2 2s 0 GMT
+Rule G 1946 o - Ap Su>=9 2s 1 BST
+Rule G 1947 o - Mar 16 2s 1 BST
+Rule G 1947 o - Ap 13 1s 2 BDST
+Rule G 1947 o - Au 10 1s 1 BST
+Rule G 1947 o - N 2 2s 0 GMT
+Rule G 1948 o - Mar 14 2s 1 BST
+Rule G 1948 o - O 31 2s 0 GMT
+Rule G 1949 o - Ap 3 2s 1 BST
+Rule G 1949 o - O 30 2s 0 GMT
+Rule G 1950 1952 - Ap Su>=14 2s 1 BST
+Rule G 1950 1952 - O Su>=21 2s 0 GMT
+Rule G 1953 o - Ap Su>=16 2s 1 BST
+Rule G 1953 1960 - O Su>=2 2s 0 GMT
+Rule G 1954 o - Ap Su>=9 2s 1 BST
+Rule G 1955 1956 - Ap Su>=16 2s 1 BST
+Rule G 1957 o - Ap Su>=9 2s 1 BST
+Rule G 1958 1959 - Ap Su>=16 2s 1 BST
+Rule G 1960 o - Ap Su>=9 2s 1 BST
+Rule G 1961 1963 - Mar lastSu 2s 1 BST
+Rule G 1961 1968 - O Su>=23 2s 0 GMT
+Rule G 1964 1967 - Mar Su>=19 2s 1 BST
+Rule G 1968 o - F 18 2s 1 BST
+Rule G 1972 1980 - Mar Su>=16 2s 1 BST
+Rule G 1972 1980 - O Su>=23 2s 0 GMT
+Rule G 1981 1995 - Mar lastSu 1u 1 BST
+Rule G 1981 1989 - O Su>=23 1u 0 GMT
+Rule G 1990 1995 - O Su>=22 1u 0 GMT
+Rule E 1977 1980 - Ap Su>=1 1u 1 S
+Rule E 1977 o - S lastSu 1u 0 -
+Rule E 1978 o - O 1 1u 0 -
+Rule E 1979 1995 - S lastSu 1u 0 -
+Rule E 1981 ma - Mar lastSu 1u 1 S
+Rule E 1996 ma - O lastSu 1u 0 -
+Zone Europe/London -0:1:15 - LMT 1847 D
+0 G %s 1968 O 27
+1 - BST 1971 O 31 2u
+0 G %s 1996
+0 E GMT/BST

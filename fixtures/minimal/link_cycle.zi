@@ -1,0 +1,4 @@
+Zone Etc/UTC 0 - UTC
+Link Etc/UTC UTC
+Link Foo Bar
+Link Bar Foo

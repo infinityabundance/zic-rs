@@ -1,0 +1,122 @@
+
+# cargo-vet audits file
+
+[[audits.anstream]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.8)"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = "Full source review (~2562 LoC). Auto-stripping/auto-converting stdout/stderr stream wrapper (the clap colour stack). Features in use: default. **Only 3 unsafe sites, all one pattern** in `adapter/strip.rs`: a private `unsafe fn from_utf8_unchecked(bytes, justification)` that — crucially — calls the **checked** `std::str::from_utf8(bytes).expect(justification)` under `cfg!(debug_assertions)` and only `from_utf8_unchecked` in release; its sole caller passes `printable`, a slice split from already-UTF-8-validated input at a position that stops exactly at the first non-(printable|UTF-8-continuation) byte, so the slice is a whole-codepoint UTF-8 prefix (SAFETY note matches the code; tests + debug-mode checked path would catch any violation). No build.rs, no proc-macro, no network; I/O is only writing to the caller's stdout/stderr stream. Deps (anstyle/anstyle-parse/colorchoice/is_terminal_polyfill, + utf8parse) separately reviewed/exempted. Reviewed each site; sound."
+
+[[audits.anstyle]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.4)"
+criteria = "safe-to-deploy"
+version = "1.0.14"
+notes = "Full source review (~1648 LoC). ANSI style descriptors (Color/Style/Effects), no_std, zero deps, no build.rs, no I/O, no env/fs/net/process. Exactly ONE unsafe site (color.rs `DisplayBuffer::as_str` -> `core::str::from_utf8_unchecked`): sound — the fixed-size buffer is only ever written via `&str` pushes, so its bytes are valid UTF-8 by construction (SAFETY comment matches the code)."
+
+[[audits.anstyle-parse]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.5)"
+criteria = "safe-to-deploy"
+version = "1.0.0"
+notes = """Full source review (~1378 LoC). ANSI/VTE escape-sequence state machine. Features in use: default = ["utf8"] (pulls `utf8parse` + `arrayvec`, separately vetted; this audit is of anstyle-parse's own code). 3 unsafe sites, each reviewed + VERIFIED: (1) `[MaybeUninit<&[u8]>; MAX_OSC_PARAMS] = MaybeUninit::uninit().assume_init()` — sound (array-of-MaybeUninit is valid uninitialized); only the first `osc_num_params` elements are initialized, and only `slices[..num_params]` is read back; `osc_num_params` is capped at `MAX_OSC_PARAMS=16` (parser returns/stops at the cap), so the read region == the initialized region. (2)+(3) `mem::transmute::<u8,State>(delta & 0x0f)` / `transmute::<u8,Action>(delta >> 4)` — sound: I COUNTED the enums — State and Action each have EXACTLY 16 `#[repr(u8)]` tag-only variants (discriminants 0..15), and the operands are masked into 0..15, so every transmute targets a valid discriminant; the `delta` bytes come from a const-generated transition table that only packs valid (state,action) pairs. No build.rs, no proc-macro, no FFI, no network/fs/env. Reviewed each site; sound (relies on the documented 16-variant invariant, which I verified holds in this version)."""
+
+[[audits.anstyle-query]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.5)"
+criteria = "safe-to-deploy"
+version = "1.1.5"
+notes = "Full source review (~242 LoC). Terminal colour-support query. Features in use: default. 1 unsafe site, and it is PLATFORM-SENSITIVE: it lives entirely in `windows.rs` behind `#[cfg(windows)]` and calls the Win32 FFI `GetConsoleMode`/`SetConsoleMode` (with a null-handle check + `last_os_error` handling) to enable ANSI VT processing. NOTE: `SetConsoleMode` *mutates* the Windows console mode — a standard, documented terminal-VT-enable, but a real side effect; it is **never compiled on non-Windows targets** (zic-rs's Unix targets do not build it). The portable path only READS colour-detection env vars (`CLICOLOR`/`CLICOLOR_FORCE`/`NO_COLOR`/`TERM`) — read-only, no fs/net. Deps: `windows-sys` under `cfg(windows)` only (separately exempted). No build.rs, no proc-macro. Admitted with the explicit Windows-FFI/console-mutation note."
+
+[[audits.anstyle-wincon]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.8)"
+criteria = "safe-to-deploy"
+version = "3.0.11"
+notes = "Full source review (~473 LoC). Windows-console colour attribute application for the anstyle stack. 2 unsafe sites, both PLATFORM-SENSITIVE in `windows.rs` behind `#[cfg(windows)]`: `get_screen_buffer_info` (Win32 `GetConsoleScreenBufferInfo`) and `set_console_text_attributes` (Win32 `SetConsoleTextAttribute`). Each null-checks the handle first, uses `std::mem::zeroed()` on `CONSOLE_SCREEN_BUFFER_INFO` (a plain-integer C struct — validly zeroable), calls the FFI, and maps a non-success return to `last_os_error()`. `SetConsoleTextAttribute` *mutates* the console text attributes — a documented, standard terminal-colour side effect, but a real one; it is **never compiled on zic-rs's non-Windows targets**. The portable path is pure colour-attribute math, no fs/net. Dep `windows-sys` under `cfg(windows)` only (separately exempted). No build.rs, no proc-macro. Admitted with the explicit Windows-FFI/console-mutation note."
+
+[[audits.cfg-if]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.3)"
+criteria = "safe-to-deploy"
+version = "1.0.4"
+notes = "Full source read (src/lib.rs, 212 LoC). Pure declarative macro_rules! cfg-cascade; #![no_std]; emits no runtime code; zero unsafe; no I/O; no build.rs."
+
+[[audits.clap_lex]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.4)"
+criteria = "safe-to-deploy"
+version = "1.1.0"
+notes = "Full source review (~810 LoC). CLI argument lexer, zero deps, no build.rs, no proc-macro, no network/fs. Only I/O is `std::env::args_os()` (normal CLI reading). Six unsafe sites, all the SAME std-blessed pattern: `OsStr::from_encoded_bytes_unchecked` on byte slices split along a `&str`/UTF-8 boundary; the `pub(crate) unsafe fn split_at(os, index)` documents `index must be at a valid UTF-8 boundary`, and every caller passes a `&str` prefix length or `Utf8Error::valid_up_to()` — valid boundaries. Reviewed each site; sound."
+
+[[audits.colorchoice]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.3)"
+criteria = "safe-to-deploy"
+version = "1.0.5"
+notes = "Full source read (115 LoC). #![no_std]; ColorChoice enum behind an AtomicUsize; zero unsafe; no I/O; no build.rs; lone expect() safe-by-construction."
+
+[[audits.errno]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.8)"
+criteria = "safe-to-deploy"
+version = "0.3.14"
+notes = "Full source review (~472 LoC across unix/wasi/windows/hermit/lib). Cross-platform `errno` accessor (reached via rustix/tempfile on some targets). 12 unsafe sites, every one a standard, bounded pattern: (1) `from_utf8_lossy` → `str::from_utf8_unchecked(&input[..error.valid_up_to()])` — the prefix is proven-valid UTF-8 by `valid_up_to()`; (2) `with_description` → `strerror_r` into a fixed 1024-byte STACK buffer, then `strlen` to find the NUL-terminated length and slice `&buf[..len]` (POSIX guarantees NUL-termination within the buffer when rc==0; ERANGE/negative-rc handled for glibc<2.13) — bounded by the stack buffer; (3) `errno()`/`set_errno()` → deref the libc thread-local errno pointer (`__errno_location`/`errno_location`/`GetLastError`/`SetLastError`); the wasi/windows arms are the analogous thread-local + FFI forms. No build.rs, no proc-macro, no network/fs; the only effect is reading/writing the thread-local C errno and formatting its message. Dep `libc` (separately exempted). Reviewed each site; sound."
+
+[[audits.fastrand]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.4)"
+criteria = "safe-to-deploy"
+version = "2.4.1"
+notes = "Full source review (~970 LoC). Non-cryptographic PRNG (Wyrand). `#![forbid(unsafe_code)]` (zero unsafe, compiler-enforced); no build.rs, no proc-macro, no network, no fs. Global generator seeds from a benign hash of `Instant::now()` + thread id (std only). NOT a CSPRNG — adequate for non-security randomness; zic-rs reaches it only via tempfile scratch-name generation, never for secrets."
+
+[[audits.id-arena]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.7)"
+criteria = "safe-to-deploy"
+version = "2.3.0"
+notes = "Full source review (~1008 LoC). Typed-index arena allocator. **`#![forbid(unsafe_code)]`** — zero unsafe, compiler-enforced (the lone grep hit IS the forbid attribute). No build.rs, no proc-macro, no FFI, no network/fs/env. Reachable only via the WASI wit-* tooling chain (getrandom WASI backend), never compiled in zic-rs's host builds."
+
+[[audits.is_terminal_polyfill]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.3)"
+criteria = "safe-to-deploy"
+version = "1.70.2"
+notes = "Full source read (50 LoC). Sealed IsTerminal trait forwarding to std::io::IsTerminal; zero unsafe; no own I/O; no build.rs."
+
+[[audits.itoa]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.5)"
+criteria = "safe-to-deploy"
+version = "1.0.18"
+notes = "Full source review (~488 LoC, lib.rs + u128_ext.rs). Integer->decimal-string formatter. Features in use: NONE (default; the optional `no-panic` feature is a build-time #[no_panic] check, not enabled). 13 unsafe sites, ALL one reviewed pattern: write ASCII digit-pairs from the 200-byte `DECIMAL_PAIRS` lookup table (`buf[i].write(*DECIMAL_PAIRS.0.get_unchecked(pair*2+{0,1}))`, pair = n%100 in 0..99 => index 0..199, in-bounds) into a `[MaybeUninit<u8>; MAX_STR_LEN]` stack buffer sized for the integer type, then read the initialized tail back via `slice_buffer_to_str` (`get_unchecked(offset..)` with offset = len - digits >= 0; `from_utf8_unchecked` sound because every written byte is ASCII from the table). `format()` casts the i128-sized buffer to the smaller per-type buffer (fits); `hint::unreachable_unchecked()` guards the encoder's own length invariant (string.len() <= type MAX_STR_LEN, true by construction). Call context: input is ALWAYS a primitive integer, never hostile bytes. No build.rs, no proc-macro, no FFI, no network/fs/env. no_std. Reviewed each site; sound."
+
+[[audits.log]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.6)"
+criteria = "safe-to-deploy"
+version = "0.4.30"
+notes = """Full source review of the logging FACADE (src/lib.rs + small modules). Features in use: NONE beyond default `std` (no `kv`/`serde`/`value-bag`); no build.rs, no proc-macro, no FFI, no network/fs/env. 8 unsafe sites, all reviewed: (1) the GLOBAL LOGGER state machine — a `static LOGGER: &dyn Log` guarded by `STATE: AtomicUsize` (UNINITIALIZED->INITIALIZING->INITIALIZED). `set_logger`/`set_logger_inner` CAS STATE from UNINITIALIZED->INITIALIZING (Acquire/AcqRel); ONLY the CAS winner writes `LOGGER` (`unsafe { LOGGER = make_logger() }`), then stores INITIALIZED (Release). `logger()` reads `unsafe { LOGGER }` ONLY when `STATE == INITIALIZED` (Acquire) — the Release/Acquire pair establishes happens-before, so the read sees the fully-written `&'static dyn Log`. The `'static` bound on `set_logger` guarantees the logger outlives all reads. Sound. (2) `mem::transmute(MAX_LOG_LEVEL_FILTER.load(Relaxed))` usize->LevelFilter: the static is private and only ever written by casting a `LevelFilter` to usize (`set_max_level`), so every stored value is a valid enum discriminant. Sound. (3) The `_racy` variants (`set_logger_racy`/`set_max_level_racy`) are `pub unsafe fn`s exposing a documented thread-unsafe contract for no-atomic platforms; they do nothing memory-unsafe themselves and zic-rs never calls them. (4) `unsafe impl Sync for AtomicUsize` is `#[cfg(not(target_has_atomic = "ptr"))]`-gated to single-core no-atomic targets (a Cell-backed fallback) — not compiled on any real zic-rs target. Concurrency model: a one-shot set + lock-free reads via the STATE atomic. CALL CONTEXT: `log` is reachable ONLY on WASI targets (zic-rs -> tempfile -> getrandom -> wasip3 -> wit-bindgen -> wit-parser/wit-component -> log); it is NEVER compiled in zic-rs's actual (non-WASI) builds — `cargo tree -i log` on the host is empty. Reviewed each site; sound."""
+
+[[audits.once_cell_polyfill]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.3)"
+criteria = "safe-to-deploy"
+version = "1.70.2"
+notes = "Full source read (51 LoC). Thin newtype over std::sync::OnceLock forwarding every method; zero unsafe; no I/O; no build.rs."
+
+[[audits.semver]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.6)"
+criteria = "safe-to-deploy"
+version = "1.0.28"
+notes = '''Full source review. Semantic-version parser/comparator. Features in use: NONE beyond default `std` (no `serde`); no build.rs, no proc-macro, no FFI, no network/fs/env; crate-wide `#![deny(unsafe_op_in_unsafe_fn)]` (every unsafe op is in an explicit unsafe block with a SAFETY comment). 49 unsafe sites; lib.rs has ZERO (the one grep hit is the `deny(unsafe_op_in_unsafe_fn)` lint attribute). identifier.rs (43): the bit-tagged short-string `Identifier` (dtolnay's well-documented pointer-tag SSO). INVARIANT: the 8-byte repr distinguishes inline (positive i64: 1-8 nonzero ASCII bytes + \0 padding), heap (negative i64: MSB rotated in; heap ptrs are align-2 so the freed LSB carries the rotated-out bit), and empty (all-ones, -1; also the niche so size_of::<Version>()==size_of::<Option<Version>>()). Reviewed categories: pointer<->repr tagging (`ptr_to_repr`/`repr_to_ptr` use the provenance-correct `wrapping_add(diff)` idiom; NonNull nonzero because MSB is set); owned heap alloc/dealloc (`new_unchecked`/`Clone`/`Drop` use a matching `Layout::from_size_align_unchecked(size, align=2)`; 16/32-bit `isize::MAX` overflow guard present); base-128 varint length header (`decode_len`/`bytes_for_varint`, bounded reads documented as 'at least 9 ASCII bytes follow'); inline reads (`inline_len`/`inline_as_str` aligned `NonZeroU64` read; `str::from_utf8_unchecked` sound because contents are ASCII by the `new_unchecked` precondition); `transmute([u8;8] -> Identifier)` for inline (head nonzero since >=1 ASCII byte). `unsafe impl Send/Sync for Identifier`: sound — it is an OWNED buffer (inline bytes or a uniquely-owned heap allocation), no interior mutability, no shared ownership. parse.rs (5): `Identifier::new_unchecked(string)` x2 — precondition (ASCII, no \0) is enforced by the `identifier()` lexer which only accepts `[-.0-9A-Za-z]`; `out.as_mut_ptr().add(depth).write(comparator)` x2 + `comparators.set_len(len)` — the standard reserve-then-write-each-index-exactly-once idiom (`reserve_exact` precedes the writes; the recursion writes one comparator per depth and returns the exact final count passed to `set_len`). The `new_unchecked` SAFETY contract ('string must be ASCII and not contain \0') is the one caller-upheld invariant; verified the only callers are the two ASCII-validated parse paths. CALL CONTEXT: `semver` is reachable ONLY on WASI targets (zic-rs -> tempfile -> getrandom -> wasip3 -> wit-bindgen -> wit-parser -> semver); it is NEVER compiled in zic-rs's actual (non-WASI) builds — `cargo tree -i semver` on the host is empty. Reviewed each site; sound.'''
+
+[[audits.thiserror]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.7)"
+criteria = "safe-to-deploy"
+version = "2.0.18"
+notes = "Full source review (~466 LoC). A DIRECT zic-rs dependency (the error-derive runtime). ZERO unsafe. Features in use: default. The build.rs is the standard dtolnay capability probe: it emits `cargo:rustc-check-cfg` declarations and compiles a tiny `build/probe.rs` with rustc to detect the nightly `error_generic_member_access` feature, writing only to OUT_DIR — no network, no writes outside OUT_DIR, no env mutation. The crate is a thin `Error`/`Display` runtime; the derive lives in thiserror-impl. Reviewed; sound."
+
+[[audits.thiserror-impl]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.7)"
+criteria = "safe-to-deploy"
+version = "2.0.18"
+notes = 'Full source review (~2437 LoC). The `#[derive(Error)]` proc-macro (direct-dep chain of thiserror). ZERO real unsafe — the single `unsafe` grep hit is a STRING LITERAL `(Keyword("unsafe"), SetState(&BLOCK))` in the expression scanner (`scan_expr.rs`), i.e. it recognises the `unsafe` *keyword token* while parsing user expressions; it is not an unsafe block. Proc-macro: no runtime code, no FFI, no network/fs/env. Reviewed; sound.'
+
+[[audits.unicode-ident]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.7)"
+criteria = "safe-to-deploy"
+version = "1.0.24"
+notes = "Full source review (~934 LoC). Unicode XID_Start/XID_Continue identifier classification (used by the proc-macro/syn chain). 2 unsafe sites, both the SAME pattern: `LEAF.0.get_unchecked(offset)` table lookups, where `offset` is computed from a multi-level trie index (`TRIE_*[ch>>k]` chains) whose values are bounded by the generated `LEAF` table size by construction — the standard dtolnay codegen-bounded trie. No build.rs, no proc-macro, no FFI, no network/fs/env. Reviewed each site; sound (bounded by table construction)."
+
+[[audits.windows-link]]
+who = "zic-rs maintainer (full-source review, T23.cargo-vet.7)"
+criteria = "safe-to-deploy"
+version = "0.2.1"
+notes = """Full source review (~39 LoC). `#![no_std]`. Exposes a single `macro_rules! link!` that expands to `#[link(... kind="raw-dylib")] extern { fn … }` import declarations for Windows system libraries; everything is `#[cfg(windows…)]`-gated. ZERO unsafe, NO runtime code (it only generates extern-fn signatures), no build.rs, no network/fs/env. Never compiled on zic-rs's non-Windows targets. Reviewed; sound."""

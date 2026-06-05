@@ -1,0 +1,29 @@
+(* #"/tmp/creusot-run2/src/lib.rs" 9 0 9 46 *)
+
+let%span slib = "/tmp/creusot-run2/src/lib.rs" 10 4 10 34
+let%span slib'0 = "/tmp/creusot-run2/src/lib.rs" 8 10 8 35
+
+use creusot.int.UInt32
+use creusot.int.UInt64
+use creusot.prelude.Any
+use int.Int
+
+meta "compute_max_steps" 1000000
+
+meta "select_lsinst" "all"
+
+let block_len [#"/tmp/creusot-run2/src/lib.rs" 9 0 9 46] (count: UInt32.t) (size: UInt32.t) (return (x: UInt64.t)) =
+(! bb0
+  [ bb0 = s0
+    [ s0 = [ &_6 <- UInt64.of_int (UInt32.t'int count) ] s1
+    | s1 = [ &_8 <- UInt64.of_int (UInt32.t'int size) ] s2
+    | s2 = UInt64.mul [%#slib] {_6} {_8} (fun (_x: UInt64.t) -> [ &_ret <- _x ] s3)
+    | s3 = return {_ret} ] ]
+  [ & _ret: UInt64.t = Any.any_l ()
+  | & count: UInt32.t = count
+  | & size: UInt32.t = size
+  | & _6: UInt64.t = Any.any_l ()
+  | & _8: UInt64.t = Any.any_l () ])
+  [ return (result: UInt64.t) -> {[@stop_split] [@expl:block_len ensures] [%#slib'0] UInt64.t'int result
+    = UInt32.t'int count * UInt32.t'int size}
+    (! return {result}) ]

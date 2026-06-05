@@ -1,0 +1,786 @@
+filename	type	release_id	size	date	sig_availability	url
+tz32code2006b.tar.gz	tzcode	2006b			no_signature_available	https://data.iana.org/time-zones/releases/tz32code2006b.tar.gz
+tz64code2006b.tar.gz	tzcode	2006b			no_signature_available	https://data.iana.org/time-zones/releases/tz64code2006b.tar.gz
+tzcode1996m.tar.gz	tzcode	1996m			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1996m.tar.gz
+tzcode1996n.tar.gz	tzcode	1996n			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1996n.tar.gz
+tzcode1996o.tar.gz	tzcode	1996o			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1996o.tar.gz
+tzcode1997a.tar.gz	tzcode	1997a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997a.tar.gz
+tzcode1997b.tar.gz	tzcode	1997b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997b.tar.gz
+tzcode1997c.tar.gz	tzcode	1997c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997c.tar.gz
+tzcode1997d.tar.gz	tzcode	1997d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997d.tar.gz
+tzcode1997e.tar.gz	tzcode	1997e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997e.tar.gz
+tzcode1997f.tar.gz	tzcode	1997f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997f.tar.gz
+tzcode1997g.tar.gz	tzcode	1997g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997g.tar.gz
+tzcode1997h.tar.gz	tzcode	1997h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997h.tar.gz
+tzcode1997i.tar.gz	tzcode	1997i			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1997i.tar.gz
+tzcode1998a.tar.gz	tzcode	1998a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998a.tar.gz
+tzcode1998b.tar.gz	tzcode	1998b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998b.tar.gz
+tzcode1998c.tar.gz	tzcode	1998c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998c.tar.gz
+tzcode1998d.tar.gz	tzcode	1998d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998d.tar.gz
+tzcode1998e.tar.gz	tzcode	1998e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998e.tar.gz
+tzcode1998f.tar.gz	tzcode	1998f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998f.tar.gz
+tzcode1998g.tar.gz	tzcode	1998g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998g.tar.gz
+tzcode1998h.tar.gz	tzcode	1998h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1998h.tar.gz
+tzcode1999a.tar.gz	tzcode	1999a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999a.tar.gz
+tzcode1999b.tar.gz	tzcode	1999b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999b.tar.gz
+tzcode1999c.tar.gz	tzcode	1999c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999c.tar.gz
+tzcode1999d.tar.gz	tzcode	1999d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999d.tar.gz
+tzcode1999e.tar.gz	tzcode	1999e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999e.tar.gz
+tzcode1999f.tar.gz	tzcode	1999f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999f.tar.gz
+tzcode1999g.tar.gz	tzcode	1999g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999g.tar.gz
+tzcode1999h.tar.gz	tzcode	1999h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999h.tar.gz
+tzcode1999i.tar.gz	tzcode	1999i			no_signature_available	https://data.iana.org/time-zones/releases/tzcode1999i.tar.gz
+tzcode2000a.tar.gz	tzcode	2000a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000a.tar.gz
+tzcode2000b.tar.gz	tzcode	2000b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000b.tar.gz
+tzcode2000c.tar.gz	tzcode	2000c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000c.tar.gz
+tzcode2000d.tar.gz	tzcode	2000d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000d.tar.gz
+tzcode2000e.tar.gz	tzcode	2000e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000e.tar.gz
+tzcode2000f.tar.gz	tzcode	2000f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000f.tar.gz
+tzcode2000g.tar.gz	tzcode	2000g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000g.tar.gz
+tzcode2000h.tar.gz	tzcode	2000h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2000h.tar.gz
+tzcode2001a.tar.gz	tzcode	2001a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2001a.tar.gz
+tzcode2001b.tar.gz	tzcode	2001b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2001b.tar.gz
+tzcode2001c.tar.gz	tzcode	2001c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2001c.tar.gz
+tzcode2001d.tar.gz	tzcode	2001d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2001d.tar.gz
+tzcode2002b.tar.gz	tzcode	2002b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2002b.tar.gz
+tzcode2002c.tar.gz	tzcode	2002c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2002c.tar.gz
+tzcode2002d.tar.gz	tzcode	2002d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2002d.tar.gz
+tzcode2003a.tar.gz	tzcode	2003a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2003a.tar.gz
+tzcode2003b.tar.gz	tzcode	2003b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2003b.tar.gz
+tzcode2003c.tar.gz	tzcode	2003c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2003c.tar.gz
+tzcode2003d.tar.gz	tzcode	2003d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2003d.tar.gz
+tzcode2003e.tar.gz	tzcode	2003e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2003e.tar.gz
+tzcode2004a.tar.gz	tzcode	2004a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004a.tar.gz
+tzcode2004b.tar.gz	tzcode	2004b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004b.tar.gz
+tzcode2004c.tar.gz	tzcode	2004c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004c.tar.gz
+tzcode2004d.tar.gz	tzcode	2004d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004d.tar.gz
+tzcode2004e.tar.gz	tzcode	2004e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004e.tar.gz
+tzcode2004f.tar.gz	tzcode	2004f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004f.tar.gz
+tzcode2004g.tar.gz	tzcode	2004g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004g.tar.gz
+tzcode2004h.tar.gz	tzcode	2004h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004h.tar.gz
+tzcode2004i.tar.gz	tzcode	2004i			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2004i.tar.gz
+tzcode2005a.tar.gz	tzcode	2005a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005a.tar.gz
+tzcode2005b.tar.gz	tzcode	2005b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005b.tar.gz
+tzcode2005c.tar.gz	tzcode	2005c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005c.tar.gz
+tzcode2005d.tar.gz	tzcode	2005d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005d.tar.gz
+tzcode2005e.tar.gz	tzcode	2005e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005e.tar.gz
+tzcode2005f.tar.gz	tzcode	2005f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005f.tar.gz
+tzcode2005g.tar.gz	tzcode	2005g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005g.tar.gz
+tzcode2005h.tar.gz	tzcode	2005h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005h.tar.gz
+tzcode2005j.tar.gz	tzcode	2005j			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005j.tar.gz
+tzcode2005k.tar.gz	tzcode	2005k			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005k.tar.gz
+tzcode2005l.tar.gz	tzcode	2005l			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005l.tar.gz
+tzcode2005m.tar.gz	tzcode	2005m			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005m.tar.gz
+tzcode2005n.tar.gz	tzcode	2005n			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005n.tar.gz
+tzcode2005o.tar.gz	tzcode	2005o			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005o.tar.gz
+tzcode2005p.tar.gz	tzcode	2005p			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005p.tar.gz
+tzcode2005q.tar.gz	tzcode	2005q			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005q.tar.gz
+tzcode2005r.tar.gz	tzcode	2005r			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2005r.tar.gz
+tzcode2006a.tar.gz	tzcode	2006a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006a.tar.gz
+tzcode2006c.tar.gz	tzcode	2006c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006c.tar.gz
+tzcode2006d.tar.gz	tzcode	2006d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006d.tar.gz
+tzcode2006f.tar.gz	tzcode	2006f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006f.tar.gz
+tzcode2006g.tar.gz	tzcode	2006g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006g.tar.gz
+tzcode2006h.tar.gz	tzcode	2006h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006h.tar.gz
+tzcode2006i.tar.gz	tzcode	2006i			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006i.tar.gz
+tzcode2006j.tar.gz	tzcode	2006j			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006j.tar.gz
+tzcode2006k.tar.gz	tzcode	2006k			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006k.tar.gz
+tzcode2006m.tar.gz	tzcode	2006m			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006m.tar.gz
+tzcode2006n.tar.gz	tzcode	2006n			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006n.tar.gz
+tzcode2006o.tar.gz	tzcode	2006o			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006o.tar.gz
+tzcode2006p.tar.gz	tzcode	2006p			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2006p.tar.gz
+tzcode2007a.tar.gz	tzcode	2007a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007a.tar.gz
+tzcode2007b.tar.gz	tzcode	2007b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007b.tar.gz
+tzcode2007c.tar.gz	tzcode	2007c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007c.tar.gz
+tzcode2007d.tar.gz	tzcode	2007d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007d.tar.gz
+tzcode2007e.tar.gz	tzcode	2007e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007e.tar.gz
+tzcode2007f.tar.gz	tzcode	2007f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007f.tar.gz
+tzcode2007g.tar.gz	tzcode	2007g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007g.tar.gz
+tzcode2007h.tar.gz	tzcode	2007h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007h.tar.gz
+tzcode2007j.tar.gz	tzcode	2007j			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007j.tar.gz
+tzcode2007k.tar.gz	tzcode	2007k			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2007k.tar.gz
+tzcode2008a.tar.gz	tzcode	2008a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2008a.tar.gz
+tzcode2008e.tar.gz	tzcode	2008e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2008e.tar.gz
+tzcode2008g.tar.gz	tzcode	2008g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2008g.tar.gz
+tzcode2008h.tar.gz	tzcode	2008h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2008h.tar.gz
+tzcode2009a.tar.gz	tzcode	2009a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009a.tar.gz
+tzcode2009b.tar.gz	tzcode	2009b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009b.tar.gz
+tzcode2009d.tar.gz	tzcode	2009d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009d.tar.gz
+tzcode2009e.tar.gz	tzcode	2009e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009e.tar.gz
+tzcode2009h.tar.gz	tzcode	2009h			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009h.tar.gz
+tzcode2009i.tar.gz	tzcode	2009i			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009i.tar.gz
+tzcode2009k.tar.gz	tzcode	2009k			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009k.tar.gz
+tzcode2009q.tar.gz	tzcode	2009q			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009q.tar.gz
+tzcode2009r.tar.gz	tzcode	2009r			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009r.tar.gz
+tzcode2009t.tar.gz	tzcode	2009t			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2009t.tar.gz
+tzcode2010a.tar.gz	tzcode	2010a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010a.tar.gz
+tzcode2010c.tar.gz	tzcode	2010c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010c.tar.gz
+tzcode2010f.tar.gz	tzcode	2010f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010f.tar.gz
+tzcode2010j.tar.gz	tzcode	2010j			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010j.tar.gz
+tzcode2010k.tar.gz	tzcode	2010k			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010k.tar.gz
+tzcode2010l.tar.gz	tzcode	2010l			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010l.tar.gz
+tzcode2010m.tar.gz	tzcode	2010m			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010m.tar.gz
+tzcode2010n.tar.gz	tzcode	2010n			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2010n.tar.gz
+tzcode2011a.tar.gz	tzcode	2011a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011a.tar.gz
+tzcode2011b.tar.gz	tzcode	2011b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011b.tar.gz
+tzcode2011c.tar.gz	tzcode	2011c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011c.tar.gz
+tzcode2011d.tar.gz	tzcode	2011d			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011d.tar.gz
+tzcode2011e.tar.gz	tzcode	2011e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011e.tar.gz
+tzcode2011g.tar.gz	tzcode	2011g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011g.tar.gz
+tzcode2011i.tar.gz	tzcode	2011i			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2011i.tar.gz
+tzcode2012a.tar.gz	tzcode	2012a			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2012a.tar.gz
+tzcode2012b.tar.gz	tzcode	2012b			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2012b.tar.gz
+tzcode2012c.tar.gz	tzcode	2012c			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2012c.tar.gz
+tzcode2012e.tar.gz	tzcode	2012e			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2012e.tar.gz
+tzcode2012f.tar.gz	tzcode	2012f			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2012f.tar.gz
+tzcode2012g.tar.gz	tzcode	2012g			no_signature_available	https://data.iana.org/time-zones/releases/tzcode2012g.tar.gz
+tzcode2012h.tar.gz	tzcode	2012h			sign_available_legacy	https://data.iana.org/time-zones/releases/tzcode2012h.tar.gz
+tzcode2012h.tar.gz.sign	signature	2012h				https://data.iana.org/time-zones/releases/tzcode2012h.tar.gz.sign
+tzcode2012i.tar.gz	tzcode	2012i			sign_available_legacy	https://data.iana.org/time-zones/releases/tzcode2012i.tar.gz
+tzcode2012i.tar.gz.sign	signature	2012i				https://data.iana.org/time-zones/releases/tzcode2012i.tar.gz.sign
+tzcode2012j.tar.gz	tzcode	2012j			asc_available	https://data.iana.org/time-zones/releases/tzcode2012j.tar.gz
+tzcode2012j.tar.gz.asc	signature	2012j				https://data.iana.org/time-zones/releases/tzcode2012j.tar.gz.asc
+tzcode2013a.tar.gz	tzcode	2013a			asc_available	https://data.iana.org/time-zones/releases/tzcode2013a.tar.gz
+tzcode2013a.tar.gz.asc	signature	2013a				https://data.iana.org/time-zones/releases/tzcode2013a.tar.gz.asc
+tzcode2013b.tar.gz	tzcode	2013b			asc_available	https://data.iana.org/time-zones/releases/tzcode2013b.tar.gz
+tzcode2013b.tar.gz.asc	signature	2013b				https://data.iana.org/time-zones/releases/tzcode2013b.tar.gz.asc
+tzcode2013c.tar.gz	tzcode	2013c			asc_available	https://data.iana.org/time-zones/releases/tzcode2013c.tar.gz
+tzcode2013c.tar.gz.asc	signature	2013c				https://data.iana.org/time-zones/releases/tzcode2013c.tar.gz.asc
+tzcode2013d.tar.gz	tzcode	2013d			asc_available	https://data.iana.org/time-zones/releases/tzcode2013d.tar.gz
+tzcode2013d.tar.gz.asc	signature	2013d				https://data.iana.org/time-zones/releases/tzcode2013d.tar.gz.asc
+tzcode2013e.tar.gz	tzcode	2013e			asc_available	https://data.iana.org/time-zones/releases/tzcode2013e.tar.gz
+tzcode2013e.tar.gz.asc	signature	2013e				https://data.iana.org/time-zones/releases/tzcode2013e.tar.gz.asc
+tzcode2013f.tar.gz	tzcode	2013f			asc_available	https://data.iana.org/time-zones/releases/tzcode2013f.tar.gz
+tzcode2013f.tar.gz.asc	signature	2013f				https://data.iana.org/time-zones/releases/tzcode2013f.tar.gz.asc
+tzcode2013g.tar.gz	tzcode	2013g			asc_available	https://data.iana.org/time-zones/releases/tzcode2013g.tar.gz
+tzcode2013g.tar.gz.asc	signature	2013g				https://data.iana.org/time-zones/releases/tzcode2013g.tar.gz.asc
+tzcode2013h.tar.gz	tzcode	2013h			asc_available	https://data.iana.org/time-zones/releases/tzcode2013h.tar.gz
+tzcode2013h.tar.gz.asc	signature	2013h				https://data.iana.org/time-zones/releases/tzcode2013h.tar.gz.asc
+tzcode2013i.tar.gz	tzcode	2013i			asc_available	https://data.iana.org/time-zones/releases/tzcode2013i.tar.gz
+tzcode2013i.tar.gz.asc	signature	2013i				https://data.iana.org/time-zones/releases/tzcode2013i.tar.gz.asc
+tzcode2014a.tar.gz	tzcode	2014a			asc_available	https://data.iana.org/time-zones/releases/tzcode2014a.tar.gz
+tzcode2014a.tar.gz.asc	signature	2014a				https://data.iana.org/time-zones/releases/tzcode2014a.tar.gz.asc
+tzcode2014b.tar.gz	tzcode	2014b			asc_available	https://data.iana.org/time-zones/releases/tzcode2014b.tar.gz
+tzcode2014b.tar.gz.asc	signature	2014b				https://data.iana.org/time-zones/releases/tzcode2014b.tar.gz.asc
+tzcode2014c.tar.gz	tzcode	2014c			asc_available	https://data.iana.org/time-zones/releases/tzcode2014c.tar.gz
+tzcode2014c.tar.gz.asc	signature	2014c				https://data.iana.org/time-zones/releases/tzcode2014c.tar.gz.asc
+tzcode2014d.tar.gz	tzcode	2014d			asc_available	https://data.iana.org/time-zones/releases/tzcode2014d.tar.gz
+tzcode2014d.tar.gz.asc	signature	2014d				https://data.iana.org/time-zones/releases/tzcode2014d.tar.gz.asc
+tzcode2014e.tar.gz	tzcode	2014e			asc_available	https://data.iana.org/time-zones/releases/tzcode2014e.tar.gz
+tzcode2014e.tar.gz.asc	signature	2014e				https://data.iana.org/time-zones/releases/tzcode2014e.tar.gz.asc
+tzcode2014f.tar.gz	tzcode	2014f			asc_available	https://data.iana.org/time-zones/releases/tzcode2014f.tar.gz
+tzcode2014f.tar.gz.asc	signature	2014f				https://data.iana.org/time-zones/releases/tzcode2014f.tar.gz.asc
+tzcode2014g.tar.gz	tzcode	2014g			asc_available	https://data.iana.org/time-zones/releases/tzcode2014g.tar.gz
+tzcode2014g.tar.gz.asc	signature	2014g				https://data.iana.org/time-zones/releases/tzcode2014g.tar.gz.asc
+tzcode2014h.tar.gz	tzcode	2014h			asc_available	https://data.iana.org/time-zones/releases/tzcode2014h.tar.gz
+tzcode2014h.tar.gz.asc	signature	2014h				https://data.iana.org/time-zones/releases/tzcode2014h.tar.gz.asc
+tzcode2014i.tar.gz	tzcode	2014i			asc_available	https://data.iana.org/time-zones/releases/tzcode2014i.tar.gz
+tzcode2014i.tar.gz.asc	signature	2014i				https://data.iana.org/time-zones/releases/tzcode2014i.tar.gz.asc
+tzcode2014j.tar.gz	tzcode	2014j			asc_available	https://data.iana.org/time-zones/releases/tzcode2014j.tar.gz
+tzcode2014j.tar.gz.asc	signature	2014j				https://data.iana.org/time-zones/releases/tzcode2014j.tar.gz.asc
+tzcode2015a.tar.gz	tzcode	2015a			asc_available	https://data.iana.org/time-zones/releases/tzcode2015a.tar.gz
+tzcode2015a.tar.gz.asc	signature	2015a				https://data.iana.org/time-zones/releases/tzcode2015a.tar.gz.asc
+tzcode2015b.tar.gz	tzcode	2015b			asc_available	https://data.iana.org/time-zones/releases/tzcode2015b.tar.gz
+tzcode2015b.tar.gz.asc	signature	2015b				https://data.iana.org/time-zones/releases/tzcode2015b.tar.gz.asc
+tzcode2015c.tar.gz	tzcode	2015c			asc_available	https://data.iana.org/time-zones/releases/tzcode2015c.tar.gz
+tzcode2015c.tar.gz.asc	signature	2015c				https://data.iana.org/time-zones/releases/tzcode2015c.tar.gz.asc
+tzcode2015d.tar.gz	tzcode	2015d			asc_available	https://data.iana.org/time-zones/releases/tzcode2015d.tar.gz
+tzcode2015d.tar.gz.asc	signature	2015d				https://data.iana.org/time-zones/releases/tzcode2015d.tar.gz.asc
+tzcode2015e.tar.gz	tzcode	2015e			asc_available	https://data.iana.org/time-zones/releases/tzcode2015e.tar.gz
+tzcode2015e.tar.gz.asc	signature	2015e				https://data.iana.org/time-zones/releases/tzcode2015e.tar.gz.asc
+tzcode2015f.tar.gz	tzcode	2015f			asc_available	https://data.iana.org/time-zones/releases/tzcode2015f.tar.gz
+tzcode2015f.tar.gz.asc	signature	2015f				https://data.iana.org/time-zones/releases/tzcode2015f.tar.gz.asc
+tzcode2015g.tar.gz	tzcode	2015g			asc_available	https://data.iana.org/time-zones/releases/tzcode2015g.tar.gz
+tzcode2015g.tar.gz.asc	signature	2015g				https://data.iana.org/time-zones/releases/tzcode2015g.tar.gz.asc
+tzcode2016a.tar.gz	tzcode	2016a			asc_available	https://data.iana.org/time-zones/releases/tzcode2016a.tar.gz
+tzcode2016a.tar.gz.asc	signature	2016a				https://data.iana.org/time-zones/releases/tzcode2016a.tar.gz.asc
+tzcode2016b.tar.gz	tzcode	2016b			asc_available	https://data.iana.org/time-zones/releases/tzcode2016b.tar.gz
+tzcode2016b.tar.gz.asc	signature	2016b				https://data.iana.org/time-zones/releases/tzcode2016b.tar.gz.asc
+tzcode2016c.tar.gz	tzcode	2016c			asc_available	https://data.iana.org/time-zones/releases/tzcode2016c.tar.gz
+tzcode2016c.tar.gz.asc	signature	2016c				https://data.iana.org/time-zones/releases/tzcode2016c.tar.gz.asc
+tzcode2016d.tar.gz	tzcode	2016d			asc_available	https://data.iana.org/time-zones/releases/tzcode2016d.tar.gz
+tzcode2016d.tar.gz.asc	signature	2016d				https://data.iana.org/time-zones/releases/tzcode2016d.tar.gz.asc
+tzcode2016e.tar.gz	tzcode	2016e			asc_available	https://data.iana.org/time-zones/releases/tzcode2016e.tar.gz
+tzcode2016e.tar.gz.asc	signature	2016e				https://data.iana.org/time-zones/releases/tzcode2016e.tar.gz.asc
+tzcode2016f.tar.gz	tzcode	2016f			asc_available	https://data.iana.org/time-zones/releases/tzcode2016f.tar.gz
+tzcode2016f.tar.gz.asc	signature	2016f				https://data.iana.org/time-zones/releases/tzcode2016f.tar.gz.asc
+tzcode2016g.tar.gz	tzcode	2016g			asc_available	https://data.iana.org/time-zones/releases/tzcode2016g.tar.gz
+tzcode2016g.tar.gz.asc	signature	2016g				https://data.iana.org/time-zones/releases/tzcode2016g.tar.gz.asc
+tzcode2016h.tar.gz	tzcode	2016h			asc_available	https://data.iana.org/time-zones/releases/tzcode2016h.tar.gz
+tzcode2016h.tar.gz.asc	signature	2016h				https://data.iana.org/time-zones/releases/tzcode2016h.tar.gz.asc
+tzcode2016i.tar.gz	tzcode	2016i			asc_available	https://data.iana.org/time-zones/releases/tzcode2016i.tar.gz
+tzcode2016i.tar.gz.asc	signature	2016i				https://data.iana.org/time-zones/releases/tzcode2016i.tar.gz.asc
+tzcode2016j.tar.gz	tzcode	2016j			asc_available	https://data.iana.org/time-zones/releases/tzcode2016j.tar.gz
+tzcode2016j.tar.gz.asc	signature	2016j				https://data.iana.org/time-zones/releases/tzcode2016j.tar.gz.asc
+tzcode2017a.tar.gz	tzcode	2017a			asc_available	https://data.iana.org/time-zones/releases/tzcode2017a.tar.gz
+tzcode2017a.tar.gz.asc	signature	2017a				https://data.iana.org/time-zones/releases/tzcode2017a.tar.gz.asc
+tzcode2017b.tar.gz	tzcode	2017b			asc_available	https://data.iana.org/time-zones/releases/tzcode2017b.tar.gz
+tzcode2017b.tar.gz.asc	signature	2017b				https://data.iana.org/time-zones/releases/tzcode2017b.tar.gz.asc
+tzcode2017c.tar.gz	tzcode	2017c			asc_available	https://data.iana.org/time-zones/releases/tzcode2017c.tar.gz
+tzcode2017c.tar.gz.asc	signature	2017c				https://data.iana.org/time-zones/releases/tzcode2017c.tar.gz.asc
+tzcode2018a.tar.gz	tzcode	2018a			asc_available	https://data.iana.org/time-zones/releases/tzcode2018a.tar.gz
+tzcode2018a.tar.gz.asc	signature	2018a				https://data.iana.org/time-zones/releases/tzcode2018a.tar.gz.asc
+tzcode2018b.tar.gz	tzcode	2018b			asc_available	https://data.iana.org/time-zones/releases/tzcode2018b.tar.gz
+tzcode2018b.tar.gz.asc	signature	2018b				https://data.iana.org/time-zones/releases/tzcode2018b.tar.gz.asc
+tzcode2018c.tar.gz	tzcode	2018c			asc_available	https://data.iana.org/time-zones/releases/tzcode2018c.tar.gz
+tzcode2018c.tar.gz.asc	signature	2018c				https://data.iana.org/time-zones/releases/tzcode2018c.tar.gz.asc
+tzcode2018d.tar.gz	tzcode	2018d			asc_available	https://data.iana.org/time-zones/releases/tzcode2018d.tar.gz
+tzcode2018d.tar.gz.asc	signature	2018d				https://data.iana.org/time-zones/releases/tzcode2018d.tar.gz.asc
+tzcode2018e.tar.gz	tzcode	2018e			asc_available	https://data.iana.org/time-zones/releases/tzcode2018e.tar.gz
+tzcode2018e.tar.gz.asc	signature	2018e				https://data.iana.org/time-zones/releases/tzcode2018e.tar.gz.asc
+tzcode2018f.tar.gz	tzcode	2018f			asc_available	https://data.iana.org/time-zones/releases/tzcode2018f.tar.gz
+tzcode2018f.tar.gz.asc	signature	2018f				https://data.iana.org/time-zones/releases/tzcode2018f.tar.gz.asc
+tzcode2018g.tar.gz	tzcode	2018g			asc_available	https://data.iana.org/time-zones/releases/tzcode2018g.tar.gz
+tzcode2018g.tar.gz.asc	signature	2018g				https://data.iana.org/time-zones/releases/tzcode2018g.tar.gz.asc
+tzcode2018h.tar.gz	tzcode	2018h			asc_available	https://data.iana.org/time-zones/releases/tzcode2018h.tar.gz
+tzcode2018h.tar.gz.asc	signature	2018h				https://data.iana.org/time-zones/releases/tzcode2018h.tar.gz.asc
+tzcode2018i.tar.gz	tzcode	2018i			asc_available	https://data.iana.org/time-zones/releases/tzcode2018i.tar.gz
+tzcode2018i.tar.gz.asc	signature	2018i				https://data.iana.org/time-zones/releases/tzcode2018i.tar.gz.asc
+tzcode2019a.tar.gz	tzcode	2019a			asc_available	https://data.iana.org/time-zones/releases/tzcode2019a.tar.gz
+tzcode2019a.tar.gz.asc	signature	2019a				https://data.iana.org/time-zones/releases/tzcode2019a.tar.gz.asc
+tzcode2019b.tar.gz	tzcode	2019b			asc_available	https://data.iana.org/time-zones/releases/tzcode2019b.tar.gz
+tzcode2019b.tar.gz.asc	signature	2019b				https://data.iana.org/time-zones/releases/tzcode2019b.tar.gz.asc
+tzcode2019c.tar.gz	tzcode	2019c			asc_available	https://data.iana.org/time-zones/releases/tzcode2019c.tar.gz
+tzcode2019c.tar.gz.asc	signature	2019c				https://data.iana.org/time-zones/releases/tzcode2019c.tar.gz.asc
+tzcode2020a.tar.gz	tzcode	2020a			asc_available	https://data.iana.org/time-zones/releases/tzcode2020a.tar.gz
+tzcode2020a.tar.gz.asc	signature	2020a				https://data.iana.org/time-zones/releases/tzcode2020a.tar.gz.asc
+tzcode2020b.tar.gz	tzcode	2020b			asc_available	https://data.iana.org/time-zones/releases/tzcode2020b.tar.gz
+tzcode2020b.tar.gz.asc	signature	2020b				https://data.iana.org/time-zones/releases/tzcode2020b.tar.gz.asc
+tzcode2020c.tar.gz	tzcode	2020c			asc_available	https://data.iana.org/time-zones/releases/tzcode2020c.tar.gz
+tzcode2020c.tar.gz.asc	signature	2020c				https://data.iana.org/time-zones/releases/tzcode2020c.tar.gz.asc
+tzcode2020d.tar.gz	tzcode	2020d			asc_available	https://data.iana.org/time-zones/releases/tzcode2020d.tar.gz
+tzcode2020d.tar.gz.asc	signature	2020d				https://data.iana.org/time-zones/releases/tzcode2020d.tar.gz.asc
+tzcode2020e.tar.gz	tzcode	2020e			asc_available	https://data.iana.org/time-zones/releases/tzcode2020e.tar.gz
+tzcode2020e.tar.gz.asc	signature	2020e				https://data.iana.org/time-zones/releases/tzcode2020e.tar.gz.asc
+tzcode2020f.tar.gz	tzcode	2020f			asc_available	https://data.iana.org/time-zones/releases/tzcode2020f.tar.gz
+tzcode2020f.tar.gz.asc	signature	2020f				https://data.iana.org/time-zones/releases/tzcode2020f.tar.gz.asc
+tzcode2021a.tar.gz	tzcode	2021a			asc_available	https://data.iana.org/time-zones/releases/tzcode2021a.tar.gz
+tzcode2021a.tar.gz.asc	signature	2021a				https://data.iana.org/time-zones/releases/tzcode2021a.tar.gz.asc
+tzcode2021b.tar.gz	tzcode	2021b			asc_available	https://data.iana.org/time-zones/releases/tzcode2021b.tar.gz
+tzcode2021b.tar.gz.asc	signature	2021b				https://data.iana.org/time-zones/releases/tzcode2021b.tar.gz.asc
+tzcode2021c.tar.gz	tzcode	2021c			asc_available	https://data.iana.org/time-zones/releases/tzcode2021c.tar.gz
+tzcode2021c.tar.gz.asc	signature	2021c				https://data.iana.org/time-zones/releases/tzcode2021c.tar.gz.asc
+tzcode2021d.tar.gz	tzcode	2021d			asc_available	https://data.iana.org/time-zones/releases/tzcode2021d.tar.gz
+tzcode2021d.tar.gz.asc	signature	2021d				https://data.iana.org/time-zones/releases/tzcode2021d.tar.gz.asc
+tzcode2021e.tar.gz	tzcode	2021e			asc_available	https://data.iana.org/time-zones/releases/tzcode2021e.tar.gz
+tzcode2021e.tar.gz.asc	signature	2021e				https://data.iana.org/time-zones/releases/tzcode2021e.tar.gz.asc
+tzcode2022a.tar.gz	tzcode	2022a			asc_available	https://data.iana.org/time-zones/releases/tzcode2022a.tar.gz
+tzcode2022a.tar.gz.asc	signature	2022a				https://data.iana.org/time-zones/releases/tzcode2022a.tar.gz.asc
+tzcode2022b.tar.gz	tzcode	2022b			asc_available	https://data.iana.org/time-zones/releases/tzcode2022b.tar.gz
+tzcode2022b.tar.gz.asc	signature	2022b				https://data.iana.org/time-zones/releases/tzcode2022b.tar.gz.asc
+tzcode2022c.tar.gz	tzcode	2022c			asc_available	https://data.iana.org/time-zones/releases/tzcode2022c.tar.gz
+tzcode2022c.tar.gz.asc	signature	2022c				https://data.iana.org/time-zones/releases/tzcode2022c.tar.gz.asc
+tzcode2022d.tar.gz	tzcode	2022d			asc_available	https://data.iana.org/time-zones/releases/tzcode2022d.tar.gz
+tzcode2022d.tar.gz.asc	signature	2022d				https://data.iana.org/time-zones/releases/tzcode2022d.tar.gz.asc
+tzcode2022e.tar.gz	tzcode	2022e			asc_available	https://data.iana.org/time-zones/releases/tzcode2022e.tar.gz
+tzcode2022e.tar.gz.asc	signature	2022e				https://data.iana.org/time-zones/releases/tzcode2022e.tar.gz.asc
+tzcode2022f.tar.gz	tzcode	2022f			asc_available	https://data.iana.org/time-zones/releases/tzcode2022f.tar.gz
+tzcode2022f.tar.gz.asc	signature	2022f				https://data.iana.org/time-zones/releases/tzcode2022f.tar.gz.asc
+tzcode2022g.tar.gz	tzcode	2022g			asc_available	https://data.iana.org/time-zones/releases/tzcode2022g.tar.gz
+tzcode2022g.tar.gz.asc	signature	2022g				https://data.iana.org/time-zones/releases/tzcode2022g.tar.gz.asc
+tzcode2023a.tar.gz	tzcode	2023a			asc_available	https://data.iana.org/time-zones/releases/tzcode2023a.tar.gz
+tzcode2023a.tar.gz.asc	signature	2023a				https://data.iana.org/time-zones/releases/tzcode2023a.tar.gz.asc
+tzcode2023b.tar.gz	tzcode	2023b			asc_available	https://data.iana.org/time-zones/releases/tzcode2023b.tar.gz
+tzcode2023b.tar.gz.asc	signature	2023b				https://data.iana.org/time-zones/releases/tzcode2023b.tar.gz.asc
+tzcode2023c.tar.gz	tzcode	2023c			asc_available	https://data.iana.org/time-zones/releases/tzcode2023c.tar.gz
+tzcode2023c.tar.gz.asc	signature	2023c				https://data.iana.org/time-zones/releases/tzcode2023c.tar.gz.asc
+tzcode2023d.tar.gz	tzcode	2023d			asc_available	https://data.iana.org/time-zones/releases/tzcode2023d.tar.gz
+tzcode2023d.tar.gz.asc	signature	2023d				https://data.iana.org/time-zones/releases/tzcode2023d.tar.gz.asc
+tzcode2024a.tar.gz	tzcode	2024a			asc_available	https://data.iana.org/time-zones/releases/tzcode2024a.tar.gz
+tzcode2024a.tar.gz.asc	signature	2024a				https://data.iana.org/time-zones/releases/tzcode2024a.tar.gz.asc
+tzcode2024b.tar.gz	tzcode	2024b			asc_available	https://data.iana.org/time-zones/releases/tzcode2024b.tar.gz
+tzcode2024b.tar.gz.asc	signature	2024b				https://data.iana.org/time-zones/releases/tzcode2024b.tar.gz.asc
+tzcode2025a.tar.gz	tzcode	2025a			asc_available	https://data.iana.org/time-zones/releases/tzcode2025a.tar.gz
+tzcode2025a.tar.gz.asc	signature	2025a				https://data.iana.org/time-zones/releases/tzcode2025a.tar.gz.asc
+tzcode2025b.tar.gz	tzcode	2025b			asc_available	https://data.iana.org/time-zones/releases/tzcode2025b.tar.gz
+tzcode2025b.tar.gz.asc	signature	2025b				https://data.iana.org/time-zones/releases/tzcode2025b.tar.gz.asc
+tzcode2025c.tar.gz	tzcode	2025c			asc_available	https://data.iana.org/time-zones/releases/tzcode2025c.tar.gz
+tzcode2025c.tar.gz.asc	signature	2025c				https://data.iana.org/time-zones/releases/tzcode2025c.tar.gz.asc
+tzcode2026a.tar.gz	tzcode	2026a			asc_available	https://data.iana.org/time-zones/releases/tzcode2026a.tar.gz
+tzcode2026a.tar.gz.asc	signature	2026a				https://data.iana.org/time-zones/releases/tzcode2026a.tar.gz.asc
+tzcode2026b.tar.gz	tzcode	2026b			asc_available	https://data.iana.org/time-zones/releases/tzcode2026b.tar.gz
+tzcode2026b.tar.gz.asc	signature	2026b				https://data.iana.org/time-zones/releases/tzcode2026b.tar.gz.asc
+tzcode93.tar.Z	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode93.tar.Z
+tzcode93c.tar.Z	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode93c.tar.Z
+tzcode93d.tar.Z	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode93d.tar.Z
+tzcode93e.tar.Z	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode93e.tar.Z
+tzcode93f.tar.Z	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode93f.tar.Z
+tzcode93g.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode93g.tar.gz
+tzcode94b.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode94b.tar.gz
+tzcode94c.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode94c.tar.gz
+tzcode94d.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode94d.tar.gz
+tzcode94e.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode94e.tar.gz
+tzcode94g.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode94g.tar.gz
+tzcode94h.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode94h.tar.gz
+tzcode95b.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95b.tar.gz
+tzcode95c.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95c.tar.gz
+tzcode95d.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95d.tar.gz
+tzcode95e.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95e.tar.gz
+tzcode95g.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95g.tar.gz
+tzcode95h.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95h.tar.gz
+tzcode95i.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode95i.tar.gz
+tzcode96a.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96a.tar.gz
+tzcode96b.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96b.tar.gz
+tzcode96c.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96c.tar.gz
+tzcode96d.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96d.tar.gz
+tzcode96g.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96g.tar.gz
+tzcode96h.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96h.tar.gz
+tzcode96i.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96i.tar.gz
+tzcode96j.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96j.tar.gz
+tzcode96l.tar.gz	tzcode				no_signature_available	https://data.iana.org/time-zones/releases/tzcode96l.tar.gz
+tzdata1996l.tar.gz	tzdata	1996l			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1996l.tar.gz
+tzdata1996n.tar.gz	tzdata	1996n			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1996n.tar.gz
+tzdata1997a.tar.gz	tzdata	1997a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997a.tar.gz
+tzdata1997b.tar.gz	tzdata	1997b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997b.tar.gz
+tzdata1997c.tar.gz	tzdata	1997c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997c.tar.gz
+tzdata1997d.tar.gz	tzdata	1997d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997d.tar.gz
+tzdata1997e.tar.gz	tzdata	1997e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997e.tar.gz
+tzdata1997f.tar.gz	tzdata	1997f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997f.tar.gz
+tzdata1997g.tar.gz	tzdata	1997g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997g.tar.gz
+tzdata1997h.tar.gz	tzdata	1997h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997h.tar.gz
+tzdata1997i.tar.gz	tzdata	1997i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997i.tar.gz
+tzdata1997j.tar.gz	tzdata	1997j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997j.tar.gz
+tzdata1997k.tar.gz	tzdata	1997k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1997k.tar.gz
+tzdata1998a.tar.gz	tzdata	1998a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998a.tar.gz
+tzdata1998b.tar.gz	tzdata	1998b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998b.tar.gz
+tzdata1998c.tar.gz	tzdata	1998c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998c.tar.gz
+tzdata1998d.tar.gz	tzdata	1998d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998d.tar.gz
+tzdata1998e.tar.gz	tzdata	1998e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998e.tar.gz
+tzdata1998h.tar.gz	tzdata	1998h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998h.tar.gz
+tzdata1998i.tar.gz	tzdata	1998i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1998i.tar.gz
+tzdata1999a.tar.gz	tzdata	1999a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999a.tar.gz
+tzdata1999b.tar.gz	tzdata	1999b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999b.tar.gz
+tzdata1999c.tar.gz	tzdata	1999c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999c.tar.gz
+tzdata1999d.tar.gz	tzdata	1999d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999d.tar.gz
+tzdata1999e.tar.gz	tzdata	1999e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999e.tar.gz
+tzdata1999f.tar.gz	tzdata	1999f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999f.tar.gz
+tzdata1999g.tar.gz	tzdata	1999g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999g.tar.gz
+tzdata1999h.tar.gz	tzdata	1999h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999h.tar.gz
+tzdata1999i.tar.gz	tzdata	1999i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999i.tar.gz
+tzdata1999j.tar.gz	tzdata	1999j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata1999j.tar.gz
+tzdata2000a.tar.gz	tzdata	2000a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000a.tar.gz
+tzdata2000b.tar.gz	tzdata	2000b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000b.tar.gz
+tzdata2000c.tar.gz	tzdata	2000c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000c.tar.gz
+tzdata2000d.tar.gz	tzdata	2000d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000d.tar.gz
+tzdata2000e.tar.gz	tzdata	2000e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000e.tar.gz
+tzdata2000f.tar.gz	tzdata	2000f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000f.tar.gz
+tzdata2000g.tar.gz	tzdata	2000g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000g.tar.gz
+tzdata2000h.tar.gz	tzdata	2000h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2000h.tar.gz
+tzdata2001a.tar.gz	tzdata	2001a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2001a.tar.gz
+tzdata2001b.tar.gz	tzdata	2001b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2001b.tar.gz
+tzdata2001c.tar.gz	tzdata	2001c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2001c.tar.gz
+tzdata2001d.tar.gz	tzdata	2001d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2001d.tar.gz
+tzdata2002b.tar.gz	tzdata	2002b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2002b.tar.gz
+tzdata2002c.tar.gz	tzdata	2002c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2002c.tar.gz
+tzdata2002d.tar.gz	tzdata	2002d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2002d.tar.gz
+tzdata2003a.tar.gz	tzdata	2003a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2003a.tar.gz
+tzdata2003b.tar.gz	tzdata	2003b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2003b.tar.gz
+tzdata2003c.tar.gz	tzdata	2003c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2003c.tar.gz
+tzdata2003d.tar.gz	tzdata	2003d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2003d.tar.gz
+tzdata2003e.tar.gz	tzdata	2003e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2003e.tar.gz
+tzdata2004a.tar.gz	tzdata	2004a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2004a.tar.gz
+tzdata2004b.tar.gz	tzdata	2004b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2004b.tar.gz
+tzdata2004d.tar.gz	tzdata	2004d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2004d.tar.gz
+tzdata2004e.tar.gz	tzdata	2004e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2004e.tar.gz
+tzdata2004g.tar.gz	tzdata	2004g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2004g.tar.gz
+tzdata2005a.tar.gz	tzdata	2005a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005a.tar.gz
+tzdata2005b.tar.gz	tzdata	2005b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005b.tar.gz
+tzdata2005c.tar.gz	tzdata	2005c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005c.tar.gz
+tzdata2005e.tar.gz	tzdata	2005e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005e.tar.gz
+tzdata2005f.tar.gz	tzdata	2005f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005f.tar.gz
+tzdata2005g.tar.gz	tzdata	2005g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005g.tar.gz
+tzdata2005h.tar.gz	tzdata	2005h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005h.tar.gz
+tzdata2005i.tar.gz	tzdata	2005i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005i.tar.gz
+tzdata2005j.tar.gz	tzdata	2005j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005j.tar.gz
+tzdata2005k.tar.gz	tzdata	2005k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005k.tar.gz
+tzdata2005l.tar.gz	tzdata	2005l			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005l.tar.gz
+tzdata2005m.tar.gz	tzdata	2005m			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005m.tar.gz
+tzdata2005n.tar.gz	tzdata	2005n			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005n.tar.gz
+tzdata2005o.tar.gz	tzdata	2005o			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005o.tar.gz
+tzdata2005p.tar.gz	tzdata	2005p			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005p.tar.gz
+tzdata2005q.tar.gz	tzdata	2005q			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005q.tar.gz
+tzdata2005r.tar.gz	tzdata	2005r			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2005r.tar.gz
+tzdata2006a.tar.gz	tzdata	2006a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006a.tar.gz
+tzdata2006b.tar.gz	tzdata	2006b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006b.tar.gz
+tzdata2006c.tar.gz	tzdata	2006c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006c.tar.gz
+tzdata2006d.tar.gz	tzdata	2006d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006d.tar.gz
+tzdata2006f.tar.gz	tzdata	2006f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006f.tar.gz
+tzdata2006g.tar.gz	tzdata	2006g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006g.tar.gz
+tzdata2006j.tar.gz	tzdata	2006j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006j.tar.gz
+tzdata2006k.tar.gz	tzdata	2006k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006k.tar.gz
+tzdata2006l.tar.gz	tzdata	2006l			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006l.tar.gz
+tzdata2006m.tar.gz	tzdata	2006m			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006m.tar.gz
+tzdata2006n.tar.gz	tzdata	2006n			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006n.tar.gz
+tzdata2006o.tar.gz	tzdata	2006o			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006o.tar.gz
+tzdata2006p.tar.gz	tzdata	2006p			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2006p.tar.gz
+tzdata2007a.tar.gz	tzdata	2007a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007a.tar.gz
+tzdata2007b.tar.gz	tzdata	2007b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007b.tar.gz
+tzdata2007c.tar.gz	tzdata	2007c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007c.tar.gz
+tzdata2007d.tar.gz	tzdata	2007d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007d.tar.gz
+tzdata2007e.tar.gz	tzdata	2007e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007e.tar.gz
+tzdata2007f.tar.gz	tzdata	2007f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007f.tar.gz
+tzdata2007g.tar.gz	tzdata	2007g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007g.tar.gz
+tzdata2007h.tar.gz	tzdata	2007h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007h.tar.gz
+tzdata2007i.tar.gz	tzdata	2007i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007i.tar.gz
+tzdata2007j.tar.gz	tzdata	2007j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007j.tar.gz
+tzdata2007k.tar.gz	tzdata	2007k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2007k.tar.gz
+tzdata2008a.tar.gz	tzdata	2008a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008a.tar.gz
+tzdata2008b.tar.gz	tzdata	2008b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008b.tar.gz
+tzdata2008c.tar.gz	tzdata	2008c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008c.tar.gz
+tzdata2008d.tar.gz	tzdata	2008d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008d.tar.gz
+tzdata2008e.tar.gz	tzdata	2008e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008e.tar.gz
+tzdata2008f.tar.gz	tzdata	2008f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008f.tar.gz
+tzdata2008g.tar.gz	tzdata	2008g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008g.tar.gz
+tzdata2008h.tar.gz	tzdata	2008h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008h.tar.gz
+tzdata2008i.tar.gz	tzdata	2008i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2008i.tar.gz
+tzdata2009a.tar.gz	tzdata	2009a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009a.tar.gz
+tzdata2009b.tar.gz	tzdata	2009b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009b.tar.gz
+tzdata2009c.tar.gz	tzdata	2009c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009c.tar.gz
+tzdata2009d.tar.gz	tzdata	2009d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009d.tar.gz
+tzdata2009e.tar.gz	tzdata	2009e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009e.tar.gz
+tzdata2009f.tar.gz	tzdata	2009f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009f.tar.gz
+tzdata2009g.tar.gz	tzdata	2009g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009g.tar.gz
+tzdata2009h.tar.gz	tzdata	2009h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009h.tar.gz
+tzdata2009i.tar.gz	tzdata	2009i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009i.tar.gz
+tzdata2009j.tar.gz	tzdata	2009j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009j.tar.gz
+tzdata2009k.tar.gz	tzdata	2009k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009k.tar.gz
+tzdata2009l.tar.gz	tzdata	2009l			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009l.tar.gz
+tzdata2009m.tar.gz	tzdata	2009m			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009m.tar.gz
+tzdata2009n.tar.gz	tzdata	2009n			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009n.tar.gz
+tzdata2009o.tar.gz	tzdata	2009o			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009o.tar.gz
+tzdata2009p.tar.gz	tzdata	2009p			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009p.tar.gz
+tzdata2009q.tar.gz	tzdata	2009q			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009q.tar.gz
+tzdata2009r.tar.gz	tzdata	2009r			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009r.tar.gz
+tzdata2009s.tar.gz	tzdata	2009s			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009s.tar.gz
+tzdata2009t.tar.gz	tzdata	2009t			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009t.tar.gz
+tzdata2009u.tar.gz	tzdata	2009u			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2009u.tar.gz
+tzdata2010a.tar.gz	tzdata	2010a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010a.tar.gz
+tzdata2010b.tar.gz	tzdata	2010b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010b.tar.gz
+tzdata2010c.tar.gz	tzdata	2010c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010c.tar.gz
+tzdata2010d.tar.gz	tzdata	2010d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010d.tar.gz
+tzdata2010e.tar.gz	tzdata	2010e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010e.tar.gz
+tzdata2010f.tar.gz	tzdata	2010f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010f.tar.gz
+tzdata2010g.tar.gz	tzdata	2010g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010g.tar.gz
+tzdata2010h.tar.gz	tzdata	2010h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010h.tar.gz
+tzdata2010i.tar.gz	tzdata	2010i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010i.tar.gz
+tzdata2010j.tar.gz	tzdata	2010j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010j.tar.gz
+tzdata2010k.tar.gz	tzdata	2010k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010k.tar.gz
+tzdata2010l.tar.gz	tzdata	2010l			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010l.tar.gz
+tzdata2010m.tar.gz	tzdata	2010m			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010m.tar.gz
+tzdata2010n.tar.gz	tzdata	2010n			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010n.tar.gz
+tzdata2010o.tar.gz	tzdata	2010o			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2010o.tar.gz
+tzdata2011a.tar.gz	tzdata	2011a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011a.tar.gz
+tzdata2011b.tar.gz	tzdata	2011b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011b.tar.gz
+tzdata2011c.tar.gz	tzdata	2011c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011c.tar.gz
+tzdata2011d.tar.gz	tzdata	2011d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011d.tar.gz
+tzdata2011e.tar.gz	tzdata	2011e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011e.tar.gz
+tzdata2011f.tar.gz	tzdata	2011f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011f.tar.gz
+tzdata2011g.tar.gz	tzdata	2011g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011g.tar.gz
+tzdata2011h.tar.gz	tzdata	2011h			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011h.tar.gz
+tzdata2011i.tar.gz	tzdata	2011i			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011i.tar.gz
+tzdata2011j.tar.gz	tzdata	2011j			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011j.tar.gz
+tzdata2011k.tar.gz	tzdata	2011k			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011k.tar.gz
+tzdata2011l.tar.gz	tzdata	2011l			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011l.tar.gz
+tzdata2011m.tar.gz	tzdata	2011m			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011m.tar.gz
+tzdata2011n.tar.gz	tzdata	2011n			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2011n.tar.gz
+tzdata2012a.tar.gz	tzdata	2012a			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012a.tar.gz
+tzdata2012b.tar.gz	tzdata	2012b			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012b.tar.gz
+tzdata2012c.tar.gz	tzdata	2012c			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012c.tar.gz
+tzdata2012d.tar.gz	tzdata	2012d			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012d.tar.gz
+tzdata2012e.tar.gz	tzdata	2012e			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012e.tar.gz
+tzdata2012f.tar.gz	tzdata	2012f			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012f.tar.gz
+tzdata2012g.tar.gz	tzdata	2012g			no_signature_available	https://data.iana.org/time-zones/releases/tzdata2012g.tar.gz
+tzdata2012h.tar.gz	tzdata	2012h			sign_available_legacy	https://data.iana.org/time-zones/releases/tzdata2012h.tar.gz
+tzdata2012h.tar.gz.sign	signature	2012h				https://data.iana.org/time-zones/releases/tzdata2012h.tar.gz.sign
+tzdata2012i.tar.gz	tzdata	2012i			sign_available_legacy	https://data.iana.org/time-zones/releases/tzdata2012i.tar.gz
+tzdata2012i.tar.gz.sign	signature	2012i				https://data.iana.org/time-zones/releases/tzdata2012i.tar.gz.sign
+tzdata2012j.tar.gz	tzdata	2012j			asc_available	https://data.iana.org/time-zones/releases/tzdata2012j.tar.gz
+tzdata2012j.tar.gz.asc	signature	2012j				https://data.iana.org/time-zones/releases/tzdata2012j.tar.gz.asc
+tzdata2013a.tar.gz	tzdata	2013a			asc_available	https://data.iana.org/time-zones/releases/tzdata2013a.tar.gz
+tzdata2013a.tar.gz.asc	signature	2013a				https://data.iana.org/time-zones/releases/tzdata2013a.tar.gz.asc
+tzdata2013b.tar.gz	tzdata	2013b			asc_available	https://data.iana.org/time-zones/releases/tzdata2013b.tar.gz
+tzdata2013b.tar.gz.asc	signature	2013b				https://data.iana.org/time-zones/releases/tzdata2013b.tar.gz.asc
+tzdata2013c.tar.gz	tzdata	2013c			asc_available	https://data.iana.org/time-zones/releases/tzdata2013c.tar.gz
+tzdata2013c.tar.gz.asc	signature	2013c				https://data.iana.org/time-zones/releases/tzdata2013c.tar.gz.asc
+tzdata2013d.tar.gz	tzdata	2013d			asc_available	https://data.iana.org/time-zones/releases/tzdata2013d.tar.gz
+tzdata2013d.tar.gz.asc	signature	2013d				https://data.iana.org/time-zones/releases/tzdata2013d.tar.gz.asc
+tzdata2013e.tar.gz	tzdata	2013e			asc_available	https://data.iana.org/time-zones/releases/tzdata2013e.tar.gz
+tzdata2013e.tar.gz.asc	signature	2013e				https://data.iana.org/time-zones/releases/tzdata2013e.tar.gz.asc
+tzdata2013f.tar.gz	tzdata	2013f			asc_available	https://data.iana.org/time-zones/releases/tzdata2013f.tar.gz
+tzdata2013f.tar.gz.asc	signature	2013f				https://data.iana.org/time-zones/releases/tzdata2013f.tar.gz.asc
+tzdata2013g.tar.gz	tzdata	2013g			asc_available	https://data.iana.org/time-zones/releases/tzdata2013g.tar.gz
+tzdata2013g.tar.gz.asc	signature	2013g				https://data.iana.org/time-zones/releases/tzdata2013g.tar.gz.asc
+tzdata2013h.tar.gz	tzdata	2013h			asc_available	https://data.iana.org/time-zones/releases/tzdata2013h.tar.gz
+tzdata2013h.tar.gz.asc	signature	2013h				https://data.iana.org/time-zones/releases/tzdata2013h.tar.gz.asc
+tzdata2013i.tar.gz	tzdata	2013i			asc_available	https://data.iana.org/time-zones/releases/tzdata2013i.tar.gz
+tzdata2013i.tar.gz.asc	signature	2013i				https://data.iana.org/time-zones/releases/tzdata2013i.tar.gz.asc
+tzdata2014a.tar.gz	tzdata	2014a			asc_available	https://data.iana.org/time-zones/releases/tzdata2014a.tar.gz
+tzdata2014a.tar.gz.asc	signature	2014a				https://data.iana.org/time-zones/releases/tzdata2014a.tar.gz.asc
+tzdata2014b.tar.gz	tzdata	2014b			asc_available	https://data.iana.org/time-zones/releases/tzdata2014b.tar.gz
+tzdata2014b.tar.gz.asc	signature	2014b				https://data.iana.org/time-zones/releases/tzdata2014b.tar.gz.asc
+tzdata2014c.tar.gz	tzdata	2014c			asc_available	https://data.iana.org/time-zones/releases/tzdata2014c.tar.gz
+tzdata2014c.tar.gz.asc	signature	2014c				https://data.iana.org/time-zones/releases/tzdata2014c.tar.gz.asc
+tzdata2014d.tar.gz	tzdata	2014d			asc_available	https://data.iana.org/time-zones/releases/tzdata2014d.tar.gz
+tzdata2014d.tar.gz.asc	signature	2014d				https://data.iana.org/time-zones/releases/tzdata2014d.tar.gz.asc
+tzdata2014e.tar.gz	tzdata	2014e			asc_available	https://data.iana.org/time-zones/releases/tzdata2014e.tar.gz
+tzdata2014e.tar.gz.asc	signature	2014e				https://data.iana.org/time-zones/releases/tzdata2014e.tar.gz.asc
+tzdata2014f.tar.gz	tzdata	2014f			asc_available	https://data.iana.org/time-zones/releases/tzdata2014f.tar.gz
+tzdata2014f.tar.gz.asc	signature	2014f				https://data.iana.org/time-zones/releases/tzdata2014f.tar.gz.asc
+tzdata2014g.tar.gz	tzdata	2014g			asc_available	https://data.iana.org/time-zones/releases/tzdata2014g.tar.gz
+tzdata2014g.tar.gz.asc	signature	2014g				https://data.iana.org/time-zones/releases/tzdata2014g.tar.gz.asc
+tzdata2014h.tar.gz	tzdata	2014h			asc_available	https://data.iana.org/time-zones/releases/tzdata2014h.tar.gz
+tzdata2014h.tar.gz.asc	signature	2014h				https://data.iana.org/time-zones/releases/tzdata2014h.tar.gz.asc
+tzdata2014i.tar.gz	tzdata	2014i			asc_available	https://data.iana.org/time-zones/releases/tzdata2014i.tar.gz
+tzdata2014i.tar.gz.asc	signature	2014i				https://data.iana.org/time-zones/releases/tzdata2014i.tar.gz.asc
+tzdata2014j.tar.gz	tzdata	2014j			asc_available	https://data.iana.org/time-zones/releases/tzdata2014j.tar.gz
+tzdata2014j.tar.gz.asc	signature	2014j				https://data.iana.org/time-zones/releases/tzdata2014j.tar.gz.asc
+tzdata2015a.tar.gz	tzdata	2015a			asc_available	https://data.iana.org/time-zones/releases/tzdata2015a.tar.gz
+tzdata2015a.tar.gz.asc	signature	2015a				https://data.iana.org/time-zones/releases/tzdata2015a.tar.gz.asc
+tzdata2015b.tar.gz	tzdata	2015b			asc_available	https://data.iana.org/time-zones/releases/tzdata2015b.tar.gz
+tzdata2015b.tar.gz.asc	signature	2015b				https://data.iana.org/time-zones/releases/tzdata2015b.tar.gz.asc
+tzdata2015c.tar.gz	tzdata	2015c			asc_available	https://data.iana.org/time-zones/releases/tzdata2015c.tar.gz
+tzdata2015c.tar.gz.asc	signature	2015c				https://data.iana.org/time-zones/releases/tzdata2015c.tar.gz.asc
+tzdata2015d.tar.gz	tzdata	2015d			asc_available	https://data.iana.org/time-zones/releases/tzdata2015d.tar.gz
+tzdata2015d.tar.gz.asc	signature	2015d				https://data.iana.org/time-zones/releases/tzdata2015d.tar.gz.asc
+tzdata2015e.tar.gz	tzdata	2015e			asc_available	https://data.iana.org/time-zones/releases/tzdata2015e.tar.gz
+tzdata2015e.tar.gz.asc	signature	2015e				https://data.iana.org/time-zones/releases/tzdata2015e.tar.gz.asc
+tzdata2015f.tar.gz	tzdata	2015f			asc_available	https://data.iana.org/time-zones/releases/tzdata2015f.tar.gz
+tzdata2015f.tar.gz.asc	signature	2015f				https://data.iana.org/time-zones/releases/tzdata2015f.tar.gz.asc
+tzdata2015g.tar.gz	tzdata	2015g			asc_available	https://data.iana.org/time-zones/releases/tzdata2015g.tar.gz
+tzdata2015g.tar.gz.asc	signature	2015g				https://data.iana.org/time-zones/releases/tzdata2015g.tar.gz.asc
+tzdata2016a.tar.gz	tzdata	2016a			asc_available	https://data.iana.org/time-zones/releases/tzdata2016a.tar.gz
+tzdata2016a.tar.gz.asc	signature	2016a				https://data.iana.org/time-zones/releases/tzdata2016a.tar.gz.asc
+tzdata2016b.tar.gz	tzdata	2016b			asc_available	https://data.iana.org/time-zones/releases/tzdata2016b.tar.gz
+tzdata2016b.tar.gz.asc	signature	2016b				https://data.iana.org/time-zones/releases/tzdata2016b.tar.gz.asc
+tzdata2016c.tar.gz	tzdata	2016c			asc_available	https://data.iana.org/time-zones/releases/tzdata2016c.tar.gz
+tzdata2016c.tar.gz.asc	signature	2016c				https://data.iana.org/time-zones/releases/tzdata2016c.tar.gz.asc
+tzdata2016d.tar.gz	tzdata	2016d			asc_available	https://data.iana.org/time-zones/releases/tzdata2016d.tar.gz
+tzdata2016d.tar.gz.asc	signature	2016d				https://data.iana.org/time-zones/releases/tzdata2016d.tar.gz.asc
+tzdata2016e.tar.gz	tzdata	2016e			asc_available	https://data.iana.org/time-zones/releases/tzdata2016e.tar.gz
+tzdata2016e.tar.gz.asc	signature	2016e				https://data.iana.org/time-zones/releases/tzdata2016e.tar.gz.asc
+tzdata2016f.tar.gz	tzdata	2016f			asc_available	https://data.iana.org/time-zones/releases/tzdata2016f.tar.gz
+tzdata2016f.tar.gz.asc	signature	2016f				https://data.iana.org/time-zones/releases/tzdata2016f.tar.gz.asc
+tzdata2016g.tar.gz	tzdata	2016g			asc_available	https://data.iana.org/time-zones/releases/tzdata2016g.tar.gz
+tzdata2016g.tar.gz.asc	signature	2016g				https://data.iana.org/time-zones/releases/tzdata2016g.tar.gz.asc
+tzdata2016h.tar.gz	tzdata	2016h			asc_available	https://data.iana.org/time-zones/releases/tzdata2016h.tar.gz
+tzdata2016h.tar.gz.asc	signature	2016h				https://data.iana.org/time-zones/releases/tzdata2016h.tar.gz.asc
+tzdata2016i.tar.gz	tzdata	2016i			asc_available	https://data.iana.org/time-zones/releases/tzdata2016i.tar.gz
+tzdata2016i.tar.gz.asc	signature	2016i				https://data.iana.org/time-zones/releases/tzdata2016i.tar.gz.asc
+tzdata2016j.tar.gz	tzdata	2016j			asc_available	https://data.iana.org/time-zones/releases/tzdata2016j.tar.gz
+tzdata2016j.tar.gz.asc	signature	2016j				https://data.iana.org/time-zones/releases/tzdata2016j.tar.gz.asc
+tzdata2017a.tar.gz	tzdata	2017a			asc_available	https://data.iana.org/time-zones/releases/tzdata2017a.tar.gz
+tzdata2017a.tar.gz.asc	signature	2017a				https://data.iana.org/time-zones/releases/tzdata2017a.tar.gz.asc
+tzdata2017b.tar.gz	tzdata	2017b			asc_available	https://data.iana.org/time-zones/releases/tzdata2017b.tar.gz
+tzdata2017b.tar.gz.asc	signature	2017b				https://data.iana.org/time-zones/releases/tzdata2017b.tar.gz.asc
+tzdata2017c.tar.gz	tzdata	2017c			asc_available	https://data.iana.org/time-zones/releases/tzdata2017c.tar.gz
+tzdata2017c.tar.gz.asc	signature	2017c				https://data.iana.org/time-zones/releases/tzdata2017c.tar.gz.asc
+tzdata2018a.tar.gz	tzdata	2018a			asc_available	https://data.iana.org/time-zones/releases/tzdata2018a.tar.gz
+tzdata2018a.tar.gz.asc	signature	2018a				https://data.iana.org/time-zones/releases/tzdata2018a.tar.gz.asc
+tzdata2018b.tar.gz	tzdata	2018b			asc_available	https://data.iana.org/time-zones/releases/tzdata2018b.tar.gz
+tzdata2018b.tar.gz.asc	signature	2018b				https://data.iana.org/time-zones/releases/tzdata2018b.tar.gz.asc
+tzdata2018c.tar.gz	tzdata	2018c			asc_available	https://data.iana.org/time-zones/releases/tzdata2018c.tar.gz
+tzdata2018c.tar.gz.asc	signature	2018c				https://data.iana.org/time-zones/releases/tzdata2018c.tar.gz.asc
+tzdata2018d.tar.gz	tzdata	2018d			asc_available	https://data.iana.org/time-zones/releases/tzdata2018d.tar.gz
+tzdata2018d.tar.gz.asc	signature	2018d				https://data.iana.org/time-zones/releases/tzdata2018d.tar.gz.asc
+tzdata2018e.tar.gz	tzdata	2018e			asc_available	https://data.iana.org/time-zones/releases/tzdata2018e.tar.gz
+tzdata2018e.tar.gz.asc	signature	2018e				https://data.iana.org/time-zones/releases/tzdata2018e.tar.gz.asc
+tzdata2018f.tar.gz	tzdata	2018f			asc_available	https://data.iana.org/time-zones/releases/tzdata2018f.tar.gz
+tzdata2018f.tar.gz.asc	signature	2018f				https://data.iana.org/time-zones/releases/tzdata2018f.tar.gz.asc
+tzdata2018g.tar.gz	tzdata	2018g			asc_available	https://data.iana.org/time-zones/releases/tzdata2018g.tar.gz
+tzdata2018g.tar.gz.asc	signature	2018g				https://data.iana.org/time-zones/releases/tzdata2018g.tar.gz.asc
+tzdata2018h.tar.gz	tzdata	2018h			asc_available	https://data.iana.org/time-zones/releases/tzdata2018h.tar.gz
+tzdata2018h.tar.gz.asc	signature	2018h				https://data.iana.org/time-zones/releases/tzdata2018h.tar.gz.asc
+tzdata2018i.tar.gz	tzdata	2018i			asc_available	https://data.iana.org/time-zones/releases/tzdata2018i.tar.gz
+tzdata2018i.tar.gz.asc	signature	2018i				https://data.iana.org/time-zones/releases/tzdata2018i.tar.gz.asc
+tzdata2019a.tar.gz	tzdata	2019a			asc_available	https://data.iana.org/time-zones/releases/tzdata2019a.tar.gz
+tzdata2019a.tar.gz.asc	signature	2019a				https://data.iana.org/time-zones/releases/tzdata2019a.tar.gz.asc
+tzdata2019b.tar.gz	tzdata	2019b			asc_available	https://data.iana.org/time-zones/releases/tzdata2019b.tar.gz
+tzdata2019b.tar.gz.asc	signature	2019b				https://data.iana.org/time-zones/releases/tzdata2019b.tar.gz.asc
+tzdata2019c.tar.gz	tzdata	2019c			asc_available	https://data.iana.org/time-zones/releases/tzdata2019c.tar.gz
+tzdata2019c.tar.gz.asc	signature	2019c				https://data.iana.org/time-zones/releases/tzdata2019c.tar.gz.asc
+tzdata2020a.tar.gz	tzdata	2020a			asc_available	https://data.iana.org/time-zones/releases/tzdata2020a.tar.gz
+tzdata2020a.tar.gz.asc	signature	2020a				https://data.iana.org/time-zones/releases/tzdata2020a.tar.gz.asc
+tzdata2020b.tar.gz	tzdata	2020b			asc_available	https://data.iana.org/time-zones/releases/tzdata2020b.tar.gz
+tzdata2020b.tar.gz.asc	signature	2020b				https://data.iana.org/time-zones/releases/tzdata2020b.tar.gz.asc
+tzdata2020c.tar.gz	tzdata	2020c			asc_available	https://data.iana.org/time-zones/releases/tzdata2020c.tar.gz
+tzdata2020c.tar.gz.asc	signature	2020c				https://data.iana.org/time-zones/releases/tzdata2020c.tar.gz.asc
+tzdata2020d.tar.gz	tzdata	2020d			asc_available	https://data.iana.org/time-zones/releases/tzdata2020d.tar.gz
+tzdata2020d.tar.gz.asc	signature	2020d				https://data.iana.org/time-zones/releases/tzdata2020d.tar.gz.asc
+tzdata2020e.tar.gz	tzdata	2020e			asc_available	https://data.iana.org/time-zones/releases/tzdata2020e.tar.gz
+tzdata2020e.tar.gz.asc	signature	2020e				https://data.iana.org/time-zones/releases/tzdata2020e.tar.gz.asc
+tzdata2020f.tar.gz	tzdata	2020f			asc_available	https://data.iana.org/time-zones/releases/tzdata2020f.tar.gz
+tzdata2020f.tar.gz.asc	signature	2020f				https://data.iana.org/time-zones/releases/tzdata2020f.tar.gz.asc
+tzdata2021a.tar.gz	tzdata	2021a			asc_available	https://data.iana.org/time-zones/releases/tzdata2021a.tar.gz
+tzdata2021a.tar.gz.asc	signature	2021a				https://data.iana.org/time-zones/releases/tzdata2021a.tar.gz.asc
+tzdata2021b.tar.gz	tzdata	2021b			asc_available	https://data.iana.org/time-zones/releases/tzdata2021b.tar.gz
+tzdata2021b.tar.gz.asc	signature	2021b				https://data.iana.org/time-zones/releases/tzdata2021b.tar.gz.asc
+tzdata2021c.tar.gz	tzdata	2021c			asc_available	https://data.iana.org/time-zones/releases/tzdata2021c.tar.gz
+tzdata2021c.tar.gz.asc	signature	2021c				https://data.iana.org/time-zones/releases/tzdata2021c.tar.gz.asc
+tzdata2021d.tar.gz	tzdata	2021d			asc_available	https://data.iana.org/time-zones/releases/tzdata2021d.tar.gz
+tzdata2021d.tar.gz.asc	signature	2021d				https://data.iana.org/time-zones/releases/tzdata2021d.tar.gz.asc
+tzdata2021e.tar.gz	tzdata	2021e			asc_available	https://data.iana.org/time-zones/releases/tzdata2021e.tar.gz
+tzdata2021e.tar.gz.asc	signature	2021e				https://data.iana.org/time-zones/releases/tzdata2021e.tar.gz.asc
+tzdata2022a.tar.gz	tzdata	2022a			asc_available	https://data.iana.org/time-zones/releases/tzdata2022a.tar.gz
+tzdata2022a.tar.gz.asc	signature	2022a				https://data.iana.org/time-zones/releases/tzdata2022a.tar.gz.asc
+tzdata2022b.tar.gz	tzdata	2022b			asc_available	https://data.iana.org/time-zones/releases/tzdata2022b.tar.gz
+tzdata2022b.tar.gz.asc	signature	2022b				https://data.iana.org/time-zones/releases/tzdata2022b.tar.gz.asc
+tzdata2022c.tar.gz	tzdata	2022c			asc_available	https://data.iana.org/time-zones/releases/tzdata2022c.tar.gz
+tzdata2022c.tar.gz.asc	signature	2022c				https://data.iana.org/time-zones/releases/tzdata2022c.tar.gz.asc
+tzdata2022d.tar.gz	tzdata	2022d			asc_available	https://data.iana.org/time-zones/releases/tzdata2022d.tar.gz
+tzdata2022d.tar.gz.asc	signature	2022d				https://data.iana.org/time-zones/releases/tzdata2022d.tar.gz.asc
+tzdata2022e.tar.gz	tzdata	2022e			asc_available	https://data.iana.org/time-zones/releases/tzdata2022e.tar.gz
+tzdata2022e.tar.gz.asc	signature	2022e				https://data.iana.org/time-zones/releases/tzdata2022e.tar.gz.asc
+tzdata2022f.tar.gz	tzdata	2022f			asc_available	https://data.iana.org/time-zones/releases/tzdata2022f.tar.gz
+tzdata2022f.tar.gz.asc	signature	2022f				https://data.iana.org/time-zones/releases/tzdata2022f.tar.gz.asc
+tzdata2022g.tar.gz	tzdata	2022g			asc_available	https://data.iana.org/time-zones/releases/tzdata2022g.tar.gz
+tzdata2022g.tar.gz.asc	signature	2022g				https://data.iana.org/time-zones/releases/tzdata2022g.tar.gz.asc
+tzdata2023a.tar.gz	tzdata	2023a			asc_available	https://data.iana.org/time-zones/releases/tzdata2023a.tar.gz
+tzdata2023a.tar.gz.asc	signature	2023a				https://data.iana.org/time-zones/releases/tzdata2023a.tar.gz.asc
+tzdata2023b.tar.gz	tzdata	2023b			asc_available	https://data.iana.org/time-zones/releases/tzdata2023b.tar.gz
+tzdata2023b.tar.gz.asc	signature	2023b				https://data.iana.org/time-zones/releases/tzdata2023b.tar.gz.asc
+tzdata2023c.tar.gz	tzdata	2023c			asc_available	https://data.iana.org/time-zones/releases/tzdata2023c.tar.gz
+tzdata2023c.tar.gz.asc	signature	2023c				https://data.iana.org/time-zones/releases/tzdata2023c.tar.gz.asc
+tzdata2023d.tar.gz	tzdata	2023d			asc_available	https://data.iana.org/time-zones/releases/tzdata2023d.tar.gz
+tzdata2023d.tar.gz.asc	signature	2023d				https://data.iana.org/time-zones/releases/tzdata2023d.tar.gz.asc
+tzdata2024a.tar.gz	tzdata	2024a			asc_available	https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz
+tzdata2024a.tar.gz.asc	signature	2024a				https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz.asc
+tzdata2024b.tar.gz	tzdata	2024b			asc_available	https://data.iana.org/time-zones/releases/tzdata2024b.tar.gz
+tzdata2024b.tar.gz.asc	signature	2024b				https://data.iana.org/time-zones/releases/tzdata2024b.tar.gz.asc
+tzdata2025a.tar.gz	tzdata	2025a			asc_available	https://data.iana.org/time-zones/releases/tzdata2025a.tar.gz
+tzdata2025a.tar.gz.asc	signature	2025a				https://data.iana.org/time-zones/releases/tzdata2025a.tar.gz.asc
+tzdata2025b.tar.gz	tzdata	2025b			asc_available	https://data.iana.org/time-zones/releases/tzdata2025b.tar.gz
+tzdata2025b.tar.gz.asc	signature	2025b				https://data.iana.org/time-zones/releases/tzdata2025b.tar.gz.asc
+tzdata2025c.tar.gz	tzdata	2025c			asc_available	https://data.iana.org/time-zones/releases/tzdata2025c.tar.gz
+tzdata2025c.tar.gz.asc	signature	2025c				https://data.iana.org/time-zones/releases/tzdata2025c.tar.gz.asc
+tzdata2026a.tar.gz	tzdata	2026a			asc_available	https://data.iana.org/time-zones/releases/tzdata2026a.tar.gz
+tzdata2026a.tar.gz.asc	signature	2026a				https://data.iana.org/time-zones/releases/tzdata2026a.tar.gz.asc
+tzdata2026b.tar.gz	tzdata	2026b			asc_available	https://data.iana.org/time-zones/releases/tzdata2026b.tar.gz
+tzdata2026b.tar.gz.asc	signature	2026b				https://data.iana.org/time-zones/releases/tzdata2026b.tar.gz.asc
+tzdata93b.tar.Z	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata93b.tar.Z
+tzdata93c.tar.Z	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata93c.tar.Z
+tzdata93d.tar.Z	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata93d.tar.Z
+tzdata93e.tar.Z	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata93e.tar.Z
+tzdata93f.tar.Z	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata93f.tar.Z
+tzdata93g.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata93g.tar.gz
+tzdata94a.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata94a.tar.gz
+tzdata94b.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata94b.tar.gz
+tzdata94d.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata94d.tar.gz
+tzdata94e.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata94e.tar.gz
+tzdata94f.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata94f.tar.gz
+tzdata94h.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata94h.tar.gz
+tzdata95b.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95b.tar.gz
+tzdata95c.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95c.tar.gz
+tzdata95d.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95d.tar.gz
+tzdata95e.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95e.tar.gz
+tzdata95f.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95f.tar.gz
+tzdata95g.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95g.tar.gz
+tzdata95h.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95h.tar.gz
+tzdata95i.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95i.tar.gz
+tzdata95k.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95k.tar.gz
+tzdata95l.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95l.tar.gz
+tzdata95m.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata95m.tar.gz
+tzdata96a.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96a.tar.gz
+tzdata96b.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96b.tar.gz
+tzdata96c.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96c.tar.gz
+tzdata96d.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96d.tar.gz
+tzdata96e.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96e.tar.gz
+tzdata96h.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96h.tar.gz
+tzdata96i.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96i.tar.gz
+tzdata96k.tar.gz	tzdata				no_signature_available	https://data.iana.org/time-zones/releases/tzdata96k.tar.gz
+tzdatabeta.tar.gz	tzdata_beta	beta			no_signature_available	https://data.iana.org/time-zones/releases/tzdatabeta.tar.gz
+tzdb-2016g.tar.lz	tzdb_complete_bundle	2016g			asc_available	https://data.iana.org/time-zones/releases/tzdb-2016g.tar.lz
+tzdb-2016g.tar.lz.asc	signature	2016g				https://data.iana.org/time-zones/releases/tzdb-2016g.tar.lz.asc
+tzdb-2016h.tar.lz	tzdb_complete_bundle	2016h			asc_available	https://data.iana.org/time-zones/releases/tzdb-2016h.tar.lz
+tzdb-2016h.tar.lz.asc	signature	2016h				https://data.iana.org/time-zones/releases/tzdb-2016h.tar.lz.asc
+tzdb-2016i.tar.lz	tzdb_complete_bundle	2016i			asc_available	https://data.iana.org/time-zones/releases/tzdb-2016i.tar.lz
+tzdb-2016i.tar.lz.asc	signature	2016i				https://data.iana.org/time-zones/releases/tzdb-2016i.tar.lz.asc
+tzdb-2016j.tar.lz	tzdb_complete_bundle	2016j			asc_available	https://data.iana.org/time-zones/releases/tzdb-2016j.tar.lz
+tzdb-2016j.tar.lz.asc	signature	2016j				https://data.iana.org/time-zones/releases/tzdb-2016j.tar.lz.asc
+tzdb-2017a.tar.lz	tzdb_complete_bundle	2017a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2017a.tar.lz
+tzdb-2017a.tar.lz.asc	signature	2017a				https://data.iana.org/time-zones/releases/tzdb-2017a.tar.lz.asc
+tzdb-2017b.tar.lz	tzdb_complete_bundle	2017b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2017b.tar.lz
+tzdb-2017b.tar.lz.asc	signature	2017b				https://data.iana.org/time-zones/releases/tzdb-2017b.tar.lz.asc
+tzdb-2017c.tar.lz	tzdb_complete_bundle	2017c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2017c.tar.lz
+tzdb-2017c.tar.lz.asc	signature	2017c				https://data.iana.org/time-zones/releases/tzdb-2017c.tar.lz.asc
+tzdb-2018a.tar.lz	tzdb_complete_bundle	2018a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018a.tar.lz
+tzdb-2018a.tar.lz.asc	signature	2018a				https://data.iana.org/time-zones/releases/tzdb-2018a.tar.lz.asc
+tzdb-2018b.tar.lz	tzdb_complete_bundle	2018b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018b.tar.lz
+tzdb-2018b.tar.lz.asc	signature	2018b				https://data.iana.org/time-zones/releases/tzdb-2018b.tar.lz.asc
+tzdb-2018c.tar.lz	tzdb_complete_bundle	2018c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018c.tar.lz
+tzdb-2018c.tar.lz.asc	signature	2018c				https://data.iana.org/time-zones/releases/tzdb-2018c.tar.lz.asc
+tzdb-2018d.tar.lz	tzdb_complete_bundle	2018d			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018d.tar.lz
+tzdb-2018d.tar.lz.asc	signature	2018d				https://data.iana.org/time-zones/releases/tzdb-2018d.tar.lz.asc
+tzdb-2018e.tar.lz	tzdb_complete_bundle	2018e			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018e.tar.lz
+tzdb-2018e.tar.lz.asc	signature	2018e				https://data.iana.org/time-zones/releases/tzdb-2018e.tar.lz.asc
+tzdb-2018f.tar.lz	tzdb_complete_bundle	2018f			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018f.tar.lz
+tzdb-2018f.tar.lz.asc	signature	2018f				https://data.iana.org/time-zones/releases/tzdb-2018f.tar.lz.asc
+tzdb-2018g.tar.lz	tzdb_complete_bundle	2018g			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018g.tar.lz
+tzdb-2018g.tar.lz.asc	signature	2018g				https://data.iana.org/time-zones/releases/tzdb-2018g.tar.lz.asc
+tzdb-2018h.tar.lz	tzdb_complete_bundle	2018h			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018h.tar.lz
+tzdb-2018h.tar.lz.asc	signature	2018h				https://data.iana.org/time-zones/releases/tzdb-2018h.tar.lz.asc
+tzdb-2018i.tar.lz	tzdb_complete_bundle	2018i			asc_available	https://data.iana.org/time-zones/releases/tzdb-2018i.tar.lz
+tzdb-2018i.tar.lz.asc	signature	2018i				https://data.iana.org/time-zones/releases/tzdb-2018i.tar.lz.asc
+tzdb-2019a.tar.lz	tzdb_complete_bundle	2019a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2019a.tar.lz
+tzdb-2019a.tar.lz.asc	signature	2019a				https://data.iana.org/time-zones/releases/tzdb-2019a.tar.lz.asc
+tzdb-2019b.tar.lz	tzdb_complete_bundle	2019b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2019b.tar.lz
+tzdb-2019b.tar.lz.asc	signature	2019b				https://data.iana.org/time-zones/releases/tzdb-2019b.tar.lz.asc
+tzdb-2019c.tar.lz	tzdb_complete_bundle	2019c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2019c.tar.lz
+tzdb-2019c.tar.lz.asc	signature	2019c				https://data.iana.org/time-zones/releases/tzdb-2019c.tar.lz.asc
+tzdb-2020a.tar.lz	tzdb_complete_bundle	2020a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2020a.tar.lz
+tzdb-2020a.tar.lz.asc	signature	2020a				https://data.iana.org/time-zones/releases/tzdb-2020a.tar.lz.asc
+tzdb-2020b.tar.lz	tzdb_complete_bundle	2020b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2020b.tar.lz
+tzdb-2020b.tar.lz.asc	signature	2020b				https://data.iana.org/time-zones/releases/tzdb-2020b.tar.lz.asc
+tzdb-2020c.tar.lz	tzdb_complete_bundle	2020c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2020c.tar.lz
+tzdb-2020c.tar.lz.asc	signature	2020c				https://data.iana.org/time-zones/releases/tzdb-2020c.tar.lz.asc
+tzdb-2020d.tar.lz	tzdb_complete_bundle	2020d			asc_available	https://data.iana.org/time-zones/releases/tzdb-2020d.tar.lz
+tzdb-2020d.tar.lz.asc	signature	2020d				https://data.iana.org/time-zones/releases/tzdb-2020d.tar.lz.asc
+tzdb-2020e.tar.lz	tzdb_complete_bundle	2020e			asc_available	https://data.iana.org/time-zones/releases/tzdb-2020e.tar.lz
+tzdb-2020e.tar.lz.asc	signature	2020e				https://data.iana.org/time-zones/releases/tzdb-2020e.tar.lz.asc
+tzdb-2020f.tar.lz	tzdb_complete_bundle	2020f			asc_available	https://data.iana.org/time-zones/releases/tzdb-2020f.tar.lz
+tzdb-2020f.tar.lz.asc	signature	2020f				https://data.iana.org/time-zones/releases/tzdb-2020f.tar.lz.asc
+tzdb-2021a.tar.lz	tzdb_complete_bundle	2021a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2021a.tar.lz
+tzdb-2021a.tar.lz.asc	signature	2021a				https://data.iana.org/time-zones/releases/tzdb-2021a.tar.lz.asc
+tzdb-2021b.tar.lz	tzdb_complete_bundle	2021b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2021b.tar.lz
+tzdb-2021b.tar.lz.asc	signature	2021b				https://data.iana.org/time-zones/releases/tzdb-2021b.tar.lz.asc
+tzdb-2021c.tar.lz	tzdb_complete_bundle	2021c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2021c.tar.lz
+tzdb-2021c.tar.lz.asc	signature	2021c				https://data.iana.org/time-zones/releases/tzdb-2021c.tar.lz.asc
+tzdb-2021d.tar.lz	tzdb_complete_bundle	2021d			asc_available	https://data.iana.org/time-zones/releases/tzdb-2021d.tar.lz
+tzdb-2021d.tar.lz.asc	signature	2021d				https://data.iana.org/time-zones/releases/tzdb-2021d.tar.lz.asc
+tzdb-2021e.tar.lz	tzdb_complete_bundle	2021e			asc_available	https://data.iana.org/time-zones/releases/tzdb-2021e.tar.lz
+tzdb-2021e.tar.lz.asc	signature	2021e				https://data.iana.org/time-zones/releases/tzdb-2021e.tar.lz.asc
+tzdb-2022a.tar.lz	tzdb_complete_bundle	2022a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022a.tar.lz
+tzdb-2022a.tar.lz.asc	signature	2022a				https://data.iana.org/time-zones/releases/tzdb-2022a.tar.lz.asc
+tzdb-2022b.tar.lz	tzdb_complete_bundle	2022b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022b.tar.lz
+tzdb-2022b.tar.lz.asc	signature	2022b				https://data.iana.org/time-zones/releases/tzdb-2022b.tar.lz.asc
+tzdb-2022c.tar.lz	tzdb_complete_bundle	2022c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022c.tar.lz
+tzdb-2022c.tar.lz.asc	signature	2022c				https://data.iana.org/time-zones/releases/tzdb-2022c.tar.lz.asc
+tzdb-2022d.tar.lz	tzdb_complete_bundle	2022d			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022d.tar.lz
+tzdb-2022d.tar.lz.asc	signature	2022d				https://data.iana.org/time-zones/releases/tzdb-2022d.tar.lz.asc
+tzdb-2022e.tar.lz	tzdb_complete_bundle	2022e			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022e.tar.lz
+tzdb-2022e.tar.lz.asc	signature	2022e				https://data.iana.org/time-zones/releases/tzdb-2022e.tar.lz.asc
+tzdb-2022f.tar.lz	tzdb_complete_bundle	2022f			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022f.tar.lz
+tzdb-2022f.tar.lz.asc	signature	2022f				https://data.iana.org/time-zones/releases/tzdb-2022f.tar.lz.asc
+tzdb-2022g.tar.lz	tzdb_complete_bundle	2022g			asc_available	https://data.iana.org/time-zones/releases/tzdb-2022g.tar.lz
+tzdb-2022g.tar.lz.asc	signature	2022g				https://data.iana.org/time-zones/releases/tzdb-2022g.tar.lz.asc
+tzdb-2023a.tar.lz	tzdb_complete_bundle	2023a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2023a.tar.lz
+tzdb-2023a.tar.lz.asc	signature	2023a				https://data.iana.org/time-zones/releases/tzdb-2023a.tar.lz.asc
+tzdb-2023b.tar.lz	tzdb_complete_bundle	2023b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2023b.tar.lz
+tzdb-2023b.tar.lz.asc	signature	2023b				https://data.iana.org/time-zones/releases/tzdb-2023b.tar.lz.asc
+tzdb-2023c.tar.lz	tzdb_complete_bundle	2023c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2023c.tar.lz
+tzdb-2023c.tar.lz.asc	signature	2023c				https://data.iana.org/time-zones/releases/tzdb-2023c.tar.lz.asc
+tzdb-2023d.tar.lz	tzdb_complete_bundle	2023d			asc_available	https://data.iana.org/time-zones/releases/tzdb-2023d.tar.lz
+tzdb-2023d.tar.lz.asc	signature	2023d				https://data.iana.org/time-zones/releases/tzdb-2023d.tar.lz.asc
+tzdb-2024a.tar.lz	tzdb_complete_bundle	2024a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2024a.tar.lz
+tzdb-2024a.tar.lz.asc	signature	2024a				https://data.iana.org/time-zones/releases/tzdb-2024a.tar.lz.asc
+tzdb-2024b.tar.lz	tzdb_complete_bundle	2024b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2024b.tar.lz
+tzdb-2024b.tar.lz.asc	signature	2024b				https://data.iana.org/time-zones/releases/tzdb-2024b.tar.lz.asc
+tzdb-2025a.tar.lz	tzdb_complete_bundle	2025a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2025a.tar.lz
+tzdb-2025a.tar.lz.asc	signature	2025a				https://data.iana.org/time-zones/releases/tzdb-2025a.tar.lz.asc
+tzdb-2025b.tar.lz	tzdb_complete_bundle	2025b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2025b.tar.lz
+tzdb-2025b.tar.lz.asc	signature	2025b				https://data.iana.org/time-zones/releases/tzdb-2025b.tar.lz.asc
+tzdb-2025c.tar.lz	tzdb_complete_bundle	2025c			asc_available	https://data.iana.org/time-zones/releases/tzdb-2025c.tar.lz
+tzdb-2025c.tar.lz.asc	signature	2025c				https://data.iana.org/time-zones/releases/tzdb-2025c.tar.lz.asc
+tzdb-2026a.tar.lz	tzdb_complete_bundle	2026a			asc_available	https://data.iana.org/time-zones/releases/tzdb-2026a.tar.lz
+tzdb-2026a.tar.lz.asc	signature	2026a				https://data.iana.org/time-zones/releases/tzdb-2026a.tar.lz.asc
+tzdb-2026b.tar.lz	tzdb_complete_bundle	2026b			asc_available	https://data.iana.org/time-zones/releases/tzdb-2026b.tar.lz
+tzdb-2026b.tar.lz.asc	signature	2026b				https://data.iana.org/time-zones/releases/tzdb-2026b.tar.lz.asc

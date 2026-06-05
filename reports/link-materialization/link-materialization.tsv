@@ -1,0 +1,4 @@
+variant	files	symlinks	unique_inodes	installed_du_bytes	tar_bytes	gzip_bytes	xz_bytes	zstd_bytes
+ref	598	0	341	204352	624640	76750	44676	47961
+copy	598	0	598	435761	931840	117620	47228	51002
+sym	341	257	598	251667	665600	78886	46528	49828

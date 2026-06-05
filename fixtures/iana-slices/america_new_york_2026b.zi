@@ -1,0 +1,35 @@
+# America/New_York — IANA tzdb 2026b slice (pinned fixture).
+#
+# PROVENANCE & TRANSFORM: derived from /usr/share/zoneinfo/tzdata.zi (2026b) by expanding ONLY the
+# leading record keywords R->Rule, Z->Zone (and L->Link). Rule names are left in their zishrink
+# form (`u` = US, `NY` = NYC) and month/day/year tokens in zic-style prefix form — zic-rs accepts
+# all of these (see src/source/names.rs and record_keyword). Reference zic compiles this slice
+# BYTE-IDENTICALLY to the abbreviated extract (asserted by a test).
+#
+# WHAT IT EXERCISES (T4.1): the genuinely *mixed-in-era* final era — `-5 u E%sT` from 1967 uses
+# Rule US with finite DST history (1967..2006) PLUS recurring 2007..max rows. Footer
+# EST5EDT,M3.2.0,M11.1.0; zdump-matches reference zic over 1883..2040.
+Rule u 1918 1919 - Mar lastSu 2 1 D
+Rule u 1918 1919 - O lastSu 2 0 S
+Rule u 1942 o - F 9 2 1 W
+Rule u 1945 o - Au 14 23u 1 P
+Rule u 1945 o - S 30 2 0 S
+Rule u 1967 2006 - O lastSu 2 0 S
+Rule u 1967 1973 - Ap lastSu 2 1 D
+Rule u 1974 o - Ja 6 2 1 D
+Rule u 1975 o - F lastSu 2 1 D
+Rule u 1976 1986 - Ap lastSu 2 1 D
+Rule u 1987 2006 - Ap Su>=1 2 1 D
+Rule u 2007 ma - Mar Su>=8 2 1 D
+Rule u 2007 ma - N Su>=1 2 0 S
+Rule NY 1920 o - Mar lastSu 2 1 D
+Rule NY 1920 o - O lastSu 2 0 S
+Rule NY 1921 1966 - Ap lastSu 2 1 D
+Rule NY 1921 1954 - S lastSu 2 0 S
+Rule NY 1955 1966 - O lastSu 2 0 S
+Zone America/New_York -4:56:2 - LMT 1883 N 18 17u
+-5 u E%sT 1920
+-5 NY E%sT 1942
+-5 u E%sT 1946
+-5 NY E%sT 1967
+-5 u E%sT

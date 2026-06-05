@@ -1,0 +1,50 @@
+release	zone	ref_present	zrs_present	zdump	verdict
+2026b	Etc/UTC	yes	yes	byte-identical	match
+2026b	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026b	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026b	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026b	Asia/Singapore	yes	yes	byte-identical	match
+2026b	Pacific/Kiritimati	yes	yes	byte-identical	match
+2026b	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026a	Etc/UTC	yes	yes	byte-identical	match
+2026a	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026a	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026a	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2026a	Asia/Singapore	yes	yes	byte-identical	match
+2026a	Pacific/Kiritimati	yes	yes	byte-identical	match
+2026a	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2025b	Etc/UTC	yes	yes	byte-identical	match
+2025b	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2025b	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2025b	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2025b	Asia/Singapore	yes	yes	byte-identical	match
+2025b	Pacific/Kiritimati	yes	yes	byte-identical	match
+2025b	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2024a	Etc/UTC	yes	yes	byte-identical	match
+2024a	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2024a	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2024a	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2024a	Asia/Singapore	yes	yes	byte-identical	match
+2024a	Pacific/Kiritimati	yes	yes	byte-identical	match
+2024a	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2020a	Etc/UTC	yes	yes	byte-identical	match
+2020a	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2020a	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2020a	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2020a	Asia/Singapore	yes	yes	byte-identical	match
+2020a	Pacific/Kiritimati	yes	yes	byte-identical	match
+2020a	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2018e	Etc/UTC	yes	yes	byte-identical	match
+2018e	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2018e	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2018e	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2018e	Asia/Singapore	yes	yes	byte-identical	match
+2018e	Pacific/Kiritimati	yes	yes	byte-identical	match
+2018e	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2015g	Etc/UTC	yes	yes	byte-identical	match
+2015g	Europe/Lisbon	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2015g	Europe/London	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2015g	America/New_York	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff
+2015g	Asia/Singapore	yes	yes	byte-identical	match
+2015g	Pacific/Kiritimati	yes	yes	byte-identical	match
+2015g	Australia/Lord_Howe	yes	yes	zdump-identical (slim/fat byte-diff)	behaviour-match-byte-diff

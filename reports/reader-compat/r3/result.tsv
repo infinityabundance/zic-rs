@@ -1,0 +1,42 @@
+reader	fixture	verdict	note
+glibc-localtime	Europe/Lisbon	match	12 instants identical (zic-rs == ref)
+glibc-localtime	Asia/Singapore	match	12 instants identical (zic-rs == ref)
+glibc-localtime	Pacific/Kiritimati	match	12 instants identical (zic-rs == ref)
+glibc-localtime	Europe/London	match	12 instants identical (zic-rs == ref)
+glibc-localtime	Europe/Dublin	match	12 instants identical (zic-rs == ref)
+glibc-localtime	America/New_York[right]	match	12 instants identical (zic-rs == ref)
+go-time	Europe/Lisbon	match	12 instants identical (zic-rs == ref)
+go-time	Asia/Singapore	match	12 instants identical (zic-rs == ref)
+go-time	Pacific/Kiritimati	match	12 instants identical (zic-rs == ref)
+go-time	Europe/London	match	12 instants identical (zic-rs == ref)
+go-time	Europe/Dublin	match	12 instants identical (zic-rs == ref)
+go-time	America/New_York[right]	match_with_known_reader_limitation	equivalent; reader ignores leap-seconds (no TAI offset applied) — capability, not a zic-rs issue
+cctz-absl	Europe/Lisbon	match	12 instants identical (zic-rs == ref)
+cctz-absl	Asia/Singapore	match	12 instants identical (zic-rs == ref)
+cctz-absl	Pacific/Kiritimati	match	12 instants identical (zic-rs == ref)
+cctz-absl	Europe/London	match	12 instants identical (zic-rs == ref)
+cctz-absl	Europe/Dublin	match	12 instants identical (zic-rs == ref)
+cctz-absl	America/New_York[right]	unsupported_by_reader	reader cannot load this file class (fails on BOTH zic-rs AND reference): LOAD_FAIL America/New_York
+java-time	Europe/Lisbon	unsupported_by_reader	consumes $JAVA_HOME/lib/tzdb.dat (TZDB format), no public raw-TZif file loader
+java-time	Asia/Singapore	unsupported_by_reader	consumes $JAVA_HOME/lib/tzdb.dat (TZDB format), no public raw-TZif file loader
+java-time	Pacific/Kiritimati	unsupported_by_reader	consumes $JAVA_HOME/lib/tzdb.dat (TZDB format), no public raw-TZif file loader
+java-time	Europe/London	unsupported_by_reader	consumes $JAVA_HOME/lib/tzdb.dat (TZDB format), no public raw-TZif file loader
+java-time	Europe/Dublin	unsupported_by_reader	consumes $JAVA_HOME/lib/tzdb.dat (TZDB format), no public raw-TZif file loader
+java-time	America/New_York[right]	unsupported_by_reader	consumes $JAVA_HOME/lib/tzdb.dat (TZDB format), no public raw-TZif file loader
+php-timelib	Europe/Lisbon	unsupported_by_reader	consumes bundled timelib DB (php -i: 'Timezone Database => internal', Olson 2026.1)
+php-timelib	Asia/Singapore	unsupported_by_reader	consumes bundled timelib DB (php -i: 'Timezone Database => internal', Olson 2026.1)
+php-timelib	Pacific/Kiritimati	unsupported_by_reader	consumes bundled timelib DB (php -i: 'Timezone Database => internal', Olson 2026.1)
+php-timelib	Europe/London	unsupported_by_reader	consumes bundled timelib DB (php -i: 'Timezone Database => internal', Olson 2026.1)
+php-timelib	Europe/Dublin	unsupported_by_reader	consumes bundled timelib DB (php -i: 'Timezone Database => internal', Olson 2026.1)
+php-timelib	America/New_York[right]	unsupported_by_reader	consumes bundled timelib DB (php -i: 'Timezone Database => internal', Olson 2026.1)
+icu4c	Europe/Lisbon	unsupported_by_reader	consumes ICU zoneinfo64.res resource bundle, not raw TZif
+icu4c	Asia/Singapore	unsupported_by_reader	consumes ICU zoneinfo64.res resource bundle, not raw TZif
+icu4c	Pacific/Kiritimati	unsupported_by_reader	consumes ICU zoneinfo64.res resource bundle, not raw TZif
+icu4c	Europe/London	unsupported_by_reader	consumes ICU zoneinfo64.res resource bundle, not raw TZif
+icu4c	Europe/Dublin	unsupported_by_reader	consumes ICU zoneinfo64.res resource bundle, not raw TZif
+icu4c	America/New_York[right]	unsupported_by_reader	consumes ICU zoneinfo64.res resource bundle, not raw TZif
+
+=== TALLY ===
+  match: 16
+  match_with_known_reader_limitation: 1
+  unsupported_by_reader: 19

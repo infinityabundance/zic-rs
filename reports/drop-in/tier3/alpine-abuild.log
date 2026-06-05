@@ -1,0 +1,19 @@
+## alpine: "Alpine Linux v3.23"
+## installing the Alpine Rust toolchain (apk rust cargo) ...
+## toolchain identity:
+   rustc=rustc 1.91.1 (ed61e7d7e 2025-11-07) (Alpine Linux Rust 1.91.1-r2)
+   cargo=cargo 1.91.1 (ea2d97820 2025-10-10) (Alpine Linux Rust 1.91.1-r2)
+   apk rust=rust-1.91.1-r2 x86_64 {rust} (Apache-2.0 OR MIT) [installed]
+   apk cargo=cargo-1.91.1-r2 x86_64 {rust} ((Apache-2.0 OR MIT) AND UNLICENSE) [installed]
+   musl: /lib/ld-musl-x86_64.so.1
+## building zic-rs 0.1.0 from the crates.io SOURCE crate (Alpine cargo, musl-native, --locked) ...
+## ecosystem-built binary:
+   zic-rs 0.1.0
+   binary_sha256=0204bdc8ef853dbcdaabb0737324457b520fb5a02319cded265abb5d23eddf21
+   runtime_abi: 	/lib/ld-musl-x86_64.so.1 (0x7f17a0443000)
+## drop-in matrix with the ecosystem-built binary:
+   compile_exit=0
+   files=598
+   bundle_hash: "bundle_hash": "453641ff2568d8b1
+## tzdata source sha: 0078657fd0b76865
+## DONE

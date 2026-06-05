@@ -1,0 +1,3 @@
+[Crux] version: 0.9.0.0.99, crux-mir version: 0.12.0.0.99
+[Crux] Git commit cf396c705b41f1dcb166318f8a9cace5343880d2
+[Crux]     branch master

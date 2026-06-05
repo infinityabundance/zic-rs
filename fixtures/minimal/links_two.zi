@@ -1,0 +1,4 @@
+Zone Etc/UTC 0 - UTC
+Zone Etc/GMT 0 - GMT
+Link Etc/UTC UTC
+Link Etc/GMT GMTLINK

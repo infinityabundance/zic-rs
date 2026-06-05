@@ -1,0 +1,36 @@
+/target
+**/*.rs.bk
+# Cargo.lock IS committed (bin crate — CI `--locked` + reproducibility). The detached
+# audit-harness lockfiles stay ignored (see the audit-harness section below).
+
+# Session/working notes are kept out of the tracked tree.
+/research/SESSION-CONTEXT.md
+
+# Valgrind / debugger core dumps
+vgcore.*
+**/vgcore.*
+*.core
+
+# Binary VM-lab artifacts — the vendor-oracle lab is external; never vendor VM blobs.
+# (Receipts, scripts, drivers, and serial logs ARE kept; only binaries are excluded.)
+**/*.iso
+**/*.qcow2
+**/*.img
+**/*.fd
+**/*.tar.gz
+**/*.tar.lz
+**/*.tar.xz
+**/*.bz2
+**/*.xz
+**/*.lz
+**/*.zip
+
+# The vendor-oracle lab + zdump-rs are EXTERNAL sibling repos (../zic-rs-vendor-oracle-lab,
+# ../zdump-rs) — moved out of research/; nothing to ignore inside this repo.
+
+# audit harness build artifacts
+audits/*/harness/target/
+audits/*/harness/verif/
+audits/loom/harness/Cargo.lock
+audits/crux-mir/harness/Cargo.lock
+audits/creusot/harness/Cargo.lock

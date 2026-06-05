@@ -1,0 +1,21 @@
+{
+  "schema": "vendor-oracle-receipt-v1",
+  "admission": "admitted",
+  "platform": "freebsd_14_x86_64",
+  "platform_status": "admitted",
+  "oracle_run_status": "completed",
+  "oracle_exit_disposition": "success",
+  "stderr_encoding": "utf8",
+  "receipt_hash_scope": "stable_verdict_only",
+  "oracle_invocation_identity": "argv_exact",
+  "argv": ["zic", "-v", "-d", "out", "fixture.zi"],
+  "fixture_set": "diagnostic-fixtures-v1",
+  "zic_binary_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "zic_version_output": "zic (FreeBSD) 2026b",
+  "tzdb_source_release": "2026b",
+  "patch_stack_identity": null,
+  "class_location_verdicts": [{ "fixture": "unknown_line_type", "verdict": "class_location_match" }, { "fixture": "duplicate_zone", "verdict": "class_location_match" }],
+  "known_divergences": [],
+  "skipped_with_reason": null,
+  "inadmissible_reason": null
+}

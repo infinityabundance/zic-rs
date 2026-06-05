@@ -1,0 +1,18 @@
+## debian: "Debian GNU/Linux 13 (trixie)"
+## apt install cargo + build-essential ...
+## toolchain identity:
+   rustc=rustc 1.85.0 (4d91de4e4 2025-02-17) (built from a source tarball)
+   cargo=cargo 1.85.0 (d73d2caf9 2024-12-31)
+   dpkg cargo=cargo 1.85.0+dfsg3-1
+   glibc=ldd (Debian GLIBC 2.41-12+deb13u3) 2.41
+## building zic-rs 0.1.0 from the crates.io SOURCE crate (Debian cargo, --locked) ...
+## ecosystem-built binary:
+   zic-rs 0.1.0
+   binary_sha256=e444105b53ab16e7373a52318f2cf44f3f92ecda0f368357af225ef314cddfab
+   runtime_abi: 	linux-vdso.so.1 (0x00007f6ffda51000)
+## drop-in matrix with the Debian-built binary:
+   compile_exit=0
+   files=598
+   bundle_hash: "bundle_hash": "453641ff2568d8b1
+## tzdata source sha: 0078657fd0b76865
+## DONE

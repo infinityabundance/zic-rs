@@ -1,0 +1,13 @@
+# T5 #4 regression — a ruled era inherits the rule set's PREVAILING state from an activation that
+# precedes the era's local expansion window. Rule PC turns DST on 1970-06-01 and does not turn it
+# off until 1980. Two ruled `B%sT` eras resume Rule PC — one just after the 1970 onset, one after an
+# intervening fixed era — and BOTH must start in DST (BDT, +6), because Rule PC is still +1 from 1970
+# and the intervening fixed era does not reset the named rule's timeline. Distinct abbreviations and
+# a fixed first era keep this focused purely on the prior-active carry.
+Rule PC 1970 only - Jun 1 0:00 1:00 D
+Rule PC 1980 only - Sep 1 0:00 0    S
+Zone Test/PriorCarry 5:00 -  AAA  1972 Jan 1
+		     5:00 PC B%sT 1974 Jan 1
+		     5:00 -  CCC  1976 Jan 1
+		     5:00 PC B%sT 1978 Jan 1
+		     5:00 -  DDD

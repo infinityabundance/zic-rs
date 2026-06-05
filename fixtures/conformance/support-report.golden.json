@@ -1,0 +1,46 @@
+{
+  "schema": "zic-rs-support-report-v4",
+  "provenance": {
+    "manifest_schema": "zic-rs-compile-manifest-v8",
+    "per_run_profile": "see `compile --manifest`: build_profile / source_inputs / link_profile / source_profile.backward_evidence",
+    "source_variant_reference_pin_gate": "lifted_for_2026b",
+    "blocked_substeps": [],
+    "unpinned_required_files": [],
+    "source_variant_behavior_implemented": false,
+    "note": "tzdb 2026b reference set admitted + signature-verified + SHA-256-pinned (reports/t12_5a2-reference-admission.md); T12.5b–d source-variant **evidence axes** are implemented for that pinned reference, while source-variant **behaviour** remains not implemented or claimed. No backzone/PACKRATLIST/DATAFORM/rearguard/vanguard behaviour is claimed; never inferred from aliases, filenames, link counts, or output byte shape.",
+    "negative_capabilities": [
+      { "capability": "does_not_claim_all_iana_releases_without_admission", "enforced_by": "T12.5a.3 release-admission matrix (only 2026b admitted)" },
+      { "capability": "does_not_claim_arbitrary_tzif_roundtrip", "enforced_by": "T15.4 tzif/rfc9636 (a validator/reader is not a round-trip preservation claim)" },
+      { "capability": "does_not_claim_full_toctou_resistance", "enforced_by": "T14.6 hostile-output-tree ledger (RequiresOpenatStyleHardening)" },
+      { "capability": "does_not_claim_future_civil_time_authority", "enforced_by": "docs/tzdb-governance.md + RFC 9557 (tzdb predicts; named-tz rules change; not a legal oracle)" },
+      { "capability": "does_not_claim_leap_smear_semantics", "enforced_by": "T11 emits discrete TZif leap-second records (compile::apply_leaps / LeapRecord); no smearing path exists" },
+      { "capability": "does_not_claim_range_truncation_leap_expiry_interaction_parity_without_witness", "enforced_by": "T11.4 — Rolling-leap-under-`-r` is a hard error (compile/leap.rs); the -r×leap-expiry interaction has no semantic witness" },
+      { "capability": "does_not_claim_report_authenticity_without_signature_or_reproducible_context", "enforced_by": "T15.5 ConformanceStatus.report_provenance (default unsigned_local_report — not an attestation)" },
+      { "capability": "does_not_claim_tzif_validator_as_security_sandbox", "enforced_by": "T15.4 tzif/rfc9636 non-claim (bounds-safe, but not a hardened sandbox for hostile binaries)" },
+      { "capability": "does_not_claim_unadmitted_vendor_parity", "enforced_by": "T13 reference-platform diagnostic matrix (only upstream_iana_2026b admitted)" },
+      { "capability": "does_not_curate_time_or_define_display_names", "enforced_by": "docs/tzdb-governance.md (IANA/CLDR boundary; not zic-rs's role)" },
+      { "capability": "does_not_depend_on_host_endianness", "enforced_by": "tzif/header.rs + data writers emit big-endian fixed-width fields (to_be_bytes); byte-identical Etc/UTC fixture pins it" },
+      { "capability": "does_not_infer_dataform_from_content", "enforced_by": "T12.5d test (negative-SAVE is not vanguard; hash-backed only)" },
+      { "capability": "does_not_infer_source_variant_from_output_shape", "enforced_by": "T12.5 source_variants_not_inferred_* tests" },
+      { "capability": "does_not_require_manifest_to_read_tzif", "enforced_by": "RFC 9636 (a TZif reader needs only the emitted bytes; manifest is a sidecar)" },
+      { "capability": "does_not_ship_or_operate_vendor_qemu_labs_in_core_repo", "enforced_by": "T16.5 vendor_oracle — core defines/admits receipts only; no VM images/QEMU orchestration vendored" },
+      { "capability": "does_not_treat_manifest_as_tzif_semantics", "enforced_by": "reports/t12-close-receipt.md §5 (manifest is provenance, not TZif semantics)" }
+    ]
+  },
+  "oracle_mode": { "mode": "not_run", "skipped_with_reason": null },
+  "conformance_status": {
+"report_kind": "support", "conformance_level": "release_admitted_compile_coverage", "declared_scope_hash": "1cd768b2e7a8b42d41ea47e8845e8f38a3b9b7ed379b665633095c560fead8b6", "admitted_release_gate": "lifted_for_2026b", "workspace_provenance": "unknown", "report_provenance": "unsigned_local_report", "claim_portability": "release_specific", "evidence_authority": "implementation_observation", "claim_boundary": { "proves": "the admitted release's zones compile (compile-coverage), each accounted in exactly one bucket", "does_not_prove": "behaviour / structural / reader-compatibility parity — those are separate surfaces (semantic-report · structural-report · tzif-validate)", "depends_on": "the signature-verified + hash-pinned 2026b reference set and this zic-rs build" }, "valid_disambiguation": ["structurally_valid: RFC 9636 byte-format integrity (tzif-validate) — NOT behaviour or semantics", "semantically_witness_matching: offset/is_dst/abbr match zdump for the declared witness set — NOT all instants", "modern_reader_compatible: no v4/legacy reader hazards — NOT semantic correctness", "future_projection_matching: the POSIX footer projects like reference — separate from footer parseability", "release_admitted: the source release is signature-verified + hash-pinned — NOT all IANA releases", "compile_covered: the admitted release's zones compile — NOT behaviour-matched", "behaviour_matched: CORE.1 341/341 vs reference zic/zdump over 1900..2040 — the live claim, separate from all above"], "core1_claim": "341/341 canonical zones behaviour-match reference zic/zdump over 1900..2040 (0 mismatch, 0 fail-closed)", "available_surfaces": ["support-report", "structural-report", "semantic-report", "tzif-validation", "compile-manifest"], "compiler_identity": { "zic_rs_version": "0.1.0", "rustc": null, "target": "<target>", "profile": "<profile>", "git_commit": null } },
+  "tzdb_version": null,
+  "zones_parsed": 1,
+  "links_parsed": 1,
+  "supported_identifiers": 2,
+  "fully_accounted": true,
+  "supported_zones": ["Etc/UTC"],
+  "unsupported": {},
+  "links": {
+    "to_supported": ["UTC"],
+    "to_unsupported": [],
+    "cycles": [],
+    "missing": []
+  }
+}

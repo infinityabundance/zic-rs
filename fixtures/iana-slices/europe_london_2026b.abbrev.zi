@@ -1,0 +1,84 @@
+# Europe/London — verbatim zishrink-abbreviated extract from tzdata.zi (IANA tzdb 2026b).
+#
+# This is the UNMODIFIED extract (record keys R/Z/L, abbreviated month/year tokens) used as
+# the faithfulness reference for the de-abbreviated canonical slice europe_london_2026b.zi:
+# reference `zic` compiles BOTH to byte-identical TZif (asserted by the test
+# `canonical_london_slice_is_byte_identical_to_abbreviated_extract_under_reference_zic`).
+# zic-rs's own parser cannot read this file (record dispatch is exact-match); it exists purely
+# as the reference-`zic` provenance anchor.
+R G 1916 o - May 21 2s 1 BST
+R G 1916 o - O 1 2s 0 GMT
+R G 1917 o - Ap 8 2s 1 BST
+R G 1917 o - S 17 2s 0 GMT
+R G 1918 o - Mar 24 2s 1 BST
+R G 1918 o - S 30 2s 0 GMT
+R G 1919 o - Mar 30 2s 1 BST
+R G 1919 o - S 29 2s 0 GMT
+R G 1920 o - Mar 28 2s 1 BST
+R G 1920 o - O 25 2s 0 GMT
+R G 1921 o - Ap 3 2s 1 BST
+R G 1921 o - O 3 2s 0 GMT
+R G 1922 o - Mar 26 2s 1 BST
+R G 1922 o - O 8 2s 0 GMT
+R G 1923 o - Ap Su>=16 2s 1 BST
+R G 1923 1924 - S Su>=16 2s 0 GMT
+R G 1924 o - Ap Su>=9 2s 1 BST
+R G 1925 1926 - Ap Su>=16 2s 1 BST
+R G 1925 1938 - O Su>=2 2s 0 GMT
+R G 1927 o - Ap Su>=9 2s 1 BST
+R G 1928 1929 - Ap Su>=16 2s 1 BST
+R G 1930 o - Ap Su>=9 2s 1 BST
+R G 1931 1932 - Ap Su>=16 2s 1 BST
+R G 1933 o - Ap Su>=9 2s 1 BST
+R G 1934 o - Ap Su>=16 2s 1 BST
+R G 1935 o - Ap Su>=9 2s 1 BST
+R G 1936 1937 - Ap Su>=16 2s 1 BST
+R G 1938 o - Ap Su>=9 2s 1 BST
+R G 1939 o - Ap Su>=16 2s 1 BST
+R G 1939 o - N Su>=16 2s 0 GMT
+R G 1940 o - F Su>=23 2s 1 BST
+R G 1941 o - May Su>=2 1s 2 BDST
+R G 1941 1943 - Au Su>=9 1s 1 BST
+R G 1942 1944 - Ap Su>=2 1s 2 BDST
+R G 1944 o - S Su>=16 1s 1 BST
+R G 1945 o - Ap M>=2 1s 2 BDST
+R G 1945 o - Jul Su>=9 1s 1 BST
+R G 1945 1946 - O Su>=2 2s 0 GMT
+R G 1946 o - Ap Su>=9 2s 1 BST
+R G 1947 o - Mar 16 2s 1 BST
+R G 1947 o - Ap 13 1s 2 BDST
+R G 1947 o - Au 10 1s 1 BST
+R G 1947 o - N 2 2s 0 GMT
+R G 1948 o - Mar 14 2s 1 BST
+R G 1948 o - O 31 2s 0 GMT
+R G 1949 o - Ap 3 2s 1 BST
+R G 1949 o - O 30 2s 0 GMT
+R G 1950 1952 - Ap Su>=14 2s 1 BST
+R G 1950 1952 - O Su>=21 2s 0 GMT
+R G 1953 o - Ap Su>=16 2s 1 BST
+R G 1953 1960 - O Su>=2 2s 0 GMT
+R G 1954 o - Ap Su>=9 2s 1 BST
+R G 1955 1956 - Ap Su>=16 2s 1 BST
+R G 1957 o - Ap Su>=9 2s 1 BST
+R G 1958 1959 - Ap Su>=16 2s 1 BST
+R G 1960 o - Ap Su>=9 2s 1 BST
+R G 1961 1963 - Mar lastSu 2s 1 BST
+R G 1961 1968 - O Su>=23 2s 0 GMT
+R G 1964 1967 - Mar Su>=19 2s 1 BST
+R G 1968 o - F 18 2s 1 BST
+R G 1972 1980 - Mar Su>=16 2s 1 BST
+R G 1972 1980 - O Su>=23 2s 0 GMT
+R G 1981 1995 - Mar lastSu 1u 1 BST
+R G 1981 1989 - O Su>=23 1u 0 GMT
+R G 1990 1995 - O Su>=22 1u 0 GMT
+R E 1977 1980 - Ap Su>=1 1u 1 S
+R E 1977 o - S lastSu 1u 0 -
+R E 1978 o - O 1 1u 0 -
+R E 1979 1995 - S lastSu 1u 0 -
+R E 1981 ma - Mar lastSu 1u 1 S
+R E 1996 ma - O lastSu 1u 0 -
+Z Europe/London -0:1:15 - LMT 1847 D
+0 G %s 1968 O 27
+1 - BST 1971 O 31 2u
+0 G %s 1996
+0 E GMT/BST

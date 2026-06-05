@@ -1,0 +1,15 @@
+# Test/FinalEffective — multi-era zone whose FINAL era references a rule set that is "mixed"
+# by raw membership (finite rows 1977..1995 + recurring rows 1996..max) but whose finite rows
+# all fall BEFORE the final era starts (1996). It mirrors Europe/London's shape in miniature:
+# inside the final era the effective rule set is recurring-only, so the compiler must classify
+# by *effective in-era activations*, not raw rule membership, and route to the
+# final-recurring anchor + footer path. (See docs/reference-zic-semantics.md.)
+#
+# Expected: final era effectively recurring-only; one forced anchor at the 1996 era start +
+# footer GMT0BST,M3.5.0/1,M10.5.0; zdump behaviour matches reference zic over 1990..2040.
+Rule	E	1977	1995	-	Apr	Sun>=1	1:00u	1:00	S
+Rule	E	1977	1995	-	Oct	lastSun	1:00u	0	-
+Rule	E	1996	max	-	Mar	lastSun	1:00u	1:00	S
+Rule	E	1996	max	-	Oct	lastSun	1:00u	0	-
+Zone	Test/FinalEffective	0	-	GMT	1996
+			0	E	GMT/BST

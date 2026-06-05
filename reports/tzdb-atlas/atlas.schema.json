@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/infinityabundance/zic-rs/reports/tzdb-atlas/atlas.schema.json",
+  "title": "zic-rs TZDB Evidence Atlas row (zic-rs-atlas-row-v1)",
+  "description": "One evidence-atlas finding. DERIVED from the canonical reports/tzdb-atlas/atlas.tsv (ATLAS-FORMAT.1) — this schema validates the NDJSON projection, it does not define new evidence. Each row joins one of four evidence axes to a receipt with explicit attribution.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "axis",
+    "subject",
+    "key_fact",
+    "verdict",
+    "attribution",
+    "receipt"
+  ],
+  "properties": {
+    "axis": {
+      "type": "string",
+      "minLength": 1,
+      "description": "evidence axis the finding belongs to",
+      "enum": [
+        "drop_in",
+        "reader",
+        "reference_zic",
+        "source_shape",
+        "upstream_archive",
+        "upstream_data",
+        "vendor_oracle",
+        "zic_rs"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1,
+      "description": "what the finding is about"
+    },
+    "key_fact": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the receipt-backed fact, stated honestly with its bounds"
+    },
+    "verdict": {
+      "type": "string",
+      "minLength": 1,
+      "description": "the row's classification (axis-local vocabulary; not collapsed across axes)"
+    },
+    "attribution": {
+      "type": "string",
+      "minLength": 1,
+      "description": "which surface the evidence is attributed to",
+      "enum": [
+        "bounded_legacy_source",
+        "drop_in_environment",
+        "reader",
+        "unsupported_by_design",
+        "upstream_archive",
+        "vendor_zic",
+        "zic_rs"
+      ]
+    },
+    "receipt": {
+      "type": "string",
+      "minLength": 1,
+      "description": "path to the backing receipt/doc/tsv (repo-relative)"
+    }
+  }
+}

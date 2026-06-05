@@ -1,0 +1,8 @@
+release	archive_sha256	sig	ref_files	zrs_files	zrs_skipped	fixtures_match	verdict
+2026b	114543d9f19a6bfe…	GOODSIG	598	598	0	7/7	match
+2026a	77b541725937bb53…	GOODSIG	598	598	0	7/7	match
+2025b	11810413345fc780…	GOODSIG	598	598	0	7/7	match
+2024a	0d0434459acbd205…	GOODSIG	597	597	0	7/7	match
+2020a	547161eca24d344e…	GOODSIG	594	591	3	7/7	match
+2018e	6b288e5926841a4c…	GOODSIG	592	589	3	7/7	match
+2015g	b923cdbf07849169…	GOODSIG	583	583	0	7/7	match

@@ -1,0 +1,53 @@
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.45
+   Compiling unicode-ident v1.0.24
+   Compiling libc v0.2.186
+   Compiling utf8parse v0.2.2
+   Compiling colorchoice v1.0.5
+   Compiling rustix v1.1.4
+   Compiling getrandom v0.4.2
+   Compiling anstyle v1.0.14
+   Compiling anstyle-query v1.1.5
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling clap_lex v1.1.0
+   Compiling cfg-if v1.0.4
+   Compiling thiserror v2.0.18
+   Compiling bitflags v2.11.1
+   Compiling strsim v0.11.1
+   Compiling heck v0.5.0
+   Compiling linux-raw-sys v0.12.1
+   Compiling anstyle-parse v1.0.0
+   Compiling fastrand v2.4.1
+   Compiling once_cell v1.21.4
+   Compiling anstream v1.0.0
+   Compiling clap_builder v4.6.0
+   Compiling syn v2.0.117
+   Compiling errno v0.3.14
+   Compiling tempfile v3.27.0
+   Compiling thiserror-impl v2.0.18
+   Compiling clap_derive v4.6.1
+   Compiling clap v4.6.1
+   Compiling zic-rs v0.1.0 (/home/one/zic-rs)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.34s
+     Running unittests src/lib.rs (target/miri/x86_64-unknown-linux-gnu/debug/deps/tzcompile-aa74fac6fa8af938)
+
+running 16 tests
+test tzif::data_block::tests::empty_abbr_reuses_a_terminator ... ok
+test tzif::data_block::tests::exact_duplicates_dedup ... ok
+test tzif::data_block::tests::non_suffix_abbrs_are_appended ... ok
+test tzif::data_block::tests::plmt_lmt_share_like_ho_chi_minh ... ok
+test tzif::data_block::tests::suffix_is_shared_regardless_of_order ... ok
+test tzif::rfc9636::tests::bad_magic_is_a_violation_not_a_panic ... ok
+test tzif::rfc9636::tests::empty_input_is_a_violation ... ok
+test tzif::rfc9636::tests::truncated_header_is_a_violation ... ok
+test tzif::rfc9636::tests::type_index_out_of_bounds_is_caught_as_a_violation ... ok
+test tzif::rfc9636::tests::well_formed_zic_rs_output_is_conformant ... ok
+test tzif::validate::tests::count_block_len_is_checked_arithmetic ... ok
+test tzif::validate::tests::implausibly_large_declared_count_is_rejected_not_ooming ... ok
+test tzif::validate::tests::out_of_range_transition_type_index_is_rejected_not_panic ... ok
+test tzif::validate::tests::round_trip_fixed_offset ... ok
+test tzif::validate::tests::round_trip_utc ... ok
+test tzif::validate::tests::valid_transition_type_index_parses ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 113 filtered out; finished in 1.37s
+

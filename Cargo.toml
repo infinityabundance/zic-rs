@@ -1,0 +1,64 @@
+[package]
+name = "zic-rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "A memory-safe Rust timezone compiler for IANA tzdata, producing TZif files with deterministic output and reference-zic comparison."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/infinityabundance/zic-rs"
+homepage = "https://github.com/infinityabundance/zic-rs"
+readme = "README.md"
+keywords = ["timezone", "tzif", "zoneinfo", "iana", "zic"]
+categories = ["command-line-utilities", "date-and-time"]
+authors = ["infinityabundance"]
+# Ship a lean crate: the library + CLI source, license, changelog, and readme.
+# The full evidence project (docs, audits, reports, vendor-oracle lab, paper) lives in the
+# GitHub repository, not in the published crate.
+include = [
+    "src/**/*",
+    "/Cargo.toml",
+    "/README.md",
+    "/LICENSE-MIT",
+    "/LICENSE-APACHE",
+    "/CHANGELOG.md",
+]
+
+# Library first: the compiler lives in `tzcompile`; the binary is a thin CLI over it.
+[lib]
+name = "tzcompile"
+path = "src/lib.rs"
+
+[[bin]]
+name = "zic-rs"
+path = "src/main.rs"
+
+[features]
+# Optional **ecosystem interop** bench (NOT in the default build/test, NOT the correctness
+# oracle). When enabled, `tests/ecosystem_consumers.rs` compiles fixtures with zic-rs and loads
+# the resulting TZif bytes with the `tz-rs` consumer crate, asserting behaviour at ledger trap
+# instants. The binding correctness contract remains reference `zic`/`zdump`; this layer only
+# shows generated TZif is *readable & usable* by a real Rust consumer. See
+# docs/consumer-testbench.md. Run with: `cargo test --features ecosystem-tests`.
+ecosystem-tests = ["dep:tz-rs"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
+# Used by the `compare` subcommand to create a unique, self-cleaning working directory for
+# reference-`zic` output. A small, widely-trusted crate; only the `compare` path uses it.
+tempfile = "3"
+# Optional consumer crate for the `ecosystem-tests` feature only — a pure-Rust TZif *reader*.
+# It is never in the default dependency graph (gated by `dep:tz-rs`), so the default build and
+# `cargo test` neither fetch nor compile it.
+tz-rs = { version = "0.7", optional = true }
+
+[profile.release]
+# Deterministic, debuggable release builds; correctness over micro-optimisation.
+overflow-checks = true
+
+[lints.rust]
+# Declare `cfg(kani)` as a known config so the normal `clippy -D warnings` gate does not flag the
+# `#[cfg(kani)]` proof harnesses (`audits/kani`, src/tzif/validate.rs) as an `unexpected_cfgs` lint.
+# `kani` is set by the Kani compiler only; under a normal build the harness modules are gated out.
+# This is the standard Kani integration — it adds no dependency and changes no behaviour.
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(kani)'] }

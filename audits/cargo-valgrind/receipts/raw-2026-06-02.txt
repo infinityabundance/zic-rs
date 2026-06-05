@@ -1,0 +1,53 @@
+==3373482== Memcheck, a memory error detector
+==3373482== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==3373482== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info
+==3373482== Command: /tmp/t23/generic/release/zic-rs compile --input /usr/share/zoneinfo/tzdata.zi --out /tmp/out --all-supported
+==3373482== 
+vex amd64->IR: unhandled instruction bytes: 0x62 0xF1 0x7F 0x48 0x7F 0x84 0x24 0x30 0x0 0x0
+vex amd64->IR:   REX=0 REX.W=0 REX.R=0 REX.X=0 REX.B=0
+vex amd64->IR:   VEX=0 VEX.L=0 VEX.nVVVV=0x0 ESC=NONE
+vex amd64->IR:   PFX.66=0 PFX.F2=0 PFX.F3=0
+==3373482== valgrind: Unrecognised instruction at address 0x41ef49d.
+==3373482==    at 0x41EF49D: _dl_start (rtld.c:565)
+==3373482==    by 0x41EE547: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+==3373482==    by 0x6: ???
+==3373482==    by 0x1FFEFFFEFE: ???
+==3373482==    by 0x1FFEFFFF1E: ???
+==3373482==    by 0x1FFEFFFF26: ???
+==3373482==    by 0x1FFEFFFF2E: ???
+==3373482==    by 0x1FFEFFFF4C: ???
+==3373482==    by 0x1FFEFFFF52: ???
+==3373482==    by 0x1FFEFFFF76: ???
+==3373482== Your program just tried to execute an instruction that Valgrind
+==3373482== did not recognise.  There are two possible reasons for this.
+==3373482== 1. Your program has a bug and erroneously jumped to a non-code
+==3373482==    location.  If you are running Memcheck and you just saw a
+==3373482==    warning about a bad jump, it's probably your program's fault.
+==3373482== 2. The instruction is legitimate but Valgrind doesn't handle it,
+==3373482==    i.e. it's Valgrind's fault.  If you think this is the case or
+==3373482==    you are not sure, please let us know and we'll try to fix it.
+==3373482== Either way, Valgrind will now raise a SIGILL signal which will
+==3373482== probably kill your program.
+==3373482== 
+==3373482== Process terminating with default action of signal 4 (SIGILL): dumping core
+==3373482==  Illegal opcode at address 0x41EF49D
+==3373482==    at 0x41EF49D: _dl_start (rtld.c:565)
+==3373482==    by 0x41EE547: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+==3373482==    by 0x6: ???
+==3373482==    by 0x1FFEFFFEFE: ???
+==3373482==    by 0x1FFEFFFF1E: ???
+==3373482==    by 0x1FFEFFFF26: ???
+==3373482==    by 0x1FFEFFFF2E: ???
+==3373482==    by 0x1FFEFFFF4C: ???
+==3373482==    by 0x1FFEFFFF52: ???
+==3373482==    by 0x1FFEFFFF76: ???
+==3373482== 
+==3373482== HEAP SUMMARY:
+==3373482==     in use at exit: 0 bytes in 0 blocks
+==3373482==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==3373482== 
+==3373482== All heap blocks were freed -- no leaks are possible
+==3373482== 
+==3373482== For lists of detected and suppressed errors, rerun with: -s
+==3373482== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+timeout: the monitored command dumped core

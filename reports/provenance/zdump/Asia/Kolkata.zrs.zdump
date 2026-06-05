@@ -1,0 +1,20 @@
+Z  -9223372036854775808 (gmtime failed) = -9223372036854775808 (localtime failed)
+Z  -67768040609762009 (gmtime failed) = -67768040609762009 (localtime failed)
+Z  -67768040609762008 (gmtime failed) = Thu Jan  1 00:00:00 -2147481748 LMT isdst=0 gmtoff=21208
+Z  -67768040609740801 (gmtime failed) = Thu Jan  1 05:53:27 -2147481748 LMT isdst=0 gmtoff=21208
+Z  Thu Jan  1 00:00:00 -2147481748 UT = Thu Jan  1 05:53:28 -2147481748 LMT isdst=0 gmtoff=21208
+Z  Sun Dec 31 18:38:49 1905 UT = Sun Dec 31 23:59:59 1905 MMT isdst=0 gmtoff=19270
+Z  Sun Dec 31 18:38:50 1905 UT = Mon Jan  1 00:08:50 1906 IST isdst=0 gmtoff=19800
+Z  Tue Sep 30 18:29:59 1941 UT = Tue Sep 30 23:59:59 1941 IST isdst=0 gmtoff=19800
+Z  Tue Sep 30 18:30:00 1941 UT = Wed Oct  1 01:00:00 1941 +0630 isdst=1 gmtoff=23400
+Z  Thu May 14 17:29:59 1942 UT = Thu May 14 23:59:59 1942 +0630 isdst=1 gmtoff=23400
+Z  Thu May 14 17:30:00 1942 UT = Thu May 14 23:00:00 1942 IST isdst=0 gmtoff=19800
+Z  Mon Aug 31 18:29:59 1942 UT = Mon Aug 31 23:59:59 1942 IST isdst=0 gmtoff=19800
+Z  Mon Aug 31 18:30:00 1942 UT = Tue Sep  1 01:00:00 1942 +0630 isdst=1 gmtoff=23400
+Z  Sun Oct 14 17:29:59 1945 UT = Sun Oct 14 23:59:59 1945 +0630 isdst=1 gmtoff=23400
+Z  Sun Oct 14 17:30:00 1945 UT = Sun Oct 14 23:00:00 1945 IST isdst=0 gmtoff=19800
+Z  Wed Dec 31 18:29:59 2147485547 UT = Wed Dec 31 23:59:59 2147485547 IST isdst=0 gmtoff=19800
+Z  Wed Dec 31 18:30:00 2147485547 UT = 67768036191657000 (localtime failed)
+Z  Wed Dec 31 23:59:59 2147485547 UT = 67768036191676799 (localtime failed)
+Z  67768036191676800 (gmtime failed) = 67768036191676800 (localtime failed)
+Z  9223372036854775807 (gmtime failed) = 9223372036854775807 (localtime failed)

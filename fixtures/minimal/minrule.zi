@@ -1,0 +1,8 @@
+# Test/MinRule — exercises the OBSOLETE `FROM = minimum` spelling. Reference `zic` warns
+# ("FROM year 'minimum' is obsolete; treated as 1900") and coerces it to the year 1900 — NOT an
+# infinite past. zic-rs follows the same finite-1900 semantics. tzdata 2026b uses this zero
+# times; it is compatibility breadth only. The early horizon (1899..1910) proves the 1900 lower
+# bound; the late horizon (2019..2040) proves the recurring tail.
+Rule	X	minimum	max	-	Apr	lastSun	2:00	1:00	D
+Rule	X	minimum	max	-	Oct	lastSun	2:00	0	S
+Zone	Test/MinRule	-5:00	X	E%sT

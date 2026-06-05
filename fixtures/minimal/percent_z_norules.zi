@@ -1,0 +1,8 @@
+# `%z` FORMAT on a no-rules era (T3.2 "%z unlock"). A `-` (no-rules) era whose FORMAT is `%z`
+# renders the era's numeric STANDARD offset (is_dst=false), exactly as reference `zic` — e.g.
+# `0:30 - %z` → `+0030`, footer `<+0030>-0:30`. This is the single highest-impact gap the
+# support-report found (≈176 zones across tzdata.zi). `%s` and `STD/DST` slash on a no-rules era
+# stay fail-closed (no LETTER / no DST context).
+Zone	Test/PZSolo	0:30	-	%z
+Zone	Test/PZMulti	0:30	-	%z	1919 Sep
+			1:00	-	WAT

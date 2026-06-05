@@ -1,0 +1,10 @@
+# Inline-save eras (T3.2b): a Zone era whose RULES column is a constant clock value (a fixed DST
+# saving), as real tzdata uses for wartime zones. Effective offset = STDOFF + SAVE; is_dst is set;
+# the abbreviation is rendered from FORMAT — literal (HKWT) or %z over the TOTAL offset (+0720).
+# Pinned against reference zic 2026b (Hong Kong / Jakarta shapes). See reference-zic-semantics §9.
+Zone Test/InlineLit	8:00	-	HKT	1941 Dec 25
+			8:00	0:30	HKWT	1945 Sep 15
+			8:00	-	HKT
+Zone Test/InlineZ	7:00	0:20	%z	1936
+			7:00	-	WIB
+Zone Test/InlineSolo	8:00	0:30	HKWT

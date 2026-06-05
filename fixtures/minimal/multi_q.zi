@@ -1,0 +1,4 @@
+Rule Q 2015 max - Mar Sun>=8 2:00 1:00 D
+Rule Q 2015 max - Nov Sun>=1 2:00 0 S
+Zone Test/Q -5:00 - EST 2000
+		-5:00 Q E%sT

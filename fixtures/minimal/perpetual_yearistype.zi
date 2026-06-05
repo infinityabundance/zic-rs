@@ -1,0 +1,13 @@
+# PERPETUAL-EXPANSION.1 fixtures.
+# Test/Perpetual: perpetual year-parity rules (`1990 max even/odd`) — the recurring tail is NOT
+# POSIX-footer-expressible (a TZ string cannot encode "even years"), so footer synthesis fails closed
+# by default and only the empty-footer fallback (`--legacy-empty-footer`) compiles it.
+Rule	P	1990	max	-	Oct	lastSun	2:00	1:00	D
+Rule	P	1990	max	even	Mar	Sun>=18	2:00	0	S
+Rule	P	1990	max	odd	Mar	Sun>=1	2:00	0	S
+Zone	Test/Perpetual	10:00	P	E%sT
+# Test/Normal: an ordinary POSIX-expressible recurring pair (one perpetual DST + one perpetual standard)
+# — synthesises a real footer; the empty-footer flag is a NO-OP for it.
+Rule	N	1990	max	-	Oct	lastSun	2:00	1:00	D
+Rule	N	1990	max	-	Mar	lastSun	2:00	0	S
+Zone	Test/Normal	10:00	N	E%sT

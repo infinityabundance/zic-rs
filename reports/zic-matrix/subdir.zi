@@ -1,0 +1,4 @@
+# ZIC-MATRIX.1.D focused fixture: UTCONLY is root-level (writable into a flat dir); Sub/Deep needs a
+# 'Sub/' subdirectory. Under -D into a flat output dir, reference zic writes UTCONLY and skips Sub/Deep.
+Zone UTCONLY 0 - UTC
+Zone Sub/Deep 1 - CET

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zic-rs/schemas/vendor-oracle-receipt-v1.schema.json",
+  "title": "Vendor-oracle receipt (interchange) (vendor-oracle-receipt-v1)",
+  "description": "External-lab -> core interchange contract for a real platform zic run over the diagnostic-fixture corpus; admission is recomputed by the core (admit()), never trusted from the receipt's self-assessment. Distinct namespace (no zic-rs- prefix). Published contract scope: this pins the schema **identity** (the `schema` const) and the top-level object shape. Field-level tightening and full instance-validation against a JSON-Schema validator are a tracked audit-suite item (the core crate carries no validator dependency); see docs/schema-compatibility-policy.md for the versioning rules and tests/schemas.rs for the registry/drift guard.",
+  "type": "object",
+  "required": ["schema"],
+  "properties": {
+    "schema": { "const": "vendor-oracle-receipt-v1", "description": "the immutable schema identity; bumped only on a meaning change" }
+  },
+  "additionalProperties": true
+}

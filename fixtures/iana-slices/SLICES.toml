@@ -1,0 +1,80 @@
+# IANA-slice receipts — the conformance ledger.
+#
+# One [[iana_slice]] block per ADMITTED real IANA-zone slice (see docs/conformance-ladder.md for
+# the admission gate and the project doctrine). This file is human-auditable DOCUMENTATION, like
+# fixtures/MANIFEST.toml — it is NOT parsed by code (no TOML dependency). The *live* enforcement
+# of these claims is:
+#   * the per-slice `zdump` oracle tests in tests/multi_era.rs (behaviour parity over the horizon),
+#   * the canonical≡abbreviated byte-identity tests (faithfulness of the de-abbreviation),
+#   * and `zic-rs support-report` (frontier accounting).
+# A slice appears here ONLY once all admission-gate evidence exists.
+#
+# Reference toolchain: reference `zic`/`zdump` = tzcode 2026b; source = the installed single-file
+# /usr/share/zoneinfo/tzdata.zi (2026b). Slices are canonicalized by expanding ONLY the zishrink
+# record keys R/Z/L (month/day/year tokens and rule names stay in zic-style prefix form, which
+# zic-rs accepts); reference `zic` compiles the canonical slice byte-identically to the verbatim
+# abbreviated extract (the faithfulness proof).
+
+[[iana_slice]]
+name = "Europe/London"
+tier = 0
+tzdb_version = "2026b"
+source = "fixtures/iana-slices/europe_london_2026b.zi"
+abbrev_source = "fixtures/iana-slices/europe_london_2026b.abbrev.zi"
+source_kind = "iana-single-file (zishrink), record-keys-only de-abbreviated"
+canonical = true
+links = []                       # the slice itself defines no Links (GB/Eire etc. live in tzdata.zi)
+horizon = "1830..2045"
+zdump = "match"
+faithfulness = "reference zic: canonical slice byte-identical to abbreviated extract"
+tzif_version = 2
+type_count = 5                   # LMT, GMT, BST(dst), BDST(double-dst), BST(fixed)
+transition_count = 159
+footer = "GMT0BST,M3.5.0/1,M10.5.0"
+semantic_classes = [
+  "multi-era",
+  "lmt",
+  "non-zero-fixed-offset-era",
+  "finite-rules",
+  "recurring-footer",
+  "effective-in-era-classification (recurring-only)",
+  "zishrink-record-keys",
+]
+consumer_bench = "tz-rs: pass (footer-projected 2030 GMT/BST)"
+tests = [
+  "europe_london_2026b_matches_reference_zic_over_1830_2045",
+  "canonical_london_slice_is_byte_identical_to_abbreviated_extract_under_reference_zic",
+]
+notes = "First real IANA-zone admission (T4.0); also the first direct tzdata.zi ingestion."
+
+[[iana_slice]]
+name = "America/New_York"
+tier = 1
+tzdb_version = "2026b"
+source = "fixtures/iana-slices/america_new_york_2026b.zi"
+abbrev_source = "fixtures/iana-slices/america_new_york_2026b.abbrev.zi"
+source_kind = "iana-single-file (zishrink), record-keys-only de-abbreviated"
+canonical = true
+links = []                       # US/Eastern, EST5EDT etc. live in tzdata.zi, not this slice
+horizon = "1883..2040"
+zdump = "match"
+faithfulness = "reference zic: canonical slice byte-identical to abbreviated extract"
+tzif_version = 2
+type_count = 5
+transition_count = 236
+footer = "EST5EDT,M3.2.0,M11.1.0"
+semantic_classes = [
+  "multi-era",
+  "lmt",
+  "finite-rules",
+  "wartime-letters (W/P)",
+  "genuinely-mixed-in-era (finite 1967..2006 + recurring 2007..max)",
+  "recurring-footer",
+  "zishrink-record-keys + zishrink-rule-names (u=US, NY=NYC)",
+]
+consumer_bench = "not run (tz-rs bench covers London; NY behaviour proven by zdump)"
+tests = [
+  "america_new_york_2026b_matches_reference_zic_over_1883_2040",
+  "zic_rs_compiles_abbreviated_and_canonical_new_york_identically",
+]
+notes = "Second real IANA-zone admission (T4.1); forced and proved the genuinely mixed-in-era final era."

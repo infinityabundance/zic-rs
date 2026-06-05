@@ -1,0 +1,15 @@
+# T12.5d DATAFORM non-inference fixture. This source deliberately exhibits every surface a naive
+# detector might (wrongly) read as a DATAFORM signal, yet it is NOT a pinned DATAFORM `.zi` artifact:
+#   - **negative inline SAVE** (`8:00 -1:00 XYZ`) — the "vanguard-looking" feature; mainline 2026b
+#     already uses negative SAVE, so "negative SAVE ⇒ vanguard" is provably wrong (law 7);
+#   - **DST rules + a rich transition stream** (output shape);
+#   - a **`Backzone/`-suggestive zone name** (names prove nothing);
+#   - a **Link** (alias/link counts prove nothing).
+# zic-rs must leave `source_profile.dataform_evidence` at `unknown_no_evidence`: detection is
+# hash-backed against the pinned artifacts only, never inferred from any of the above.
+Zone Test/NegSave	8:00	-1:00	XYZ
+Rule N 2020 only - Mar Sun>=8 2:00 1:00 D
+Rule N 2020 only - Nov Sun>=1 2:00 0 S
+Zone Test/Dst	-5:00	N	E%sT
+Zone Backzone/Looking	0	-	LOOK
+Link Test/Dst	Test/Alias

@@ -1,0 +1,11 @@
+# Test/MixedInEra — the genuinely MIXED-IN-ERA case (T4.1): the final era starts 1970, so Rule
+# E's finite rows (1977..1995) ARE active inside the era, alongside the recurring 1996..max rows.
+# zic-rs expands the finite history explicitly and projects the recurring tail via the footer
+# (same path as single-era Test/Mixed). This is the miniature of America/New_York's final era.
+# Contrast Test/FinalEffective, whose finite rows all predate the era (effectively recurring-only).
+Rule	E	1977	1995	-	Apr	Sun>=1	1:00u	1:00	S
+Rule	E	1977	1995	-	Oct	lastSun	1:00u	0	-
+Rule	E	1996	max	-	Mar	lastSun	1:00u	1:00	S
+Rule	E	1996	max	-	Oct	lastSun	1:00u	0	-
+Zone	Test/MixedInEra	0	-	GMT	1970
+			0	E	GMT/BST

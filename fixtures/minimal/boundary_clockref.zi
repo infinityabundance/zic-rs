@@ -1,0 +1,12 @@
+# T5 #5 regression — clock-reference normalization at an era boundary. The era ends at a WALL
+# UNTIL (`1990 Mar lastSun 2:00`) that, at save=0, names the SAME instant as Rule Y's STANDARD-ref
+# spring (`Mar lastSun 2:00s`), while the standard offset DROPS 6->5. Reference zic makes the
+# boundary itself the spring (GDT, +6); the bug emitted standard (+5) then sprang one UT-hour later,
+# because the absorption test required exact w/s/u reference equality (wall != standard) even though
+# wall 02:00 == standard 02:00 when the prevailing save is 0. Middle era keeps it on the general path.
+# Generic shape of Asia/Tashkent / Ashgabat / Anadyr 1991-92.
+Rule Y 1980 max - Mar lastSun 2:00s 1:00 D
+Rule Y 1980 max - Oct lastSun 2:00s 0    S
+Zone Test/BoundaryClockRef 6:00 Y G%sT 1990 Mar lastSun 2:00
+			   5:00 Y G%sT 1995
+			   5:00 -  GST

@@ -1,0 +1,4 @@
+profile	ref_files	zrs_files	fileset_match	ref_hardlinked	zrs_hardlinked	perm_match	fix_match	verdict	note
+posix	598	598	yes	368	0	yes(644)	6/6	install-semantics-difference	identical file set + behaviour; ref HARDLINKS links (368), zic-rs COPIES (relocatable, bucket-3)
+right	598	598	yes	368	0	yes(644)	6/6	install-semantics-difference	identical file set + behaviour; ref HARDLINKS links (368), zic-rs COPIES (relocatable, bucket-3)
+localtime	-	-	-	-	-	-	-	install-semantics-difference	ref -t writes an ARBITRARY outside path [wrote-/tmp/pa/ref/etc/localtime-113B]; zic-rs REFUSES absolute -t [ZIC008_OUTPUT_PATH_TRAVERSAL] but ACCEPTS a safe relative name under --out [accepted-under-out] (bucket-3 safer)

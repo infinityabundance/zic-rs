@@ -1,0 +1,189 @@
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#tz-rs@0.7.3 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#tz-rs@0.7.3 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#tz-rs@0.7.3 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#tz-rs@0.7.3 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+Failed to match (ignoring source) package: registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.228 
+     Removed 8270 files, 2.2GiB total
+   Compiling proc-macro2 v1.0.106
+   Compiling unicode-ident v1.0.24
+   Compiling quote v1.0.45
+    Checking utf8parse v0.2.2
+   Compiling libc v0.2.186
+    Checking anstyle-query v1.1.5
+    Checking anstyle v1.0.14
+    Checking is_terminal_polyfill v1.70.2
+   Compiling rustix v1.1.4
+    Checking colorchoice v1.0.5
+   Compiling getrandom v0.4.2
+   Compiling heck v0.5.0
+    Checking linux-raw-sys v0.12.1
+    Checking cfg-if v1.0.4
+    Checking clap_lex v1.1.0
+    Checking strsim v0.11.1
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/is_terminal_polyfill-cb311c9f413aefae.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/utf8parse-a3c57471a0fdc5c4.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/cfg_if-e7f3f42eb79a8477.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/heck-f2569b767cf4326e.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/getrandom-941c4026d36b67fd/build_script_build-941c4026d36b67fd.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/libc-0ee2412e78028e33/build_script_build-0ee2412e78028e33.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libcfg_if-e7f3f42eb79a8477.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/rustix-3ae6f9fb47e86ab2/build_script_build-3ae6f9fb47e86ab2.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/anstyle_query-0b8322a96a58150a.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/colorchoice-9ca51bc4fd4a1951.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/quote-76885401fd60bb49/build_script_build-76885401fd60bb49.d","emit":"dep-info"}
+   Compiling thiserror v2.0.18
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libis_terminal_polyfill-cb311c9f413aefae.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/strsim-f06c4725db79ea72.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/proc-macro2-e61b3caad72a3067/build_script_build-e61b3caad72a3067.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/anstyle-a8236b7ed4a5a82a.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/unicode_ident-a43390fd6bef71db.d","emit":"dep-info"}
+    Checking bitflags v2.11.1
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libanstyle_query-0b8322a96a58150a.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libutf8parse-a3c57471a0fdc5c4.rmeta","emit":"metadata"}
+    Checking fastrand v2.4.1
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/clap_lex-80933dedea576627.d","emit":"dep-info"}
+    Checking anstyle-parse v1.0.0
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/thiserror-5450ec67f6b19510/build_script_build-5450ec67f6b19510.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libcolorchoice-9ca51bc4fd4a1951.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/bitflags-92693d143cb0f442.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/linux_raw_sys-7a8d34a2af3e838e.d","emit":"dep-info"}
+    Checking once_cell v1.21.4
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libunicode_ident-a43390fd6bef71db.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libheck-f2569b767cf4326e.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/fastrand-45160078175159d7.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libunicode_ident-a43390fd6bef71db.rlib","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libclap_lex-80933dedea576627.rmeta","emit":"metadata"}
+    Checking tz-rs v0.7.3
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/anstyle_parse-8706bc35971369ee.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libstrsim-f06c4725db79ea72.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/once_cell-07c7dea302602c4b.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libanstyle-a8236b7ed4a5a82a.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/getrandom-941c4026d36b67fd/build_script_build-941c4026d36b67fd","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libbitflags-92693d143cb0f442.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libheck-f2569b767cf4326e.rlib","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libanstyle_parse-8706bc35971369ee.rmeta","emit":"metadata"}
+    Checking anstream v1.0.0
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libonce_cell-07c7dea302602c4b.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libfastrand-45160078175159d7.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/tz-c1292fd47b1f02b6.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/quote-76885401fd60bb49/build_script_build-76885401fd60bb49","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/rustix-3ae6f9fb47e86ab2/build_script_build-3ae6f9fb47e86ab2","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/anstream-0841cbbd36ddf4d0.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/libc-0ee2412e78028e33/build_script_build-0ee2412e78028e33","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/thiserror-5450ec67f6b19510/build_script_build-5450ec67f6b19510","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/build/proc-macro2-e61b3caad72a3067/build_script_build-e61b3caad72a3067","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libanstream-0841cbbd36ddf4d0.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/liblinux_raw_sys-7a8d34a2af3e838e.rmeta","emit":"metadata"}
+    Checking clap_builder v4.6.0
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/proc_macro2-e844a18aaf41eeef.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libc-9646351a99517bc9.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libtz-c1292fd47b1f02b6.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/clap_builder-615c67dc751ea836.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/rustix-dd7fc9d1d4f2d8d6.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libproc_macro2-e844a18aaf41eeef.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libproc_macro2-e844a18aaf41eeef.rlib","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/quote-258f0f40cdbe0b86.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libquote-258f0f40cdbe0b86.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libquote-258f0f40cdbe0b86.rlib","emit":"link"}
+   Compiling syn v2.0.117
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/liblibc-9646351a99517bc9.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/getrandom-46d3522fb3350dbd.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libgetrandom-46d3522fb3350dbd.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/syn-77c7d0ca832b3614.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/librustix-dd7fc9d1d4f2d8d6.rmeta","emit":"metadata"}
+    Checking tempfile v3.27.0
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/tempfile-6cbe96db509866d5.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libtempfile-6cbe96db509866d5.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libclap_builder-615c67dc751ea836.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libsyn-77c7d0ca832b3614.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libsyn-77c7d0ca832b3614.rlib","emit":"link"}
+   Compiling thiserror-impl v2.0.18
+   Compiling clap_derive v4.6.1
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/thiserror_impl-2f9ebad318382637.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/clap_derive-afbe8fd67a15b65a.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libthiserror_impl-2f9ebad318382637.so","emit":"link"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/thiserror-b083d84bfe5838b3.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libthiserror-b083d84bfe5838b3.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libclap_derive-afbe8fd67a15b65a.so","emit":"link"}
+    Checking clap v4.6.1
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/clap-228444aebe9ac1f8.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libclap-228444aebe9ac1f8.rmeta","emit":"metadata"}
+    Checking zic-rs v0.1.0 (/home/one/zic-rs)
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/tzcompile-89a97569ab2a294e.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libtzcompile-89a97569ab2a294e.rmeta","emit":"metadata"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/zic_rs-3d6adf4ebca01aca.d","emit":"dep-info"}
+{"$message_type":"artifact","artifact":"/home/one/zic-rs/target/debug/deps/libzic_rs-3d6adf4ebca01aca.rmeta","emit":"metadata"}
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.21s
+    Scanning done
+WARNING: Dependency file was never scanned: /home/one/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.0/README.md
+WARNING: Dependency file was never scanned: /home/one/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap-4.6.1/examples/demo.md
+WARNING: Dependency file was never scanned: /home/one/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_derive-4.6.1/README.md
+WARNING: Dependency file was never scanned: /home/one/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.2/README.md
+
+Metric output format: x/y
+    x = unsafe code used by the build
+    y = total unsafe code found in the crate
+
+Symbols:
+    :) = No `unsafe` usage found, declares #![forbid(unsafe_code)]
+    ?  = No `unsafe` usage found, missing #![forbid(unsafe_code)]
+    !  = `unsafe` usage found
+
+Functions  Expressions  Impls  Traits  Methods  Dependency
+
+0/0        0/0          0/0    0/0     0/0      :) zic-rs 0.1.0
+0/0        0/0          0/0    0/0     0/0      ?  ├── clap 4.6.1
+0/0        0/0          0/0    0/0     0/0      :) │   ├── clap_builder 4.6.0
+1/1        7/7          0/0    0/0     0/0      !  │   │   ├── anstream 1.0.0
+0/0        17/17        0/0    0/0     0/0      !  │   │   │   ├── anstyle-parse 1.0.0
+0/0        1/1          0/0    0/0     0/0      !  │   │   │   │   └── utf8parse 0.2.2
+0/0        22/22        0/0    0/0     0/0      !  │   │   │   ├── anstyle-query 1.1.5
+0/0        6/6          0/0    0/0     0/0      !  │   │   │   ├── anstyle 1.0.14
+0/0        0/0          0/0    0/0     0/0      ?  │   │   │   ├── colorchoice 1.0.5
+0/0        0/0          0/0    0/0     0/0      ?  │   │   │   ├── is_terminal_polyfill 1.70.2
+0/0        1/1          0/0    0/0     0/0      !  │   │   │   └── utf8parse 0.2.2
+0/0        6/6          0/0    0/0     0/0      !  │   │   ├── anstyle 1.0.14
+1/1        15/15        0/0    0/0     0/0      !  │   │   ├── clap_lex 1.1.0
+0/0        0/0          0/0    0/0     0/0      :) │   │   └── strsim 0.11.1
+0/0        0/0          0/0    0/0     0/0      :) │   └── clap_derive 4.6.1
+0/0        6/6          0/0    0/0     0/0      !  │       ├── anstyle 1.0.14
+0/0        0/0          0/0    0/0     0/0      :) │       ├── heck 0.5.0
+0/0        14/14        0/0    0/0     3/3      !  │       ├── proc-macro2 1.0.106
+0/0        4/4          0/0    0/0     0/0      !  │       │   └── unicode-ident 1.0.24
+0/0        0/0          0/0    0/0     0/0      ?  │       ├── quote 1.0.45
+0/0        14/14        0/0    0/0     3/3      !  │       │   └── proc-macro2 1.0.106
+0/0        87/87        3/3    0/0     2/2      !  │       └── syn 2.0.117
+0/0        14/14        0/0    0/0     3/3      !  │           ├── proc-macro2 1.0.106
+0/0        0/0          0/0    0/0     0/0      ?  │           ├── quote 1.0.45
+0/0        4/4          0/0    0/0     0/0      !  │           └── unicode-ident 1.0.24
+0/0        0/46         0/0    0/0     0/0      ?  ├── tempfile 3.27.0
+0/0        0/0          0/0    0/0     0/0      :) │   ├── fastrand 2.4.1
+3/7        64/249       0/0    0/0     0/0      !  │   ├── getrandom 0.4.2
+0/0        0/0          0/0    0/0     0/0      ?  │   │   ├── cfg-if 1.0.4
+0/92       34/725       0/2    0/0     8/101    !  │   │   └── libc 0.2.186
+0/0        81/128       5/9    0/0     3/5      !  │   ├── once_cell 1.21.4
+45/436     714/7539     6/22   1/2     22/62    !  │   └── rustix 1.1.4
+0/0        0/0          0/0    0/0     0/0      ?  │       ├── bitflags 2.11.1
+0/0        0/103        0/0    0/0     0/0      ?  │       ├── errno 0.3.14
+0/92       34/725       0/2    0/0     8/101    !  │       │   └── libc 0.2.186
+0/92       34/725       0/2    0/0     8/101    !  │       ├── libc 0.2.186
+10/10      292/17551    0/0    0/0     20/2286  !  │       └── linux-raw-sys 0.12.1
+0/0        0/0          0/0    0/0     0/0      ?  └── thiserror 2.0.18
+0/0        0/0          0/0    0/0     0/0      ?      └── thiserror-impl 2.0.18
+0/0        14/14        0/0    0/0     3/3      !          ├── proc-macro2 1.0.106
+0/0        0/0          0/0    0/0     0/0      ?          ├── quote 1.0.45
+0/0        87/87        3/3    0/0     2/2      !          └── syn 2.0.117
+
+60/547     1358/26514   14/36  1/2     58/2459
+
+error: Found 4 warnings

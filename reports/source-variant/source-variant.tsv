@@ -1,0 +1,6 @@
+profile	source_zi	ref_files	zrs_files	fix_compared	fix_match	byte_identical	zrs_skipped	verdict	finding
+main	main.zi	598	598	8	8	3	0	behaviour-match-byte-diff	-
+vanguard	vanguard.zi	598	598	8	8	3	0	behaviour-match-byte-diff	-
+rearguard	rearguard.zi	598	598	8	8	3	0	behaviour-match-byte-diff	-
+backzone_excluded	main.zi	598	598	8	8	3	0	behaviour-match-byte-diff	-
+backzone_included	main-backzone.zi	599	599	8	8	3	0	behaviour-match-byte-diff	-

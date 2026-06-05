@@ -1,0 +1,14 @@
+source_id	canonical_url	archive_status	wayback_url	archive_today_url	note
+S1	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260602172641/https://www.rfc-editor.org/info/rfc9636/	https://archive.ph/QIc1m	operator_capture_2026-06-02
+S2	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260602172910/https://www.rfc-editor.org/info/rfc8536/	https://archive.ph/jjhb4	operator_capture_2026-06-02
+S3	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260602173246/https://www.rfc-editor.org/info/rfc6557/	https://archive.ph/uU17k	operator_capture_2026-06-02
+S5	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260601213037/https://www.iana.org/time-zones	https://archive.ph/QHRtv	operator_capture_2026-06-02
+S6	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260602175253/https://data.iana.org/time-zones/releases/tzdb-2026b.tar.lz	n/a	operator_capture_2026-06-02;release_tarballs_archived(tzdb-2026b.tar.lz+tzdata2026b.tar.gz+tzcode2026b.tar.gz;see_source-ledger)
+S10	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260602182627/https://docs.rs/jiff/latest/jiff/	n/a	operator_capture_2026-06-02;3_crates_archived(jiff+tz-rs+chrono-tz;see_source-ledger)
+S4	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260531182809/https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html	https://archive.ph/5fWeS	copyrighted;existing_external_witness_not_self_mirror;operator_capture_2026-06-02
+S11	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260508202414/https://sourceware.org/glibc/	link_only_no_mirror	copyrighted;existing_external_witness_not_self_mirror;operator_capture_2026-06-02
+S12	(see source-ledger.tsv)	captured	https://web.archive.org/web/20260601011314/http://cldr.unicode.org/	link_only_no_mirror	copyrighted;existing_external_witness_not_self_mirror;operator_capture_2026-06-02
+S7	(in-repo)	not_applicable	n/a	n/a	own_work_in_repo_hash_pinned
+S8	(in-repo)	not_applicable	n/a	n/a	own_work_in_repo_hash_pinned
+S9	(in-repo)	not_applicable	n/a	n/a	own_work_in_repo_hash_pinned
+S13	https://data.iana.org/time-zones/tz-link.html	captured	https://web.archive.org/web/20260602175855/https://data.iana.org/time-zones/tz-link.html	pending	operator_capture_2026-06-02;archive_today_pending

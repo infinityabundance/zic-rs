@@ -1,0 +1,799 @@
+╔══════════════════════════════════════════════════════════════╗
+║         DSFB Gray Static Crate Scan Report                 ║
+║   Canonical Broad Audit for Code Quality + Review Readiness║
+╚══════════════════════════════════════════════════════════════╝
+
+Crate: zic-rs
+Version: 0.1.0
+Generated At (UTC): 2026-06-05T09:25:02.369722599Z
+Root: /home/one/zic-rs
+Scanned Crate: https://crates.io/crates/zic-rs
+Scanned Crate Docs: https://docs.rs/zic-rs
+Scanner Crate: https://crates.io/crates/dsfb-gray
+Scanner Docs: https://docs.rs/dsfb-gray
+Source SHA-256: ef66cab16642333ac230b160e33cf17b51d061af944926dc4fc6c8aafec534e7
+VCS Commit: not declared
+Path In VCS: not declared
+Source Files Scanned: 109
+Artifact Files Inspected: 18458
+Matched Heuristics: 2
+Caveat: Static source-visible proxy only: this report highlights structural motifs, constrained-runtime signals, verification evidence, and lifecycle artifacts. It does not certify the crate or infer live gray failures without runtime telemetry.
+
+Audit Summary
+──────────────────────────────────────────────────────────────
+Purpose:
+  - improve Rust code quality across the full crate surface
+  - support compliance- and certification-oriented internal review
+  - preserve all current DSFB audit breadth in one canonical report
+Non-certification statement:
+  - DSFB does not certify compliance with IEC, ISO, RTCA, MIL, NIST, or other standards.
+  - Treat this report as a structured guideline for improvement and review readiness.
+Canonical audit shape:
+  - one full audit
+  - one overall score plus visible subscores
+  - one shared evidence set reused by the concluding interpretation lenses
+Finding mix: 3 defect-candidate | 11 design-review | 1 review-readiness | 2 context-needed
+Audit families preserved: runtime, safety, verification, build, lifecycle, Power of Ten, advanced structural, heuristic motifs, runtime priors, and attestation exports.
+
+Report scope note: DSFB findings may support internal review against standards-oriented expectations, but the report remains a source-visible structural audit of 18458 artifact(s), not a certificate.
+
+Add dsfb-gray report badge to your GitHub repo README
+──────────────────────────────────────────────────────────────
+DSFB-gray crate: https://crates.io/crates/dsfb-gray
+Use this when you place the audit report in the repository root as a code-quality and review-readiness document.
+Root-level report link target used below: ./zic_rs_scan.txt
+Markdown snippet:
+```md
+[![DSFB Gray Audit: 60.3% mixed assurance posture](https://img.shields.io/badge/DSFB%20Gray%20Audit-60.3%25-yellowgreen)](./zic_rs_scan.txt)
+```
+Badge semantics: this links to the DSFB audit report for the crate; it is not a compliance or certification badge.
+
+Overall Score and Subscores
+──────────────────────────────────────────────────────────────
+Scoring Version: dsfb-assurance-score-v1
+Overall: 60.3% (mixed assurance posture)
+Weighted points earned: 60.3/100.0
+Score use: this score is a broad improvement target derived from the locked DSFB audit rubric. It is not a compliance certification.
+Advisory Broad Subscores
++------------------------------+--------+
+| Subscore                     | Score% |
++------------------------------+--------+
+| Correctness                  |   58.9 |
+| Maintainability              |   39.3 |
+| Concurrency / Async          |   50.0 |
+| Resource Discipline          |   36.7 |
+| Verification / Reviewability |   64.4 |
+| Assurance / Provenance       |   66.6 |
++------------------------------+--------+
+  - Correctness: Derived from safety surface, correctness-critical Power-of-Ten rules, and correctness-oriented structural checks.
+  - Maintainability: Derived from lifecycle/governance evidence, reviewability-oriented Power-of-Ten rules, and maintainability-heavy structural checks.
+  - Concurrency / Async: Derived from async/concurrency structural checks and bounded-control-flow review signals.
+  - Resource Discipline: Derived from runtime-allocation proxies, resource-lifecycle checks, and bounded-allocation / bounded-loop review rules.
+  - Verification / Reviewability: Derived from verification signals, build/tooling complexity, and analyzability-oriented Power-of-Ten rules.
+  - Assurance / Provenance: Derived from the full locked rubric as a broad readiness-oriented advisory synthesis.
+Score Summary Table
++------------------------------+--------+--------+--------+--------+
+| Section                      | Score% | Weight | Points | Checks |
++------------------------------+--------+--------+--------+--------+
+| Safety Surface               |   60.0 |   15.0 |    9.0 |      5 |
+| Verification Evidence        |   60.0 |   15.0 |    9.0 |      5 |
+| Build / Tooling Complexity   |  100.0 |   10.0 |   10.0 |      6 |
+| Lifecycle / Governance       |   84.6 |   10.0 |    8.5 |     13 |
+| NASA/JPL Power of Ten        |   30.0 |   25.0 |    7.5 |     10 |
+| Advanced Structural Checks   |   65.2 |   25.0 |   16.3 |     23 |
++------------------------------+--------+--------+--------+--------+
+| Overall                      |   60.3 |  100.0 |   60.3 |     62 |
++------------------------------+--------+--------+--------+--------+
+Locked rubric section breakdown:
+  - Safety Surface: 60.0% of section, 9.0/15.0 weighted points across 5 checkpoint(s)
+  - Verification Evidence: 60.0% of section, 9.0/15.0 weighted points across 5 checkpoint(s)
+  - Build / Tooling Complexity: 100.0% of section, 10.0/10.0 weighted points across 6 checkpoint(s)
+  - Lifecycle / Governance: 84.6% of section, 8.5/10.0 weighted points across 13 checkpoint(s)
+  - NASA/JPL Power of Ten: 30.0% of section, 7.5/25.0 weighted points across 10 checkpoint(s)
+  - Advanced Structural Checks: 65.2% of section, 16.3/25.0 weighted points across 23 checkpoint(s)
+Scoring guideline:
+  - Method: weighted checkpoint scoring across Safety (15%), Verification (15%), Build/Tooling (10%), Lifecycle/Governance (10%), NASA/JPL Power of Ten (25%), and Advanced Structural Checks (25%).
+  - Checkpoint credit: pass/clear/applied = 1.0, indeterminate/partial = 0.5, elevated/not applied = 0.0.
+  - Fairness rule: raw motif counts do not linearly reduce the score; each checkpoint contributes once so large crates are not punished simply for having more code.
+  - Informational-only signals such as DSFB heuristic motif matches, hotspot counts, and capability flags like no_std/no_alloc are reported but excluded from the score denominator.
+  - Interpretation: this is a broad improvement and review-readiness score for source-visible controls and evidence, not a certification and not a measure of runtime correctness.
+
+Top Findings
+──────────────────────────────────────────────────────────────
+JPL-R4 elevated [design-review | confidence=high | impact=maintainability]
+  Title: Data-flow traceability / interior mutability audit
+  Detail: 4 interior-mutability motif(s) observed (Cell/RefCell/UnsafeCell/atomic types).
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: JPL-R4-01-atomic-write-27 src/fs/atomic_write.rs:27 [atomicu] use std::sync::atomic::{AtomicU64, Ordering};
+
+JPL-R9 elevated [design-review | confidence=high | impact=maintainability]
+  Title: Unchecked extraction / dereference safety audit
+  Detail: 9 unwrap/expect-like site(s) observed; these deserve explicit invariant review in high-assurance code.
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: JPL-R9-01-transitions-96 src/compile/transitions.rs:96 [.expect(] let lo = rules.iter().map(|r| r.from).min().expect("non-empty");
+
+NASA-CC elevated [design-review | confidence=high | impact=maintainability]
+  Title: Cyclomatic complexity hotspot audit (NASA SWE-220 proxy)
+  Detail: 4 extracted hotspot(s); 4 exceed the NASA safety-critical threshold of 15 by this lightweight estimate.
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: NASA-CC-01-transitions-392 src/compile/transitions.rs:392 [estimated cyclomatic complexity] function `compile_multi_era` has estimated complexity 47
+
+SAFE-STATE elevated [defect-candidate | confidence=high | impact=correctness]
+  Title: Catch-all state handling / safe-state fallback audit
+  Detail: 45 catch-all match arm(s) observed; explicit state enumeration is preferable for safety review.
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: SAFE-STATE-01-posix-226 research/zdump-rs/src/posix.rs:226 [_ =>] _ => {
+
+ZERO-COPY elevated [design-review | confidence=high | impact=resource discipline]
+  Title: Copy-on-read / zero-copy provenance audit
+  Detail: 4 function(s) copy buffers with `.to_vec()` or `.clone()` on apparent read paths.
+  Why This Matters In Rust: Avoidable copies on hot paths often show up later as bandwidth and tail-latency debt.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: ZERO-COPY-01-hash-58 src/hash.rs:58 [.to_vec()] let mut msg = data.to_vec();
+
+ITER-UNB elevated [context-needed | confidence=high | impact=resource discipline]
+  Title: Unbounded iterator terminal-consumption audit
+  Detail: 2 iterator terminal site(s) use collect/fold/count/last/sum without an obvious `.take()` or single-step bound.
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: ITER-UNB-01-main-21 research/zdump-rs/src/main.rs:21 [.collect(] let args: Vec<String> = std::env::args().skip(1).collect();
+
+JPL-R0 elevated [design-review | confidence=high | impact=maintainability]
+  Title: Recursion and cyclic call graph audit
+  Detail: 0 direct-recursion hit(s) and 2 local indirect cycle(s) observed.
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  First Evidence: JPL-R0-01-vendor-oracle-529 src/vendor_oracle.rs:529 [local indirect recursion cycle] function `value` appears mutually recursive with `array`
+
+PART-SPACE elevated [design-review | confidence=high | impact=assurance/provenance]
+  Title: Global shared-resource / partitioning-risk audit
+  Detail: 2 global shared-resource motif(s) observed.
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding is especially relevant to review readiness because it affects reproducibility, isolation, or operator trust in what was shipped.
+  First Evidence: PART-SPACE-01-atomic-write-45 src/fs/atomic_write.rs:45 [static declaration] static TEMP_SEQ: AtomicU64 = AtomicU64::new(0);
+
+Hotspots
+──────────────────────────────────────────────────────────────
+Guide:
+  [##--------] observed  score 12-19
+  [####------] guarded   score 20-29
+  [######----] elevated  score 30-39
+  [########--] high      score 40-49
+  [##########] severe    score 50+
+  row format: path:line `function` [bar] band score=<n> complexity~<n>
+  signals: comma-separated structural risk contributors
+src/compile/transitions.rs:392 `compile_multi_era` [##########] severe   score=58 complexity~=47
+  signals: complexity>15, long-function
+src/tzif/rfc9636.rs:153 `validate` [########--] high     score=47 complexity~=36
+  signals: complexity>15, long-function
+src/release_diff.rs:247 `build_release_diff` [########--] high     score=42 complexity~=31
+  signals: complexity>15, long-function
+src/compile/plan.rs:294 `run` [########--] high     score=41 complexity~=30
+  signals: complexity>15, long-function
+src/aux_tables.rs:246 `validate_zone_table` [########--] high     score=40 complexity~=29
+  signals: complexity>15, long-function
+src/model/time.rs:58 `parse_hms` [####------] guarded  score=28 complexity~=17
+  signals: complexity>15, long-function
+src/size_report.rs:70 `run_size_report` [####------] guarded  score=28 complexity~=17
+  signals: complexity>15, long-function
+src/compile/transitions.rs:82 `compile_rule_zone` [####------] guarded  score=25 complexity~=11
+  signals: long-function, unwrap
+
+Code Quality Themes
+──────────────────────────────────────────────────────────────
+assurance/provenance: 1 finding(s) [PART-SPACE]
+concurrency/async: 1 finding(s) [P10-5]
+correctness: 5 finding(s) [SAFE-STATE, P10-2, P10-3, P10-7, H-CLOCK-01]
+maintainability: 6 finding(s) [JPL-R4, JPL-R9, NASA-CC, JPL-R0, P10-4]
+resource discipline: 3 finding(s) [ZERO-COPY, ITER-UNB, H-ALLOC-01]
+verification/reviewability: 1 finding(s) [P10-8]
+
+Interpret these themes as review clusters: they tell you where multiple findings are reinforcing the same kind of engineering debt or risk surface.
+
+Remediation Guide
+──────────────────────────────────────────────────────────────
+JPL-R4 [design-review]: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+JPL-R9 [design-review]: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+NASA-CC [design-review]: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+SAFE-STATE [defect-candidate]: Make fallback states explicit and document what the safe-state behavior is for the affected control path.
+ZERO-COPY [design-review]: Keep ingress data borrowed or reference-counted longer, and avoid eager `.to_vec()` / `.clone()` on hot read paths.
+ITER-UNB [context-needed]: Add `.take(...)`, explicit bounds, or documented finite-source guarantees on terminal iterator consumption.
+JPL-R0 [design-review]: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+PART-SPACE [design-review]: Reduce shared global state, or document the partitioning/ownership rationale for any remaining shared resource.
+P10-2 [design-review]: Add explicit upper bounds, timeout guards, or fixed-step limits so loop behavior is reviewable.
+P10-3 [design-review]: Move dynamic allocation to initialization paths or document and bound the steady-state allocation sites.
+P10-4 [design-review]: Split large functions into reviewable units with clearer local invariants and narrower responsibilities.
+P10-5 [defect-candidate]: Replace catch-all control flow with explicit state handling or document the fallback state as intentional.
+
+Verification Suggestions
+──────────────────────────────────────────────────────────────
+JPL-R4 [maintainability]: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+JPL-R9 [maintainability]: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+NASA-CC [maintainability]: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+SAFE-STATE [correctness]: Add tests that drive the fallback path explicitly and confirm the intended safe-state behavior is named, not implied.
+ZERO-COPY [resource discipline]: Benchmark the read path before and after borrowing/reference-counting changes and confirm copy count drops.
+ITER-UNB [resource discipline]: Add a bound, trusted finite-source proof, or regression test that demonstrates the iterator cannot grow without limit.
+JPL-R0 [maintainability]: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+PART-SPACE [assurance/provenance]: Document the shared-resource boundary and add a test or review note that proves ownership/partitioning is intentional.
+P10-2 [correctness]: Add a regression test that demonstrates a visible loop bound, timeout, or cancellation path on the flagged logic.
+P10-3 [correctness]: Profile the flagged path under steady-state load and confirm no avoidable heap growth remains after initialization.
+P10-4 [maintainability]: Split the function and add narrower tests that name the local invariants introduced by the refactor.
+P10-5 [concurrency/async]: Add state-transition tests that cover the previously catch-all path explicitly.
+
+Evidence Ledger
+──────────────────────────────────────────────────────────────
+JPL-R4: 4 evidence item(s) [JPL-R4-01-atomic-write-27, JPL-R4-02-atomic-write-45, JPL-R4-03-output-tree-193, JPL-R4-04-output-tree-194]
+JPL-R9: 4 evidence item(s) [JPL-R9-01-transitions-96, JPL-R9-02-transitions-107, JPL-R9-03-doctor-297, JPL-R9-04-hash-45]
+NASA-CC: 4 evidence item(s) [NASA-CC-01-transitions-392, NASA-CC-02-rfc9636-153, NASA-CC-03-release-diff-247, NASA-CC-04-plan-294]
+SAFE-STATE: 4 evidence item(s) [SAFE-STATE-01-posix-226, SAFE-STATE-02-posix-264, SAFE-STATE-03-aux-tables-57, SAFE-STATE-04-cli-1115]
+ZERO-COPY: 4 evidence item(s) [ZERO-COPY-01-hash-58, ZERO-COPY-02-parser-61, ZERO-COPY-03-validate-354, ZERO-COPY-04-validate-411]
+ITER-UNB: 2 evidence item(s) [ITER-UNB-01-main-21, ITER-UNB-02-lib-348]
+JPL-R0: 2 evidence item(s) [JPL-R0-01-vendor-oracle-529, JPL-R0-02-vendor-oracle-529]
+PART-SPACE: 2 evidence item(s) [PART-SPACE-01-atomic-write-45, PART-SPACE-02-output-tree-194]
+P10-2: 4 evidence item(s) [P10-2-01-posix-287, P10-2-02-posix-309, P10-2-03-lib-403, P10-2-04-calendar-189]
+P10-3: 4 evidence item(s) [P10-3-01-civil-45, P10-3-02-civil-52, P10-3-03-civil-56, P10-3-04-civil-62]
+P10-4: 4 evidence item(s) [P10-4-01-transitions-392, P10-4-02-plan-294, P10-4-03-manifest-2385, P10-4-04-release-diff-247]
+P10-5: 4 evidence item(s) [P10-5-01-transitions-392, P10-5-02-plan-294, P10-5-03-manifest-2385, P10-5-04-rfc9636-153]
+P10-7: 4 evidence item(s) [P10-7-01-civil-64, P10-7-02-tzif-207, P10-7-03-transitions-134, P10-7-04-atomic-write-111]
+P10-8: 4 evidence item(s) [P10-8-01-cargo-61, P10-8-02-plan-339, P10-8-03-atomic-write-35, P10-8-04-atomic-write-39]
+P10-6: 2 evidence item(s) [P10-6-01-atomic-write-45, P10-6-02-output-tree-194]
+H-ALLOC-01: 6 evidence item(s) [H-ALLOC-01-01-posix-346, H-ALLOC-01-02-tzif-126, H-ALLOC-01-03-tzif-130, H-ALLOC-01-04-tzif-142, H-ALLOC-01-05-tzif-156, H-ALLOC-01-06-tzif-171]
+H-CLOCK-01: 6 evidence item(s) [H-CLOCK-01-01-cli-650, H-CLOCK-01-02-semantic-witness-340, H-CLOCK-01-03-semantic-witness-449, H-CLOCK-01-04-semantic-witness-486, H-CLOCK-01-05-semantic-witness-513, H-CLOCK-01-06-semantic-witness-551]
+
+Detailed Audit Surface
+──────────────────────────────────────────────────────────────
+The sections below preserve the full DSFB audit breadth. They are detailed evidence views, not separate scan modes.
+
+Constrained Runtime Profile
+──────────────────────────────────────────────────────────────
+no_std declared: no
+no_alloc candidate: no
+alloc crate references: 0
+heap allocation motifs: 620
+heap-allocation evidence:
+  - research/zdump-rs/src/civil.rs:45 [format!(] return Err(format!("bad date (want YYYY-MM-DD): {date:?}"));
+  - research/zdump-rs/src/civil.rs:52 [format!(] return Err(format!("month/day out of range in {date:?}"));
+  - research/zdump-rs/src/civil.rs:56 [format!(] return Err(format!("bad time (want HH:MM:SS): {time:?}"));
+  - research/zdump-rs/src/civil.rs:62 [format!(] return Err(format!("time component out of range in {time:?}"));
+
+Unsafe / Panic Surface
+──────────────────────────────────────────────────────────────
+unsafe policy: forbid(unsafe_code)
+no_unsafe candidate: yes
+explicit unsafe sites: 0
+panic-like sites: 1
+unwrap/expect-like sites: 9
+FFI boundary sites: 0
+SAFETY: justification comments: 0
+unsafe policy evidence:
+  - research/zdump-rs/src/civil.rs:9 [#![forbid(unsafe_code)]] #![forbid(unsafe_code)]
+  - research/zdump-rs/src/leap.rs:12 [#![forbid(unsafe_code)]] #![forbid(unsafe_code)]
+  - research/zdump-rs/src/lib.rs:33 [#![forbid(unsafe_code)]] #![forbid(unsafe_code)]
+  - research/zdump-rs/src/main.rs:12 [#![forbid(unsafe_code)]] #![forbid(unsafe_code)]
+panic evidence:
+  - src/tzif/data_block.rs:184 [unreachable!(] other => unreachable!("unsupported TZif time size {other}"),
+unwrap evidence:
+  - src/compile/transitions.rs:96 [.expect(] let lo = rules.iter().map(|r| r.from).min().expect("non-empty");
+  - src/compile/transitions.rs:107 [.expect(] .expect("finite set has a concrete TO")
+  - src/doctor.rs:297 [.unwrap(] version: first_line.unwrap(),
+  - src/hash.rs:45 [.unwrap(] s.push(char::from_digit((byte >> 4) as u32, 16).unwrap());
+
+Verification Evidence Signals
+──────────────────────────────────────────────────────────────
+tests/ directory present: yes
+test markers: 612
+property-testing signals: 0
+concurrency exploration signals: 0
+fuzzing signals: 9
+formal-method signals: 49
+test evidence:
+  - research/zdump-rs/src/civil.rs:83 [#[cfg(test)]] #[cfg(test)]
+  - research/zdump-rs/src/civil.rs:84 [mod tests] mod tests {
+  - research/zdump-rs/src/civil.rs:86 [#[test]] #[test]
+  - research/zdump-rs/src/civil.rs:91 [#[test]] #[test]
+fuzzing evidence:
+  - fuzz/fuzz_targets/aux_table_validator.rs:6 [libfuzzer_sys] use libfuzzer_sys::fuzz_target;
+  - fuzz/fuzz_targets/manifest_json.rs:9 [libfuzzer_sys] use libfuzzer_sys::fuzz_target;
+  - fuzz/fuzz_targets/path_materialization_model.rs:8 [libfuzzer_sys] use libfuzzer_sys::fuzz_target;
+  - fuzz/fuzz_targets/posix_footer.rs:8 [libfuzzer_sys] use libfuzzer_sys::fuzz_target;
+formal-method evidence:
+  - Cargo.toml:60 [kani] # Declare `cfg(kani)` as a known config so the normal `clippy -D warnings` gate does not flag the
+  - Cargo.toml:61 [kani] # `#[cfg(kani)]` proof harnesses (`audits/kani`, src/tzif/validate.rs) as an `unexpected_cfgs` lint.
+  - Cargo.toml:62 [kani] # `kani` is set by the Kani compiler only; under a normal build the harness modules are gated out.
+  - Cargo.toml:63 [kani] # This is the standard Kani integration — it adds no dependency and changes no behaviour.
+
+Build / Tooling Complexity
+──────────────────────────────────────────────────────────────
+direct dependencies: 4
+build dependencies: 0
+dev dependencies: 0
+build.rs present: no
+proc-macro crate: no
+codegen / native-build signals: 0
+
+Lifecycle / Governance Artifacts
+──────────────────────────────────────────────────────────────
+README present: yes
+CHANGELOG present: yes
+SECURITY.md present: yes
+SAFETY.md present: no
+architecture/design doc present: yes
+docs/ content present: yes
+license files: LICENSE-APACHE, LICENSE-MIT, research/zdump-rs/LICENSE, research/zic-rs-vendor-oracle-lab/LICENSE-APACHE, research/zic-rs-vendor-oracle-lab/LICENSE-MIT
+manifest license: MIT OR Apache-2.0
+manifest rust-version: 1.74
+manifest edition: 2021
+repository URL: https://github.com/infinityabundance/zic-rs
+documentation URL: not declared
+homepage URL: https://github.com/infinityabundance/zic-rs
+manifest readme: README.md
+
+NASA/JPL Power of Ten Audit
+──────────────────────────────────────────────────────────────
+Rust adaptation of Holzmann's Power of Ten rules. C-specific rules are approximated with source-visible Rust proxies. This is guidance for review and improvement, not a certification result.
+Applied: 3 | Not Applied: 7 | Indeterminate: 0
+P10-1 applied: Simple control flow; no recursion or equivalent escapes
+  Detail: No direct recursion or obvious control-flow escape motifs observed. Indirect recursion is not proven absent by this lightweight scan.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Unbounded recursion still threatens reviewability and stack reasoning in Rust, even when ownership is otherwise strong.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Remove recursion where possible, or isolate the pattern behind a bounded proof and explicit review note.
+  Verification Suggestion: Add a focused test or review note that proves the remaining recursion is bounded, or refactor it into an explicit loop/work queue.
+P10-2 not applied: All loops have a fixed upper bound
+  Detail: 7 potentially unbounded `loop`/`while` construct(s) observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Explicit bounds are one of the clearest ways to make Rust control flow auditable under failure pressure.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Add explicit upper bounds, timeout guards, or fixed-step limits so loop behavior is reviewable.
+  Verification Suggestion: Add a regression test that demonstrates a visible loop bound, timeout, or cancellation path on the flagged logic.
+  Evidence:
+  - P10-2-01-posix-287 research/zdump-rs/src/posix.rs:287 [loop] loop {
+  - P10-2-02-posix-309 research/zdump-rs/src/posix.rs:309 [while] while dom > dim {
+  - P10-2-03-lib-403 src/lib.rs:403 [loop] loop {
+  - P10-2-04-calendar-189 src/model/calendar.rs:189 [loop] loop {
+P10-3 not applied: No dynamic allocation after initialization
+  Detail: 620 heap-allocation motif(s) observed, including 620 runtime-core signal(s). This crate-level scan cannot distinguish initialization-only allocation from steady-state allocation.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Steady-state allocation surfaces are often where long-lived Rust services accumulate jitter and memory debt.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Move dynamic allocation to initialization paths or document and bound the steady-state allocation sites.
+  Verification Suggestion: Profile the flagged path under steady-state load and confirm no avoidable heap growth remains after initialization.
+  Evidence:
+  - P10-3-01-civil-45 research/zdump-rs/src/civil.rs:45 [format!(] return Err(format!("bad date (want YYYY-MM-DD): {date:?}"));
+  - P10-3-02-civil-52 research/zdump-rs/src/civil.rs:52 [format!(] return Err(format!("month/day out of range in {date:?}"));
+  - P10-3-03-civil-56 research/zdump-rs/src/civil.rs:56 [format!(] return Err(format!("bad time (want HH:MM:SS): {time:?}"));
+  - P10-3-04-civil-62 research/zdump-rs/src/civil.rs:62 [format!(] return Err(format!("time component out of range in {time:?}"));
+P10-4 not applied: Functions stay within a single-sheet size budget (~60 LOC)
+  Detail: 31 function(s) exceed the 60-line threshold.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: Large functions make invariants harder to see, test, and review, even in otherwise safe Rust.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Split large functions into reviewable units with clearer local invariants and narrower responsibilities.
+  Verification Suggestion: Split the function and add narrower tests that name the local invariants introduced by the refactor.
+  Evidence:
+  - P10-4-01-transitions-392 src/compile/transitions.rs:392 [function length > 60 lines] function `compile_multi_era` spans 433 lines
+  - P10-4-02-plan-294 src/compile/plan.rs:294 [function length > 60 lines] function `run` spans 252 lines
+  - P10-4-03-manifest-2385 src/manifest.rs:2385 [function length > 60 lines] function `build_compile_manifest` spans 246 lines
+  - P10-4-04-release-diff-247 src/release_diff.rs:247 [function length > 60 lines] function `build_release_diff` spans 187 lines
+P10-5 not applied: Assertion density averages at least two per function
+  Detail: Estimated assertion density is 0.02 per function across 449 extracted function(s).
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: concurrency/async
+  Why This Matters In Rust: Catch-all state handling often hides missing invariants or incomplete transitions in otherwise exhaustive-looking Rust code.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Replace catch-all control flow with explicit state handling or document the fallback state as intentional.
+  Verification Suggestion: Add state-transition tests that cover the previously catch-all path explicitly.
+  Evidence:
+  - P10-5-01-transitions-392 src/compile/transitions.rs:392 [assertion density < 2 per function] function `compile_multi_era` has 0 assertion site(s) across 433 lines
+  - P10-5-02-plan-294 src/compile/plan.rs:294 [assertion density < 2 per function] function `run` has 0 assertion site(s) across 252 lines
+  - P10-5-03-manifest-2385 src/manifest.rs:2385 [assertion density < 2 per function] function `build_compile_manifest` has 0 assertion site(s) across 246 lines
+  - P10-5-04-rfc9636-153 src/tzif/rfc9636.rs:153 [assertion density < 2 per function] function `validate` has 0 assertion site(s) across 172 lines
+P10-6 not applied: Data objects remain at the smallest practical scope
+  Detail: 2 crate-global mutable/shared state motif(s) observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: Global shared state spreads coupling and makes local reasoning harder across modules and tasks.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Reduce dependence on global mutable state or document synchronization and ownership boundaries.
+  Verification Suggestion: Document ownership/synchronization boundaries or add module-level tests that prove shared state cannot drift silently.
+  Evidence:
+  - P10-6-01-atomic-write-45 src/fs/atomic_write.rs:45 [static declaration] static TEMP_SEQ: AtomicU64 = AtomicU64::new(0);
+  - P10-6-02-output-tree-194 src/fs/output_tree.rs:194 [static declaration] static SEQ: AtomicU64 = AtomicU64::new(0);
+P10-7 not applied: Return values are checked and parameters are validated
+  Detail: 10 explicit discard site(s) and 9 unwrap/expect site(s) observed. Parameter validation cannot be proven by this scan.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Unchecked extraction pushes invariant proof onto the reader instead of the code.
+  Review / Readiness Note: This rule supports bounded, reviewable structure that often matters in compliance- or certification-oriented internal reviews.
+  Remediation: Propagate errors explicitly rather than unwrapping, or document the invariant that justifies the unwrap/expect.
+  Verification Suggestion: Replace unwrap/expect with explicit handling or add an invariant test that proves the extraction precondition.
+  Evidence:
+  - P10-7-01-civil-64 research/zdump-rs/src/civil.rs:64 [let _ =] let _ = neg;
+  - P10-7-02-tzif-207 research/zdump-rs/src/tzif.rs:207 [let _ =] let _ = read_block(&mut c, counts, false)?;
+  - P10-7-03-transitions-134 src/compile/transitions.rs:134 [let _ =] let _ = intern(&mut types, initial);
+  - P10-7-04-atomic-write-111 src/fs/atomic_write.rs:111 [let _ =] let _ = std::fs::remove_file(&tmp);
+P10-8 not applied: Conditional compilation and metaprogramming stay minimal
+  Detail: 15 review-relevant conditional-compilation site(s), 0 macro-definition/proc-macro site(s) observed. This is a Rust adaptation of the C preprocessor rule.
+  Classification: review-readiness
+  Confidence: high
+  Impact Kind: verification/reviewability
+  Why This Matters In Rust: Macros and cfg forks can hide large semantic deltas behind small source surfaces.
+  Review / Readiness Note: This rule is directly relevant to review readiness because it affects whether a reviewer can trust what paths are present and what tools continue to check.
+  Remediation: Reduce conditional-compilation forks or document why each feature/macro path remains auditable.
+  Verification Suggestion: Review feature/macro-expanded paths and add CI coverage for the meaningful forks.
+  Evidence:
+  - P10-8-01-cargo-61 Cargo.toml:61 [review-relevant cfg] # `#[cfg(kani)]` proof harnesses (`audits/kani`, src/tzif/validate.rs) as an `unexpected_cfgs` lint.
+  - P10-8-02-plan-339 src/compile/plan.rs:339 [review-relevant cfg] if config.file_mode.is_some() && !cfg!(unix) {
+  - P10-8-03-atomic-write-35 src/fs/atomic_write.rs:35 [review-relevant cfg] #[cfg(unix)]
+  - P10-8-04-atomic-write-39 src/fs/atomic_write.rs:39 [review-relevant cfg] #[cfg(not(unix))]
+P10-9 applied: Pointer use remains restricted
+  Detail: No raw-pointer or function-pointer motifs were observed.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Raw-pointer and FFI boundaries are where Rust's usual guarantees weaken and local contracts matter most.
+  Review / Readiness Note: This rule is directly relevant to review readiness because it affects whether a reviewer can trust what paths are present and what tools continue to check.
+  Remediation: Tighten raw-pointer / FFI surfaces and document the local safety contract for each remaining site.
+  Verification Suggestion: Document the local pointer/FFI contract and add the narrowest possible regression around the unsafe edge.
+P10-10 applied: Pedantic warnings and static analyzers are enforced
+  Detail: Observed warning-strictness signal(s) (39) and static-analysis signal(s) (301). Daily cadence and zero-warning status are not provable from packaged crate sources.
+  Classification: review-readiness
+  Confidence: high
+  Impact Kind: verification/reviewability
+  Why This Matters In Rust: Analyzer and warning gates are part of keeping a Rust codebase reviewable over time.
+  Review / Readiness Note: This rule is directly relevant to review readiness because it affects whether a reviewer can trust what paths are present and what tools continue to check.
+  Remediation: Keep warnings and analyzer gates active in CI so the audit surface stays reviewable over time.
+  Verification Suggestion: Keep analyzer and warnings-as-errors gates in CI and record the expected toolchain surface in the repo docs.
+  Evidence:
+  - P10-10-01-ci-10 .github/workflows/ci.yml:10 [-d warnings] RUSTFLAGS: -D warnings
+  - P10-10-02-ci-28 .github/workflows/ci.yml:28 [-d warnings] run: cargo clippy --all-targets -- -D warnings
+  - P10-10-03-ci-60 .github/workflows/ci.yml:60 [-d warnings] run: cargo clippy --all-targets --features ecosystem-tests -- -D warnings
+  - P10-10-04-contributing-12 CONTRIBUTING.md:12 [-d warnings] cargo clippy --all-targets -- -D warnings
+
+Advanced Structural Risk Checks
+──────────────────────────────────────────────────────────────
+These checks are source-visible structural proxies for mission, safety, security, and code-quality review. Elevated means review-worthy, not automatically unsafe and not a certification decision.
+Elevated: 8 | Clear: 15 | Indeterminate: 0
+JPL-R0 elevated: Recursion and cyclic call graph audit
+  Detail: 0 direct-recursion hit(s) and 2 local indirect cycle(s) observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+  Verification Suggestion: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+  Evidence:
+  - JPL-R0-01-vendor-oracle-529 src/vendor_oracle.rs:529 [local indirect recursion cycle] function `value` appears mutually recursive with `array`
+  - JPL-R0-02-vendor-oracle-529 src/vendor_oracle.rs:529 [local indirect recursion cycle] function `value` appears mutually recursive with `object`
+JPL-R4 elevated: Data-flow traceability / interior mutability audit
+  Detail: 4 interior-mutability motif(s) observed (Cell/RefCell/UnsafeCell/atomic types).
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+  Verification Suggestion: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+  Evidence:
+  - JPL-R4-01-atomic-write-27 src/fs/atomic_write.rs:27 [atomicu] use std::sync::atomic::{AtomicU64, Ordering};
+  - JPL-R4-02-atomic-write-45 src/fs/atomic_write.rs:45 [atomicu] static TEMP_SEQ: AtomicU64 = AtomicU64::new(0);
+  - JPL-R4-03-output-tree-193 src/fs/output_tree.rs:193 [atomicu] use std::sync::atomic::{AtomicU64, Ordering};
+  - JPL-R4-04-output-tree-194 src/fs/output_tree.rs:194 [atomicu] static SEQ: AtomicU64 = AtomicU64::new(0);
+JPL-R9 elevated: Unchecked extraction / dereference safety audit
+  Detail: 9 unwrap/expect-like site(s) observed; these deserve explicit invariant review in high-assurance code.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+  Verification Suggestion: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+  Evidence:
+  - JPL-R9-01-transitions-96 src/compile/transitions.rs:96 [.expect(] let lo = rules.iter().map(|r| r.from).min().expect("non-empty");
+  - JPL-R9-02-transitions-107 src/compile/transitions.rs:107 [.expect(] .expect("finite set has a concrete TO")
+  - JPL-R9-03-doctor-297 src/doctor.rs:297 [.unwrap(] version: first_line.unwrap(),
+  - JPL-R9-04-hash-45 src/hash.rs:45 [.unwrap(] s.push(char::from_digit((byte >> 4) as u32, 16).unwrap());
+NASA-CC elevated: Cyclomatic complexity hotspot audit (NASA SWE-220 proxy)
+  Detail: 4 extracted hotspot(s); 4 exceed the NASA safety-critical threshold of 15 by this lightweight estimate.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+  Verification Suggestion: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+  Evidence:
+  - NASA-CC-01-transitions-392 src/compile/transitions.rs:392 [estimated cyclomatic complexity] function `compile_multi_era` has estimated complexity 47
+  - NASA-CC-02-rfc9636-153 src/tzif/rfc9636.rs:153 [estimated cyclomatic complexity] function `validate` has estimated complexity 36
+  - NASA-CC-03-release-diff-247 src/release_diff.rs:247 [estimated cyclomatic complexity] function `build_release_diff` has estimated complexity 31
+  - NASA-CC-04-plan-294 src/compile/plan.rs:294 [estimated cyclomatic complexity] function `run` has estimated complexity 30
+H-ASYNC-LOCK clear: Async lock contention / priority inversion proxy
+  Detail: No async lock contention motifs were observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+  Verification Suggestion: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+SAFE-STATE elevated: Catch-all state handling / safe-state fallback audit
+  Detail: 45 catch-all match arm(s) observed; explicit state enumeration is preferable for safety review.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Make fallback states explicit and document what the safe-state behavior is for the affected control path.
+  Verification Suggestion: Add tests that drive the fallback path explicitly and confirm the intended safe-state behavior is named, not implied.
+  Evidence:
+  - SAFE-STATE-01-posix-226 research/zdump-rs/src/posix.rs:226 [_ =>] _ => {
+  - SAFE-STATE-02-posix-264 research/zdump-rs/src/posix.rs:264 [_ =>] _ => 30,
+  - SAFE-STATE-03-aux-tables-57 src/aux_tables.rs:57 [_ =>] _ => ArtifactCategory::PolicyInput,
+  - SAFE-STATE-04-cli-1115 src/cli.rs:1115 [_ =>] _ => Err(Error::config(
+TIME-WAIT clear: Hard-coded timing assumption audit
+  Detail: No hard-coded sleep/timing-wait motifs were observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: maintainability
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review the finding against the emitted evidence and either tighten the local structure or document the local invariant.
+  Verification Suggestion: Use the evidence block to write the smallest targeted regression or review note that proves the intended invariant.
+PART-SPACE elevated: Global shared-resource / partitioning-risk audit
+  Detail: 2 global shared-resource motif(s) observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: assurance/provenance
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding is especially relevant to review readiness because it affects reproducibility, isolation, or operator trust in what was shipped.
+  Remediation: Reduce shared global state, or document the partitioning/ownership rationale for any remaining shared resource.
+  Verification Suggestion: Document the shared-resource boundary and add a test or review note that proves ownership/partitioning is intentional.
+  Evidence:
+  - PART-SPACE-01-atomic-write-45 src/fs/atomic_write.rs:45 [static declaration] static TEMP_SEQ: AtomicU64 = AtomicU64::new(0);
+  - PART-SPACE-02-output-tree-194 src/fs/output_tree.rs:194 [static declaration] static SEQ: AtomicU64 = AtomicU64::new(0);
+PLUGIN-LOAD clear: Dynamic loading / plugin sandbox audit
+  Detail: No dynamic loading motifs were observed.
+  Classification: review-readiness
+  Confidence: high
+  Impact Kind: assurance/provenance
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding is especially relevant to review readiness because it affects reproducibility, isolation, or operator trust in what was shipped.
+  Remediation: Constrain dynamic loading behind verification, sandboxing, or explicit operator review.
+  Verification Suggestion: Add review notes or CI checks that prove the dynamic-loading boundary is verified, sandboxed, or intentionally excluded from trusted paths.
+CWE-404 clear: Manual resource-lifecycle / shutdown audit
+  Detail: No manual resource-lifecycle motifs were observed.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: resource discipline
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Tighten ownership so resources close on all error paths and avoid raw-handle escape hatches unless documented.
+  Verification Suggestion: Exercise an error path and confirm ownership cleanup happens without raw-handle leakage.
+CMD-BUF clear: Hazardous command buffering audit
+  Detail: No command/control queue motifs were observed.
+  Classification: context-needed
+  Confidence: high
+  Impact Kind: resource discipline
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Add TTL, sequence, staleness, or cancellation guards so queued control messages cannot accumulate invisibly.
+  Verification Suggestion: Add queue tests that demonstrate staleness, TTL, cancellation, or sequence handling under backlog.
+  Evidence:
+  - CMD-BUF-01-cargo-6 research/zic-rs-vendor-oracle-lab/Cargo.toml:6 [generation] description = "Companion crate for the external zic-rs vendor-oracle lab: stable pointers to the evidence-generation harness that produces vendor-oracle-receipt-v1 receipts admitted by the zic-rs compiler."
+  - CMD-BUF-02-leap-44 src/compile/leap.rs:44 [expires] if range.is_some() && (table.expires.is_some() || !table.entries.is_empty()) {
+  - CMD-BUF-03-leap-81 src/compile/leap.rs:81 [expires] if let Some(raw_expires) = table.expires {
+  - CMD-BUF-04-leap-82 src/compile/leap.rs:82 [expires] let adj_expires = raw_expires + last as i64;
+ITER-UNB elevated: Unbounded iterator terminal-consumption audit
+  Detail: 2 iterator terminal site(s) use collect/fold/count/last/sum without an obvious `.take()` or single-step bound.
+  Classification: context-needed
+  Confidence: high
+  Impact Kind: resource discipline
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Add `.take(...)`, explicit bounds, or documented finite-source guarantees on terminal iterator consumption.
+  Verification Suggestion: Add a bound, trusted finite-source proof, or regression test that demonstrates the iterator cannot grow without limit.
+  Evidence:
+  - ITER-UNB-01-main-21 research/zdump-rs/src/main.rs:21 [.collect(] let args: Vec<String> = std::env::args().skip(1).collect();
+  - ITER-UNB-02-lib-348 src/lib.rs:348 [.collect(] .collect();
+ISR-SAFE clear: Interrupt-context allocation / lock audit
+  Detail: No interrupt handlers with allocation or mutex/lock motifs were observed.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Keep interrupt handlers allocation-free and lock-free where possible, or document the ISR contract explicitly.
+  Verification Suggestion: Review interrupt-path code and add a targeted test or note proving it stays allocation-free and lock-free where required.
+FUTURE-WAKE clear: Manual Future pending-without-waker audit
+  Detail: No manual `Poll::Pending` sites without local wake registration were observed.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: concurrency/async
+  Why This Matters In Rust: Manual futures live on a strict wake contract; getting it wrong produces futures that appear correct but never make progress.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Ensure every manual `Poll::Pending` path arranges a wakeup before returning pending.
+  Verification Suggestion: Add a manual-future regression that proves each Pending path registers a wake before returning.
+TASK-LEAK clear: Detached-task / discarded JoinHandle audit
+  Detail: No explicit discarded Tokio JoinHandle sites were observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: concurrency/async
+  Why This Matters In Rust: Detached tasks are easy to create in Rust async code and hard to reason about during shutdown, overload, or retries.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Retain JoinHandles, cancellation paths, or supervision ownership for spawned tasks that affect shutdown and backpressure.
+  Verification Suggestion: Track JoinHandle ownership and add shutdown tests that prove tasks do not outlive their supervisor unintentionally.
+DROP-PANIC clear: Panic-in-Drop audit
+  Detail: No panic-like sites were observed inside `impl Drop` bodies.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Keep `Drop` implementations infallible; move failure reporting out of destructor paths.
+  Verification Suggestion: Move failure reporting out of Drop and add a regression proving teardown stays infallible under unwind pressure.
+ATOMIC-RELAXED clear: Relaxed atomic ordering on critical-state paths
+  Detail: No `Ordering::Relaxed` sites were observed on functions that also look like critical state-transition logic.
+  Classification: context-needed
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Review whether the flagged atomic needs stronger ordering semantics on the observed state-transition path.
+  Verification Suggestion: Review the state-transition path and add the narrowest concurrency test that proves the ordering is sufficient.
+CLOCK-MIX clear: Mixed monotonic/wall-clock duration audit
+  Detail: No functions were observed mixing `Instant::now()` and `SystemTime::now()`.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Mixing monotonic and wall-clock time is a classic correctness trap in timeout, lease, and control logic.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Avoid mixing `Instant` and `SystemTime` in one duration/control path unless the conversion boundary is explicit.
+  Verification Suggestion: Add tests that isolate monotonic timing behavior from wall-clock use and verify deadline math at the boundary.
+SHORT-WRITE clear: Partial-write / Interrupted handling audit
+  Detail: No single-call `.write(...)` sites lacking an obvious retry or `write_all` handling path were observed.
+  Classification: defect-candidate
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Use `write_all`, retry `Interrupted`, or document why partial writes are already handled by the caller.
+  Verification Suggestion: Add IO-path tests that inject Interrupted or partial writes and prove the caller handles them correctly.
+ASYNC-RECUR clear: Async recursion depth-bound audit
+  Detail: No async-recursive function attributes were observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: concurrency/async
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Add a visible base-case/depth bound or replace async recursion with an explicit work queue or loop.
+  Verification Suggestion: Add a visible depth bound or refactor to a loop/work queue and prove the new path terminates under stress.
+CHAN-UNB clear: Unbounded async command-queue audit
+  Detail: No `mpsc::unbounded_channel` sites were observed.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: concurrency/async
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Prefer bounded channels or document why unbounded growth is safe under the expected ingress rate.
+  Verification Suggestion: Add load tests that demonstrate bounded backlog or justify why unbounded growth cannot accumulate invisibly.
+ZERO-COPY elevated: Copy-on-read / zero-copy provenance audit
+  Detail: 4 function(s) copy buffers with `.to_vec()` or `.clone()` on apparent read paths.
+  Classification: design-review
+  Confidence: high
+  Impact Kind: resource discipline
+  Why This Matters In Rust: Avoidable copies on hot paths often show up later as bandwidth and tail-latency debt.
+  Review / Readiness Note: This finding can support standards-oriented internal review because it highlights boundedness, determinism, ownership, or resource-discipline questions.
+  Remediation: Keep ingress data borrowed or reference-counted longer, and avoid eager `.to_vec()` / `.clone()` on hot read paths.
+  Verification Suggestion: Benchmark the read path before and after borrowing/reference-counting changes and confirm copy count drops.
+  Evidence:
+  - ZERO-COPY-01-hash-58 src/hash.rs:58 [.to_vec()] let mut msg = data.to_vec();
+  - ZERO-COPY-02-parser-61 src/source/parser.rs:61 [.clone()] db.zones.iter().map(|z| (z.name.clone(), 0usize)).collect();
+  - ZERO-COPY-03-validate-354 src/tzif/validate.rs:354 [.to_vec()] String::from_utf8(rest[..end].to_vec()).map_err(|_| Error::message(                        ))
+  - ZERO-COPY-04-validate-411 src/tzif/validate.rs:411 [.to_vec()] String::from_utf8(inner.to_vec()).map_err(|_| Error::message(                  ))
+CARGO-VERS clear: Dependency version drift / reproducibility audit
+  Detail: No wildcard or open-ended dependency version requirements were observed.
+  Classification: review-readiness
+  Confidence: high
+  Impact Kind: assurance/provenance
+  Why This Matters In Rust: This structural check points to a reviewable Rust pattern that often deserves explicit local invariants or tests.
+  Review / Readiness Note: This finding is especially relevant to review readiness because it affects reproducibility, isolation, or operator trust in what was shipped.
+  Remediation: Pin or narrow dependency version requirements so builds and attestations remain reproducible.
+  Verification Suggestion: Pin or narrow version requirements and verify the attested build stays reproducible across fresh environments.
+Criticality Heatmap
+──────────────────────────────────────────────────────────────
+Guide:
+  [##--------] observed  score 12-19
+  [####------] guarded   score 20-29
+  [######----] elevated  score 30-39
+  [########--] high      score 40-49
+  [##########] severe    score 50+
+  row format: path:line `function` [bar] band score=<n> complexity~<n>
+  signals: comma-separated structural risk contributors
+src/compile/transitions.rs:392 `compile_multi_era` [##########] severe   score=58 complexity~=47
+  signals: complexity>15, long-function
+src/tzif/rfc9636.rs:153 `validate` [########--] high     score=47 complexity~=36
+  signals: complexity>15, long-function
+src/release_diff.rs:247 `build_release_diff` [########--] high     score=42 complexity~=31
+  signals: complexity>15, long-function
+src/compile/plan.rs:294 `run` [########--] high     score=41 complexity~=30
+  signals: complexity>15, long-function
+src/aux_tables.rs:246 `validate_zone_table` [########--] high     score=40 complexity~=29
+  signals: complexity>15, long-function
+src/model/time.rs:58 `parse_hms` [####------] guarded  score=28 complexity~=17
+  signals: complexity>15, long-function
+src/size_report.rs:70 `run_size_report` [####------] guarded  score=28 complexity~=17
+  signals: complexity>15, long-function
+src/compile/transitions.rs:82 `compile_rule_zone` [####------] guarded  score=25 complexity~=11
+  signals: long-function, unwrap
+
+Derived Runtime Structural Priors
+──────────────────────────────────────────────────────────────
+These bounded priors are derived from static source motifs. They are meant to bias runtime review toward structurally plausible motifs, not to override runtime evidence.
+H-ALLOC-01 confidence=0.69 drift_scale=0.83 slew_scale=0.79
+H-CLOCK-01 confidence=0.52 drift_scale=0.87 slew_scale=1.00
+
+DSFB Heuristic Motifs
+──────────────────────────────────────────────────────────────
+H-ALLOC-01 → MemoryPressureEscalation
+  Description: Monotonic increase in allocation latency with step-change at capacity doubling
+  Provenance:  Vec<T> capacity doubling in hot loop; jemalloc arena exhaustion
+  Total Hits:  15
+  Patterns:    vec::with_capacity
+  Remediation: Audit hot-loop allocation sites and prefer bounded or reserved growth on steady-state paths.
+  Evidence:
+  - H-ALLOC-01-01-posix-346 research/zdump-rs/src/posix.rs:346 [vec::with_capacity] let mut tr: Vec<(i64, bool)> = Vec::with_capacity(6);
+  - H-ALLOC-01-02-tzif-126 research/zdump-rs/src/tzif.rs:126 [vec::with_capacity] let mut transitions = Vec::with_capacity(n.timecnt as usize);
+  - H-ALLOC-01-03-tzif-130 research/zdump-rs/src/tzif.rs:130 [vec::with_capacity] let mut type_indices = Vec::with_capacity(n.timecnt as usize);
+  - H-ALLOC-01-04-tzif-142 research/zdump-rs/src/tzif.rs:142 [vec::with_capacity] let mut raw_types = Vec::with_capacity(n.typecnt as usize);
+  - H-ALLOC-01-05-tzif-156 research/zdump-rs/src/tzif.rs:156 [vec::with_capacity] let mut types = Vec::with_capacity(n.typecnt as usize);
+  - H-ALLOC-01-06-tzif-171 research/zdump-rs/src/tzif.rs:171 [vec::with_capacity] let mut leaps = Vec::with_capacity(n.leapcnt as usize);
+  Classification: design-review
+  Confidence: high
+  Impact Kind: resource discipline
+  Why This Matters In Rust: Allocation-heavy source motifs often correlate with hot-path latency variance and avoidable memory churn.
+  Review / Readiness Note: This motif can support internal review against standards-oriented expectations, but it is still only a structural proxy rather than compliance evidence by itself.
+  Verification Suggestion: Benchmark the flagged path under steady load and inspect allocation counts before and after preallocation changes.
+
+H-CLOCK-01 → ClockDriftDivergence
+  Description: Monotonic drift in timestamp-derived residuals between nodes
+  Provenance:  TSC vs HPET clock source discrepancy between cluster nodes
+  Total Hits:  7
+  Patterns:    timestamp
+  Remediation: Prefer monotonic clocks for control logic and isolate wall-clock use to presentation or external protocol boundaries.
+  Evidence:
+  - H-CLOCK-01-01-cli-650 src/cli.rs:650 [timestamp] println!("  {} @ {}: {}", w.zone, w.timestamp, w.verdict.as_str());
+  - H-CLOCK-01-02-semantic-witness-340 src/semantic_witness.rs:340 [timestamp] pub timestamp: String,
+  - H-CLOCK-01-03-semantic-witness-449 src/semantic_witness.rs:449 [timestamp] escape(&w.timestamp),
+  - H-CLOCK-01-04-semantic-witness-486 src/semantic_witness.rs:486 [timestamp] timestamp: "-".into(),
+  - H-CLOCK-01-05-semantic-witness-513 src/semantic_witness.rs:513 [timestamp] timestamp: "-".into(),
+  - H-CLOCK-01-06-semantic-witness-551 src/semantic_witness.rs:551 [timestamp] let timestamp = zr
+  Classification: context-needed
+  Confidence: high
+  Impact Kind: correctness
+  Why This Matters In Rust: Clock-related motifs are where monotonic and wall-clock assumptions can quietly diverge.
+  Review / Readiness Note: This motif frequently appears in assurance-oriented reviews because it changes how operators and reviewers reason about timing, boundedness, and fault handling.
+  Verification Suggestion: Add a regression test that isolates monotonic timing logic from wall-clock presentation or protocol boundaries.
+
+Conclusion Lenses
+──────────────────────────────────────────────────────────────
+Rust Maintainer Lens: Use the 60.3% overall score as a broad code-improvement target, not a compliance or certification badge. The highest-value maintainer work is concentrated in JPL-R4, JPL-R9, NASA-CC, SAFE-STATE, ZERO-COPY.
+Compliance Readiness Lens: 3 finding(s) directly affect analyzability, reproducibility, or review traceability. DSFB may support internal review against standards-oriented expectations, but it does not certify compliance.
+Certification Preparation Lens: For certification-oriented preparation, treat JPL-R4, JPL-R9, NASA-CC, SAFE-STATE, ZERO-COPY as pre-review cleanup targets and evidence-organizing prompts rather than certification outcomes.
+Distributed / Operational Lens: Operational pressure is most visible in ZERO-COPY, ITER-UNB, P10-5, H-ALLOC-01. These findings are the most likely to matter later in runtime replay, backpressure review, or production-style load investigation.
+

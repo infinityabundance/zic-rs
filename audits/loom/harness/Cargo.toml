@@ -1,0 +1,13 @@
+# Detached loom harness — NOT part of the zic-rs package (own [workspace] so loom never enters the
+# main crate's dependency / cargo-vet / cargo-audit surface, mirroring fuzz/). Build/run only here:
+#   RUSTFLAGS="--cfg loom" cargo test --release   (from audits/loom/harness/)
+[workspace]
+
+[package]
+name = "zic-rs-loom-harness"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+loom = "0.7"

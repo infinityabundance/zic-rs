@@ -1,0 +1,25 @@
+## arch: "Arch Linux"
+## installing base-devel + rust (Arch's own toolchain) ...
+## toolchain identity:
+   rustc=rustc 1.96.0 (ac68faa20 2026-05-25) (Arch Linux rust 1:1.96.0-1)
+   cargo=cargo 1.96.0 (30a34c682 2026-05-25) (Arch Linux rust 1:1.96.0-1)
+   pacman rust=rust 1:1.96.0-1
+   makepkg=makepkg (pacman) 7.1.0
+   glibc=ldd (GNU libc) 2.43
+## running makepkg as unprivileged 'builder' (fetch crate -> cargo build --release --locked) ...
+## built Arch package: zic-rs-0.1.0-1-x86_64.pkg.tar.zst  (769976 bytes)
+   pkg_sha256=91a0aa8d688005d36f0158d30c6fabe6d15ccc0d95a4a2e2986a70b8ae81fef2
+## installing the package (pacman -U) ...
+## packaged binary:
+   zic-rs 0.1.0
+   binary_sha256=ed358fc0471a1d5af416d21a16af0c03e7b7f39084acd20024b36f35aac6740f
+   runtime_abi: 	linux-vdso.so.1 (0x00007f68556e4000)
+## drop-in matrix with the makepkg-built, pacman-installed binary:
+   compile_exit=0
+   files=598
+grep: warning: stray \ before "
+grep: warning: stray \ before "
+grep: warning: stray \ before "
+   bundle_hash: "bundle_hash": "453641ff2568d8b1
+## tzdata source sha: 0078657fd0b76865
+## DONE

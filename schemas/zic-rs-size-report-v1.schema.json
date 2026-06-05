@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zic-rs/schemas/zic-rs-size-report-v1.schema.json",
+  "title": "Bundle footprint report (zic-rs-size-report-v1)",
+  "description": "Read-only footprint of a produced --out tree for container/embedded image builders (T21): tzif_files / symlink_links / other_files counts, total + tzif bytes, largest TZif, version histogram, footer_present, and a deterministic bundle_hash (sorted (relpath, content-hash)). Never compiles/writes/admits. Non-claims: does NOT distinguish a zone from a copy-mode link (needs alias-map.json), makes no runtime/reader approval claim, and bundle_hash is a determinism witness, not a signed attestation. Published contract scope: this pins the schema identity (the `schema` const) and the top-level object shape; field-level tightening + full instance-validation are a tracked audit-suite item (the core crate carries no validator dependency). See docs/schema-compatibility-policy.md and tests/schemas.rs.",
+  "type": "object",
+  "required": ["schema"],
+  "properties": {
+    "schema": { "const": "zic-rs-size-report-v1", "description": "the immutable schema identity; bumped only on a meaning change" }
+  },
+  "additionalProperties": true
+}

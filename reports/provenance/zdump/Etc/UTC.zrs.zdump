@@ -1,0 +1,6 @@
+Z  -9223372036854775808 (gmtime failed) = -9223372036854775808 (localtime failed)
+Z  -67768040609740801 (gmtime failed) = -67768040609740801 (localtime failed)
+Z  Thu Jan  1 00:00:00 -2147481748 UT = Thu Jan  1 00:00:00 -2147481748 UTC isdst=0 gmtoff=0
+Z  Wed Dec 31 23:59:59 2147485547 UT = Wed Dec 31 23:59:59 2147485547 UTC isdst=0 gmtoff=0
+Z  67768036191676800 (gmtime failed) = 67768036191676800 (localtime failed)
+Z  9223372036854775807 (gmtime failed) = 9223372036854775807 (localtime failed)

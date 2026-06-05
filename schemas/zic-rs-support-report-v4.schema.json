@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zic-rs/schemas/zic-rs-support-report-v4.schema.json",
+  "title": "Support / conformance report (zic-rs-support-report-v4)",
+  "description": "Compile-coverage report over a source file with a bounded conformance_status rollup, declared_scope_hash, oracle_mode, and guard-enforced negative_capabilities. Published contract scope: this pins the schema **identity** (the `schema` const) and the top-level object shape. Field-level tightening and full instance-validation against a JSON-Schema validator are a tracked audit-suite item (the core crate carries no validator dependency); see docs/schema-compatibility-policy.md for the versioning rules and tests/schemas.rs for the registry/drift guard.",
+  "type": "object",
+  "required": ["schema"],
+  "properties": {
+    "schema": { "const": "zic-rs-support-report-v4", "description": "the immutable schema identity; bumped only on a meaning change" }
+  },
+  "additionalProperties": true
+}

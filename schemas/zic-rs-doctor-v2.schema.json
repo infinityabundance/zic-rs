@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zic-rs/schemas/zic-rs-doctor-v2.schema.json",
+  "title": "Doctor host-probe report (zic-rs-doctor-v2)",
+  "description": "Read-only host probe: reference zic/zdump ToolStatus (typed version_status + hash_status), optional tzdata, compiler identity. Always exit 0 (diagnosis, not gate). Published contract scope: this pins the schema **identity** (the `schema` const) and the top-level object shape. Field-level tightening and full instance-validation against a JSON-Schema validator are a tracked audit-suite item (the core crate carries no validator dependency); see docs/schema-compatibility-policy.md for the versioning rules and tests/schemas.rs for the registry/drift guard.",
+  "type": "object",
+  "required": ["schema"],
+  "properties": {
+    "schema": { "const": "zic-rs-doctor-v2", "description": "the immutable schema identity; bumped only on a meaning change" }
+  },
+  "additionalProperties": true
+}

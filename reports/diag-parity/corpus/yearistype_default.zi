@@ -1,0 +1,3 @@
+Rule R 1990 1994 even Mar Sun>=18 2:00 0 S
+Rule R 1990 1994 - Oct lastSun 2:00 1:00 D
+Zone Test/A 10:00 R E%sT

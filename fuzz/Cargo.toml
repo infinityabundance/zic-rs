@@ -1,0 +1,97 @@
+# zic-rs fuzzing harness (T17.FUZZ).
+#
+# This is a SEPARATE, non-published crate. The empty `[workspace]` table below detaches it from the
+# parent so the parent's gate (`cargo build`/`test`/`clippy`/`fmt` in `..`) never builds it — the parent
+# is a single package with no `[workspace]`, and this crate is not a dependency of it. It is built ONLY by
+# `cargo +nightly fuzz run <target>` from inside `fuzz/`, which needs nightly + libFuzzer. In a stable,
+# no-network environment it cannot be built — that is expected; see `README.md`: a fuzz *target existing*
+# is not a fuzz *result*, and every run is `pending_capture` until a real receipt exists.
+[package]
+name = "zic-rs-fuzz"
+version = "0.0.0"
+edition = "2021"
+publish = false
+rust-version = "1.74"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+# The crate under test, by path. The fuzz harness exercises only its PUBLIC API.
+# The package was renamed `zic-rs` for the crates.io publish (lib name stays `tzcompile`), so depend on the
+# `zic-rs` package and expose it under its lib name `tzcompile` (which every target's `use tzcompile::…` uses).
+# (Found by T23.cargo-fuzz.1: the T17.FUZZ scaffold's bare `tzcompile = { path = ".." }` no longer resolved.)
+tzcompile = { path = "..", package = "zic-rs" }
+
+# Fuzz targets link libFuzzer; debug assertions + overflow checks on, so a wrap/overflow is a finding.
+[profile.release]
+debug = true
+overflow-checks = true
+
+# Detach from any parent workspace so the parent gate never compiles this crate.
+[workspace]
+
+# ── one bin per target (priority order documented in README.md) ──
+[[bin]]
+name = "tzif_validate_bytes"
+path = "fuzz_targets/tzif_validate_bytes.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "vendor_oracle_json"
+path = "fuzz_targets/vendor_oracle_json.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "manifest_json"
+path = "fuzz_targets/manifest_json.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "source_lexer"
+path = "fuzz_targets/source_lexer.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "zone_rule_link_parser"
+path = "fuzz_targets/zone_rule_link_parser.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "posix_footer"
+path = "fuzz_targets/posix_footer.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "aux_table_validator"
+path = "fuzz_targets/aux_table_validator.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "release_diff_tree"
+path = "fuzz_targets/release_diff_tree.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "path_materialization_model"
+path = "fuzz_targets/path_materialization_model.rs"
+test = false
+doc = false
+bench = false

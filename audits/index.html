@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zic-rs · audit suite (T23)</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 60rem; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
+  h1 { font-size: 1.5rem; } code { background: #f2f2f2; padding: 0 .25em; border-radius: 3px; }
+  blockquote { border-left: 3px solid #ccc; margin: 1rem 0; padding: .3rem 1rem; color: #333; background: #fafafa; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ddd; padding: .35rem .6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+  .run { color: #0a7a0a; font-weight: 600; } .pending { color: #9a6a00; } .exp { color: #6a4ea3; } .na { color: #777; }
+  small { color: #666; }
+</style>
+</head>
+<body>
+<h1>zic-rs · audit suite <small>(T23)</small></h1>
+
+<blockquote>
+<strong>An audit folder existing is not an audit result.</strong> A result is admitted <em>only by a
+receipt</em> (tool · version · host · command · input+hash · duration · result · findings · residual ·
+non-claims). This is evidence-producing infrastructure, <strong>not a pass/fail badge</strong> — it records
+what each tool <em>can and cannot</em> witness. No claim that all audits are green. See
+<a href="README.md">README.md</a>.
+</blockquote>
+
+<p>The top-level set is <strong>authoritative and fixed</strong> — no tool removed, substituted, or
+reclassified out; additions only <em>inside</em> a folder.</p>
+
+<table>
+<thead><tr><th>Audit</th><th>Witnesses</th><th>Status (this environment)</th></tr></thead>
+<tbody>
+<tr><td><a href="panic-analysis/README.md">panic-analysis</a></td><td>panic-primitive surface vs the panic policy</td><td class="run">✅ RUN — real receipt</td></tr>
+<tr><td><a href="dsfb-gray/README.md">dsfb-gray</a></td><td>zic-rs's own gray-box claim-boundary checks</td><td class="run">✅ RUN — real receipt</td></tr>
+<tr><td><a href="cargo-fuzz/README.md">cargo-fuzz</a></td><td>crashes/panics/OOM on the libFuzzer targets</td><td class="run">✅ RUN (T23.cargo-fuzz.1/.2) — bounded smoke found 3 panic bugs F1–F3; .2 fixed 3/3 + regression seeds, smoke re-ran 9/9 clean (panic-policy restored for known seeds + bounded rerun, not exhaustive)</td></tr>
+<tr><td><a href="cargo-audit/README.md">cargo-audit</a></td><td>known-vuln / yanked deps (RustSec)</td><td class="run">✅ RUN — clean (0 vulns / 67 deps)</td></tr>
+<tr><td><a href="cargo-auditable/README.md">cargo-auditable</a></td><td>embedded dependency manifest</td><td class="run">✅ RUN — embedded manifest</td></tr>
+<tr><td><a href="cargo-crev/README.md">cargo-crev</a></td><td>dependency code-review trust</td><td class="pending">✅ RAN (0.27.1) — 66 crates, no trusted WoT Ids → nothing verified (empty-but-real)</td></tr>
+<tr><td><a href="cargo-geiger/README.md">cargo-geiger</a></td><td>unsafe-usage census of the dep tree</td><td class="run">✅ RUN — own 0 unsafe; dep surface mapped</td></tr>
+<tr><td><a href="cargo-scan/README.md">cargo-scan</a></td><td>dependency effect/capability footprint</td><td class="pending">✅ RAN (confirmed stub) — installed Rust CLI is a non-functional stub (Python endpoint only)</td></tr>
+<tr><td><a href="cargo-valgrind/README.md">cargo-valgrind</a></td><td>runtime memory errors/leaks (memcheck)</td><td class="na">◐ valgrind INCONCLUSIVE (host SIGILL) → ✅ ASan substitute RAN clean (151 tests, 0 sanitizer errors, native)</td></tr>
+<tr><td><a href="cargo-vet/README.md">cargo-vet</a></td><td>vetted-dependency / imported-audit status</td><td class="na">◐ T23.cargo-vet.8 — Vetting Succeeded: 42 fully · 1 partial · 23 exempted; 20 first-party (full-source reviews incl. unsafe-heavy tier itoa/anstyle-parse/anstyle-query + semver/log + now errno/anstream/anstyle-wincon, each unsafe site reasoned; host-vs-all-target reachability recorded) + trusted-import; 23 still honestly exempted/UNAUDITED (large syscall/serde/clap/proc-macro tiers); no "verified" claim</td></tr>
+<tr><td><a href="kani/README.md">kani</a></td><td>bounded model checking (CBMC) of harnesses</td><td class="run">✅ 10 bounded helper proofs VERIFIED, 0 failed — T23.kani.1 count-arithmetic + T23.kani.2 Cursor take/skip/≤-remaining + T23.kani.3a type_index&lt;typecnt + T23.kani.3b abbr-index slice-safety + T23.kani.3f.1–.4 four standards-precision predicates (reduced-surface helpers only)</td></tr>
+<tr><td><a href="miri/README.md">miri</a></td><td>undefined-behaviour detection (MIR)</td><td class="run">✅ RUN — clean over tzif core (0 UB)</td></tr>
+<tr><td><a href="creusot/README.md">creusot</a></td><td>deductive functional verification (Why3)</td><td class="run">✅ RAN + PROVED (Why3+SMT) — why3find prove ✔ on the count×size invariant, matched why3 built from creusot-pinned source; 3rd engine vs Kani+crux-mir</td></tr>
+<tr><td><a href="crux-mir/README.md">crux-mir</a></td><td>symbolic execution of MIR</td><td class="run">✅ RAN — Overall status Valid, 5/5 goals proved (zic-rs harnesses); 2nd-engine corroboration of Kani</td></tr>
+<tr><td><a href="flux/README.md">flux</a></td><td>refinement types for Rust</td><td class="run">✅ RAN clean — checked zic-rs to completion (exit 0); no refinement annotations → no specific property proven</td></tr>
+<tr><td><a href="hax/README.md">hax</a></td><td>extraction to formal backends (F*/Coq)</td><td class="run">✅ RAN — cargo hax json extracted the crate (186 KB AST, exit 0); frontend only, no backend proofs</td></tr>
+<tr><td><a href="loom/README.md">loom</a></td><td>concurrency interleaving testing</td><td class="run">✅ RAN — loom::model proved the fetch_add unique-sequence invariant across all interleavings (corrects prior N/A)</td></tr>
+</tbody>
+</table>
+
+<p><small>Built near the end of the ladder (after T17.FUZZ / T19 / T20 / T21 / T22). <strong>All 17 tools
+were actually run/confirmed (2026-06-05 sweep)</strong>, each with captured raw output: cargo-audit (clean) ·
+cargo-geiger · cargo-auditable · miri (0 UB) · panic-analysis · dsfb-gray (the real tool, 60.3% review-readiness
+map) · kani (10 bounded proofs) · cargo-fuzz (found+fixed F1–F3; LONG-FUZZ smoke clean) · cargo-vet (T23.cargo-vet.8:
+42 fully / 23 exempted, 20 first-party) · cargo-crev (66 crates enumerated, empty WoT) · cargo-scan (confirmed non-functional
+Rust-CLI stub) · cargo-valgrind→ASan (151 tests, 0 sanitizer errors, native — valgrind itself SIGILLs on this host) ·
+crux-mir (5/5 goals Valid) · flux (checked clean) · hax (frontend extraction) · loom (fetch_add unique-sequence
+invariant proved) · <strong>creusot (RAN + PROVED — Why3+SMT discharge ✔, after building the creusot-pinned
+why3/why3find from source)</strong>. <strong>The count-arithmetic invariant is now proven by three independent
+engines — Kani (CBMC) · crux-mir (Crucible) · creusot (Why3+SMT).</strong> No audit's status was upgraded without a
+receipt — and the formal-verification tools prove reduced-surface invariants only, not whole-crate correctness.</small></p>
+</body>
+</html>

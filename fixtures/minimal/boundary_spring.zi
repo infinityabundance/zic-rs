@@ -1,0 +1,10 @@
+# T5 #3 regression — era boundary coincident with a new-era spring-forward, where the new era's
+# standard offset is 1h SMALLER than the old era's. Reference `zic` makes the boundary itself the
+# DST transition: the UT offset is continuous (+3 -> +3) but isdst flips 0->1 and the abbreviation
+# goes to the DST form. The bug was a spurious 1h standard interval after the boundary. This is the
+# generic shape of Europe/Moscow 1991 (3 R MSK/MSD -> 2 R EE%sT, both "Mar lastSun 02:00s").
+Rule BS 1970 max - Mar lastSun 2:00s 1:00 D
+Rule BS 1970 max - Oct lastSun 2:00s 0 S
+Zone Test/BoundarySpring 3:00 BS CE%sT 1985 Mar lastSun 2:00s
+			 2:00 BS EE%sT 1995
+			 2:00 -  EET

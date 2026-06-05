@@ -1,0 +1,13 @@
+# Test/Mixed — SINGLE-era zone whose rule set mixes finite rows (1977..1995, April onset) and
+# recurring rows (1996..max, March onset). The finite history must be emitted with its real
+# April onsets — NOT collapsed into the recurring footer's March rule. zic-rs emits a "fat"
+# explicit history (every year through RECUR_HI) while reference zic emits a "slim" set
+# (finite history + one recurring anchor); both are zdump-equivalent and share the footer.
+# See docs/reference-zic-semantics.md (slim/fat note).
+#
+# Expected: April onsets for 1977..1995, March onsets from 1996; footer GMT0BST,M3.5.0/1,M10.5.0.
+Rule	E	1977	1995	-	Apr	Sun>=1	1:00u	1:00	S
+Rule	E	1977	1995	-	Oct	lastSun	1:00u	0	-
+Rule	E	1996	max	-	Mar	lastSun	1:00u	1:00	S
+Rule	E	1996	max	-	Oct	lastSun	1:00u	0	-
+Zone	Test/Mixed	0	E	GMT/BST

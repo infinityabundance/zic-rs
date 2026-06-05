@@ -1,0 +1,2 @@
+   Compiling zic-rs v0.1.0 (/home/one/zic-rs)
+    Finished `release` profile [optimized] target(s) in 3.09s

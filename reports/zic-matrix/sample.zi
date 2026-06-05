@@ -1,0 +1,6 @@
+# ZIC-MATRIX.1 sample source. A US-style DST zone, a fixed-offset zone, and a link.
+Rule M 1980 max - Mar Sun>=8 2:00 1:00 D
+Rule M 1980 max - Nov Sun>=1 2:00 0    S
+Zone Test/Matrix -5:00 M E%sT
+Zone Test/Fixed   1:00 -  CET
+Link Test/Matrix  Test/MatrixAlias

@@ -1,0 +1,9 @@
+# YEARISTYPE.1 — minimal even/odd (yearistype) exercise.
+# Southern-hemisphere shape (like the historical Australia `AS` rules): DST STARTS on the last Sunday
+# of October every year 1990-1994; DST ENDS in March on Sun>=18 in EVEN years and Sun>=1 in ODD years.
+# Finite rules (no `max`), so the zone settles to plain standard after 1994 — POSIX-footer-clean, unlike
+# the pre-1995 perpetual `1990 max even/odd` shape that needs the separate non-POSIX-footer feature.
+Rule	Y	1990	1994	-	Oct	lastSun	2:00	1:00	D
+Rule	Y	1990	1994	even	Mar	Sun>=18	2:00	0	S
+Rule	Y	1990	1994	odd	Mar	Sun>=1	2:00	0	S
+Zone	Test/YearIsType	10:00	Y	E%sT

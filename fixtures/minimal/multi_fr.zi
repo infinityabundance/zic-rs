@@ -1,0 +1,4 @@
+Rule US 2007 max - Mar Sun>=8 2:00 1:00 D
+Rule US 2007 max - Nov Sun>=1 2:00 0 S
+Zone Test/FR -5:00 - EST 2000
+		-5:00 US E%sT

@@ -1,0 +1,20 @@
+flag/mode	ref_cmd	zrs_cmd	ref_exit	zrs_exit	fileset	behaviour	verdict	note
+default compile	zic -d OUT sample.zi	zic-rs compile --all-supported --input sample.zi --out OUT	0	0	match	match	match	basic Zone/Rule/Link compile
+-d / --out	zic -d DIR …	zic-rs compile --out DIR …	0	0	match	match	match	-d ≡ --out (output directory)
+-b slim	zic -b slim …	zic-rs … --emit-style zic-slim	0	0	match	match	match	slim structural: Test/Matrix null-diff (T8 slim residual class is behaviourally null)
+-b fat	zic -b fat …	zic-rs … -b fat	0	0	match	match	match	fat is zic-rs default
+-r @lo/@hi	zic -r @lo/@hi …	zic-rs … -r @lo/@hi	0	0	match	match	match	bounded range matches; open-ended -r has named residuals (T10.4e)
+-L leapseconds	zic -L leapseconds …	zic-rs … -L leapseconds	0	0	match	match	match	right/ leap profile; cctz cannot read leap files (reader limit, not zic-rs)
+-v verbose	zic -v warn.zi	zic-rs compile -v warn.zi	0	0	n/a	both-warn	class-parity	both flag the >6-char abbreviation (class match; exact wording is NOT claimed — wording last)
+-l localtime	zic -l Test/Matrix …	zic-rs … -l Test/Matrix	1	0	ref:no zrs:yes	localtime→Test/Matrix	intentional-divergence	reference zic -l writes localtime to the SYSTEM default (TZDEFAULT, e.g. /etc — hence the non-root permission fail/exit≠0); zic-rs writes localtime UNDER --out only — deliberate safer-divergence (T9.4). The link's target behaviour is equivalent; the install LOCATION differs by design
+-t localtime-name	zic -l … -t Local/Custom	zic-rs … -t Local/Custom	0	0	ref:yes zrs:yes	link→Test/Matrix	match	custom localtime link name; zic-rs constrains to safe relative name under --out
+-D no-create-dirs	zic -D -d OUT(flat,Test/ missing)	zic-rs compile -D --out OUT(flat,Test/ missing)	1	1	ref_files=0 zrs_files=0	exit r=1 z=1	match	FIXED (ZIC-MATRIX.1.D): -D forbids creating missing zone subdirs; zones needing them are skipped & the run exits 1, zones whose parent already exists are written (matches reference write-what-fits semantics)
+-m mode	zic -m 600 …	zic-rs -m 600 …	0	0	ref:600 zrs:600	match	match	octal subset; symbolic chmod exprs = intentional-simplification (T9.5)
+-p posixrules	zic -p posixrules …	(no -p flag)	0	2	n/a	n/a	unsupported-by-design	reference zic itself warns -p is obsolete & likely ineffective; zic-rs does not implement it (would be opt-in bucket-2 only if a real consumer needs it)
+-u owner	zic -u owner …	(no -u flag)	0	n/a	n/a	n/a	deferred	privileged Unix-only install metadata; zic-rs has no -u (so it can't be mistaken for a silent no-op); lands as explicit Unix-only mode if a consumer needs it (T9.5)
+--version	zic --version	zic-rs --version	0	0	n/a	ref:zic (tzcode) 2026b-dirty zrs:zic-rs 0.1.0	intentional-divergence	different product/version string by design (separate tools)
+--help	zic --help	zic-rs --help	0	0	n/a	n/a	intentional-divergence	zic-rs is a subcommand CLI (compile/compare/…); deliberately NOT an argv drop-in (drop-in-compatibility-contract.md)
+multiple input files	zic f1 f2 …	zic-rs --input f1 --input f2 …	0	0	match	match	match	order-independent record set (metamorphic, T14.3)
+links / aliases	Link Test/Matrix Test/MatrixAlias	(same source)	0	0	ref:yes zrs:yes	alias=Test/Matrix	match	links materialised (copy by default); cycle/self-link = hard error in both
+backzone (source-set)	zic <backzone file> (just another input)	zic-rs --input <backzone> [--backzone included]	n/a	n/a	n/a	n/a	not-applicable	backzone is a Makefile/source-set choice, not a zic CLI flag; passing the file = ordinary input (compiles in both); zic-rs additionally records hash-backed provenance evidence (T12.5b), never inferred
+invalid input	zic bad.zi (unknown line type)	zic-rs compile bad.zi	1	1	n/a	ref-class:1 zrs-class:1	class-parity	both reject (exit≠0); zic-rs is deliberately FINER on continuation-without-zone (ZIC014, intentional-divergence T13.2)

@@ -1,0 +1,5 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.64s
+why3find prove: unknown option '--summary'.
+  why3find prove [OPTIONS] PATH...
+Error: 'why3find prove' failed
+Error: 'why3find prove' failed -- why3find: Package 'creusot' not found (creusot Why3 prelude not installed via 'cargo creusot setup install')

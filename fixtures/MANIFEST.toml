@@ -1,0 +1,156 @@
+# Fixture provenance.
+#
+# Every checked-in expected output records exactly how it was produced, so a reviewer can
+# regenerate and trust it. We never check in an opaque binary blob without this record.
+#
+# Reference toolchain for ALL expected blobs in this file:
+#   reference zic : tzcode 2026b   (`zic --version` => "zic (tzcode) 2026b")
+#   tzdata source : hand-written minimal fixtures (see below); pinned IANA slices arrive
+#                   in milestone T4, extracted from /usr/share/zoneinfo/tzdata.zi (2026b).
+#   zic invocation: zic -d <out> <source.zi>     (slim default; no -b fat, no -L)
+
+[[fixture]]
+name = "Etc/UTC"
+source = "minimal/utc.zi"
+expected = "expected/Etc_UTC.tzif"
+zic_command = "zic -d <out> fixtures/minimal/utc.zi"
+expected_behavior = "Constant UT offset 0, abbreviation UTC, POSIX footer UTC0, no transitions."
+parity = "byte-identical"     # our output equals reference zic byte-for-byte
+known_differences = "none"
+
+[[fixture]]
+name = "UTC"
+source = "minimal/utc.zi"     # Link Etc/UTC UTC
+expected_behavior = "Link alias of Etc/UTC; materialised by copy (default link mode)."
+parity = "semantic"
+known_differences = "Link representation (copy vs symlink) is a local choice; target content matches."
+
+[[fixture]]
+name = "Test/Fixed"
+source = "minimal/fixed.zi"
+expected = "expected/Test_Fixed.tzif"
+zic_command = "zic -d <out> fixtures/minimal/fixed.zi"
+expected_behavior = "Constant UT offset -5:00 (-18000s), abbreviation EST, POSIX footer EST5, no transitions."
+parity = "byte-identical"
+known_differences = "none"
+
+# --- T2: finite rule-driven DST zones. Parity is SEMANTIC (zdump), not byte: zic's
+# local-time-type and abbreviation-table ordering differ from ours while the meaning is
+# identical, so we deliberately do not pin byte blobs for these.
+
+[[fixture]]
+name = "Test/Simple"
+source = "minimal/dst.zi"
+zic_command = "zic -d <out> fixtures/minimal/dst.zi ; zdump -v <out>/Test/Simple"
+expected_behavior = "US-style finite DST in 2020: spring 2020-03-08 07:00Z -> EDT (-14400), fall 2020-11-01 06:00Z -> EST (-18000); footer EST5."
+parity = "semantic"
+known_differences = "Type/designation ordering differs from zic; zdump output identical."
+
+[[fixture]]
+name = "Test/Euro"
+source = "minimal/euro.zi"
+zic_command = "zic -d <out> fixtures/minimal/euro.zi ; zdump -v <out>/Test/Euro"
+expected_behavior = "EU-style finite DST in 2021 with lastSun and UT-referenced AT (1:00u): CET (+3600) / CEST (+7200); footer CET-1."
+parity = "semantic"
+known_differences = "Type/designation ordering differs from zic; zdump output identical."
+
+[[fixture]]
+name = "Test/Sle"
+source = "minimal/sle.zi"
+zic_command = "zic -d <out> fixtures/minimal/sle.zi ; zdump -v -c 2019,2022 <out>/Test/Sle"
+expected_behavior = "Finite DST in 2015 with Sun<=25 and standard-time AT (2:00s): STDOFF -3:00, summer -7:00 (-7200); footer fixed."
+parity = "zdump-behaviour (2019..2022)"
+known_differences = "Type/designation ordering differs from zic; zdump output identical."
+
+# --- T3: recurring (TO = maximum) DST zone. Verified by the zdump behaviour oracle over a
+# WIDE horizon so the recurring POSIX footer (not just explicit transitions) is exercised.
+
+[[fixture]]
+name = "Test/Eastern"
+source = "minimal/eastern.zi"
+zic_command = "zic -d <out> fixtures/minimal/eastern.zi ; zdump -v -c 2019,2099 <out>/Test/Eastern"
+expected_behavior = "US-Eastern-style recurring DST (2007..max): footer EST5EDT,M3.2.0,M11.1.0; spring 2nd Sun Mar, fall 1st Sun Nov, EST/EDT."
+parity = "zdump-behaviour (2019..2099)"
+known_differences = "Explicit-transition horizon and type ordering differ from zic; zdump behaviour identical across the horizon."
+
+# --- T3.2c: multi-era final era classified by EFFECTIVE in-era activations. The rule set is
+# mixed by raw membership but its finite rows fall before the final era starts, so in the
+# final era it is effectively recurring-only (the Europe/London shape, in miniature).
+
+[[fixture]]
+name = "Test/FinalEffective"
+source = "minimal/final_effective.zi"
+zic_command = "zic -d <out> fixtures/minimal/final_effective.zi ; zdump -v -c 1990,2040 <out>/Test/FinalEffective"
+expected_behavior = "Final era (from 1996) references a finite+recurring rule set whose finite rows end in 1995; effective in-era set is recurring-only -> anchor at 1996 + footer GMT0BST,M3.5.0/1,M10.5.0."
+parity = "zdump-behaviour (1990..2040), byte-identical for this fixture"
+known_differences = "none observed for this fixture; behaviour is the binding contract."
+
+# --- T3.2a: obsolete `FROM = minimum`, coerced to 1900 exactly as reference `zic`.
+
+[[fixture]]
+name = "Test/MinRule"
+source = "minimal/minrule.zi"
+zic_command = "zic -d <out> fixtures/minimal/minrule.zi ; zdump -v -c 1899,1910 <out>/Test/MinRule"
+expected_behavior = "FROM=minimum coerced to 1900 (reference zic warns 'obsolete; treated as 1900'); first transition 1900-04-29 07:00Z; recurring footer EST5EDT,M4.5.0,M10.5.0."
+parity = "zdump-behaviour (1899..1910 and 2019..2040)"
+known_differences = "Explicit-transition representation (slim/fat) differs from zic; zdump behaviour identical. Reference zic also emits a non-fatal 'minimum obsolete' warning that zic-rs does not yet surface (no compile-warning sink)."
+
+# --- "%z unlock": a `%z` FORMAT on a no-rules era renders the numeric standard offset.
+
+[[fixture]]
+name = "Test/PZSolo"
+source = "minimal/percent_z_norules.zi"
+zic_command = "zic -d <out> fixtures/minimal/percent_z_norules.zi ; zdump -v -c 1900,2010 <out>/Test/PZSolo"
+expected_behavior = "No-rules era 0:30 - %z -> one fixed type utoff=1800, is_dst=0, abbr +0030; footer <+0030>-0:30. (ttinfo matches reference zic.)"
+parity = "zdump-behaviour (1900..2010), byte-identical"
+known_differences = "none; %s and STD/DST slash on a no-rules era stay fail-closed."
+
+# --- T3.2b: inline-save eras (RULES = a constant clock value). Effective offset STDOFF+SAVE,
+# is_dst set, abbreviation from literal or %z FORMAT (over the total offset). ttinfo decode is
+# byte-identical to reference zic for these.
+
+[[fixture]]
+name = "Test/InlineLit"
+source = "minimal/inline.zi"
+zic_command = "zic -d <out> fixtures/minimal/inline.zi ; zdump -v -c 1940,1946 <out>/Test/InlineLit"
+expected_behavior = "Hong-Kong-style wartime inline save: 8:00 era, middle era 8:00 + 0:30 = +8:30 HKWT (isdst=1), back to HKT. Types byte-match reference zic."
+parity = "zdump-behaviour (1940..1946), ttinfo byte-identical"
+known_differences = "none observed for this fixture."
+
+[[fixture]]
+name = "Test/InlineZ"
+source = "minimal/inline.zi"
+zic_command = "zic -d <out> fixtures/minimal/inline.zi ; zdump -v -c 1930,1940 <out>/Test/InlineZ"
+expected_behavior = "Jakarta-style inline save with %z FORMAT: 7:00 + 0:20 = +7:20, abbreviation rendered from the TOTAL offset as +0720 (isdst=1), then WIB. Types byte-match reference zic."
+parity = "zdump-behaviour (1930..1940), ttinfo byte-identical"
+known_differences = "none observed for this fixture."
+
+[[fixture]]
+name = "Test/InlineSolo"
+source = "minimal/inline.zi"
+zic_command = "zic -d <out> fixtures/minimal/inline.zi ; zdump -v -c 1990,1995 <out>/Test/InlineSolo"
+expected_behavior = "Single-era inline save 8:00 + 0:30 = +8:30 HKWT (isdst=1), fixed footer HKWT-8:30."
+parity = "zdump-behaviour (1990..1995)"
+known_differences = "none observed for this fixture."
+
+# --- T4.1: second pinned IANA slice, America/New_York — the genuinely *mixed-in-era* case
+# (final era from 1967 uses Rule US: finite DST 1967..2006 + recurring 2007..max).
+
+[[fixture]]
+name = "America/New_York"
+source = "iana-slices/america_new_york_2026b.zi"
+zic_command = "zic -d <out> fixtures/iana-slices/america_new_york_2026b.zi ; zdump -v -c 1883,2040 <out>/America/New_York"
+expected_behavior = "Full New York history (LMT, US + NYC rule eras, WWII W/P war time) + recurring footer EST5EDT,M3.2.0,M11.1.0; final era is mixed-in-era (finite 1967..2006 + recurring 2007..max)."
+parity = "zdump-behaviour (1883..2040)"
+known_differences = "Explicit-transition representation (slim/fat) differs from zic; zdump behaviour identical. De-abbreviated slice is byte-identical to the abbreviated tzdata.zi extract through reference zic."
+
+# --- T4.0: first pinned IANA slice. Canonical (record-keys-only de-abbreviated) Europe/London
+# from tzdb 2026b. The slice file documents its own provenance + faithfulness proof.
+
+[[fixture]]
+name = "Europe/London"
+source = "iana-slices/europe_london_2026b.zi"
+zic_command = "zic -d <out> fixtures/iana-slices/europe_london_2026b.zi ; zdump -v -c 1830,2045 <out>/Europe/London"
+expected_behavior = "Full Europe/London history (LMT -> GMT/BST eras, the 1968-71 BST/BDST period) + recurring EU footer GMT0BST,M3.5.0/1,M10.5.0; final EU era effectively recurring-only."
+parity = "zdump-behaviour (1830..2045)"
+known_differences = "Explicit-transition representation (slim/fat) differs from zic; zdump behaviour identical. De-abbreviated slice is byte-identical to the abbreviated tzdata.zi extract through reference zic."

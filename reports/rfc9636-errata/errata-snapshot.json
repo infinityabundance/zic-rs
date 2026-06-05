@@ -1,0 +1,43 @@
+{
+  "source": "https://www.rfc-editor.org/errata.json",
+  "fetched": "2026-06-05",
+  "feed_sha256": "cc92d64d201e5775ffbd6a82c31ed9ef0bd8346e94d55beab0f84c582f1f4f28",
+  "feed_bytes": 11508091,
+  "feed_total_errata": 7935,
+  "filter_sanity": {
+    "RFC8259": 15,
+    "RFC8536": 4
+  },
+  "rfc9636_errata_count": 0,
+  "rfc9636_errata": [],
+  "rfc8536_predecessor_errata": [
+    {
+      "eid": "7681",
+      "status": "Held for Document Update",
+      "type": "Technical",
+      "section": "B.2",
+      "submit_date": "2023-10-17"
+    },
+    {
+      "eid": "6426",
+      "status": "Held for Document Update",
+      "type": "Technical",
+      "section": "B.3",
+      "submit_date": "2021-02-12"
+    },
+    {
+      "eid": "6435",
+      "status": "Verified",
+      "type": "Technical",
+      "section": "5.2",
+      "submit_date": "2021-02-20"
+    },
+    {
+      "eid": "6757",
+      "status": "Held for Document Update",
+      "type": "Technical",
+      "section": "B.3",
+      "submit_date": "2021-11-28"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+zone	source_file	ref_sha256	zrs_fat_sha256	zrs_slim_sha256	behaviour_zdump	structural_slim_vs_ref	categories	selection_reason
+America/New_York	northamerica	d7f2206b3a45989f	8d0d951800a68a0c	173e3f4292611578	MATCH	DIFF	1,6	pre-1883 LMT + many transitions + ~2^31 boundary
+Europe/London	europe	676541f0b8ad457c	7c27432f530167b1	7c27432f530167b1	MATCH	DIFF	1,3,10	pre-1847 LMT + WW2 double summer time + far-future footer
+Europe/Dublin	europe	11c00336e02f1318	d88a38a08a280366	59953cc9b6d2b3aa	MATCH	DIFF	2	negative DST (winter-time IST/GMT inversion)
+Europe/Prague	europe	a6e930e3375cdcb5	03acf7dbcb02cd36	734c7a64a212fcc0	MATCH	DIFF	2	inline negative SAVE (1 -1 GMT, law 7)
+Africa/Windhoek	africa	8358cb464a3fda97	c7217e38a376f33f	c7217e38a376f33f	MATCH	DIFF	2,8	Namibia winter-time / DST-sign churn
+Europe/Paris	europe	cd588e779c5737d7	a8224f7ecb0230a0	e14ef3778a68b081	MATCH	DIFF	3,1	1940s double summer time under occupation
+Asia/Kolkata	asia	3a00bdbe1bc4959e	3a00bdbe1bc4959e	3a00bdbe1bc4959e	MATCH	BYTE_MATCH	4,9	+5:30 non-hour offset + renamed (Calcutta)
+Asia/Kathmandu	asia	76b8f1bfe072231a	76b8f1bfe072231a	76b8f1bfe072231a	MATCH	BYTE_MATCH	4	+5:45 sub-hour offset
+Australia/Eucla	australasia	dcdaac15f33347af	ec4ed99ed31c997e	ec4ed99ed31c997e	MATCH	DIFF	4	+8:45 non-hour offset + DST
+Asia/Tehran	asia	65ac5ec01f3721d6	0367914d7dc5f18d	0367914d7dc5f18d	MATCH	DIFF	4,8	+3:30 offset + Iran DST (now abolished)
+Asia/Yangon	asia	e89d835c811d4da4	e89d835c811d4da4	e89d835c811d4da4	MATCH	BYTE_MATCH	4	+6:30 offset
+Asia/Singapore	asia	0954b2d9a301d94f	0954b2d9a301d94f	0954b2d9a301d94f	MATCH	BYTE_MATCH	5,4	odd historical offsets: LMT +6:55:25 -> +7:20 -> +7:30 -> +8:00
+Africa/Monrovia	africa	58cf8955faf9d365	58cf8955faf9d365	58cf8955faf9d365	MATCH	BYTE_MATCH	5,8	Liberia -0:44:30 until 1972 (odd sub-minute, late switch)
+Asia/Jerusalem	asia	9fcde8d584dea058	80bdfb8106ca9b3c	6a1c9387d4147ef7	MATCH	DIFF	6,8	many transitions, complex modern DST
+America/Santiago	southamerica	fd006953c2b442a2	32eb11df7c318333	fd006953c2b442a2	MATCH	BYTE_MATCH	6,10	southern-hemisphere DST + v3 footer (dayshift)
+Pacific/Honolulu	northamerica	1daa5729aa1e0f32	1daa5729aa1e0f32	1daa5729aa1e0f32	MATCH	BYTE_MATCH	7	sparse transitions, no modern DST
+America/Phoenix	northamerica	ae11453c21d08984	f7393bf53a951939	f7393bf53a951939	MATCH	DIFF	7	Arizona no-DST, sparse
+Asia/Gaza	asia	f8f0bffe018e0da0	85db6553f359e955	c9bf852b239f5e52	MATCH	DIFF	8,10,12	Ramadan rules, v3 footer, late churn (law 10)
+Africa/Casablanca	africa	30ca6cf13e00c2a6	9abed260f26526c1	9abed260f26526c1	MATCH	DIFF	8,10,12	Morocco Ramadan DST, unusual footer, late churn
+Pacific/Fiji	australasia	ba608d86d4ee0738	c278d82d6bad06b4	c278d82d6bad06b4	MATCH	DIFF	8	late political DST on/off churn
+Asia/Damascus	asia	02d6530d1cc7101e	9a40e29a780c8c3a	9a40e29a780c8c3a	MATCH	DIFF	8	Syria DST churn (DST dropped 2022)
+Europe/Volgograd	europe	bf73fa88527ead38	bf73fa88527ead38	bf73fa88527ead38	MATCH	BYTE_MATCH	8	Russia MSK offset churn (recent)
+Europe/Kyiv	europe	0589e80ddecebf9d	258b85c6c897ae70	258b85c6c897ae70	MATCH	DIFF	9	renamed (Kiev), political
+America/Argentina/Buenos_Aires	southamerica	20454ea527c8ea88	c911c2f508cbc597	c911c2f508cbc597	MATCH	DIFF	9	sub-zoned/renamed, provincial churn
+Asia/Ho_Chi_Minh	asia	0d6e76fb941d0540	0d6e76fb941d0540	0d6e76fb941d0540	MATCH	BYTE_MATCH	9	renamed (Saigon)
+Antarctica/Troll	antarctica	b38cf417fb8acf1d	b38cf417fb8acf1d	b38cf417fb8acf1d	MATCH	BYTE_MATCH	10,12	UTC<->+02 (CEST) — unusual footer / reader stress
+Pacific/Kiritimati	australasia	71454698c4418259	71454698c4418259	71454698c4418259	MATCH	BYTE_MATCH	12	+14 maximum offset (reader stress)
+Asia/Tokyo	asia	59a3871430f0d3b9	8dff15a1da88f850	8dff15a1da88f850	MATCH	DIFF	7	stable control zone (well-behaved)
+Africa/Juba	africa	553a683003fe8c9e	ad136c5e3a4d13e6	ad136c5e3a4d13e6	MATCH	DIFF	14,8	South Sudan 2021 offset change (underrepresented)
+Pacific/Bougainville	australasia	aea767d58e0749aa	aea767d58e0749aa	aea767d58e0749aa	MATCH	BYTE_MATCH	14,15	2014 +10->+11 change (underrepresented)
+America/Punta_Arenas	southamerica	d80aa1edbaa8fa64	d80aa1edbaa8fa64	d80aa1edbaa8fa64	MATCH	BYTE_MATCH	14	split from Santiago 2017 (underrepresented)
+Asia/Atyrau	asia	d581b84332f13d16	d581b84332f13d16	d581b84332f13d16	MATCH	BYTE_MATCH	14,8	Kazakhstan offset change (underrepresented)
+America/Vancouver	northamerica	7d23681b36849ac7	76487b663cb1d144	76487b663cb1d144	MATCH	DIFF	15,8	the real 2026a->2026b release-diff zone
+Antarctica/Casey	antarctica	d6373e1408ef90a9	d6373e1408ef90a9	d6373e1408ef90a9	MATCH	BYTE_MATCH	8,14	flips +08/+11 (churn, underrepresented)
+Pacific/Apia	australasia	dc70c47c80ab2c87	4ff469339fb20ac0	4ff469339fb20ac0	MATCH	DIFF	8	Samoa 2011 dateline skip (lost a calendar day)
+Asia/Pyongyang	asia	3710b975af284d9e	3710b975af284d9e	3710b975af284d9e	MATCH	BYTE_MATCH	8	2015 +8:30 then 2018 back to +9
+Europe/Lisbon	europe	44d2f6cf84737e6a	36bcae5e21df5f7f	36bcae5e21df5f7f	MATCH	DIFF	10	slim/fat timecnt residual zone (structural edge)
+America/Adak	northamerica	abfb1980e20d5f84	124b05ba38bea317	a932f71ba5736bdd	MATCH	DIFF	1,10	abbreviation suffix-sharing (HST in AHST), Aleutian
+US/Eastern	backward	d7f2206b3a45989f	8d0d951800a68a0c	173e3f4292611578	MATCH	DIFF	9,11	backward Link -> America/New_York (linked identity)
+Etc/UTC	etcetera	fddce1e648a1732a	fddce1e648a1732a	fddce1e648a1732a	MATCH	BYTE_MATCH	7,13	fixed sparse; + right/ leap profile witness (see reader-compat.2)

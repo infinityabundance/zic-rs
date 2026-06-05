@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zic-rs/schemas/zic-rs-structural-report-v3.schema.json",
+  "title": "Structural TZif parity report (zic-rs-structural-report-v3)",
+  "description": "Per-zone structural (Shape) parity vs reference zic, classified by ParityClass; a separate axis from behaviour. Published contract scope: this pins the schema **identity** (the `schema` const) and the top-level object shape. Field-level tightening and full instance-validation against a JSON-Schema validator are a tracked audit-suite item (the core crate carries no validator dependency); see docs/schema-compatibility-policy.md for the versioning rules and tests/schemas.rs for the registry/drift guard.",
+  "type": "object",
+  "required": ["schema"],
+  "properties": {
+    "schema": { "const": "zic-rs-structural-report-v3", "description": "the immutable schema identity; bumped only on a meaning change" }
+  },
+  "additionalProperties": true
+}
